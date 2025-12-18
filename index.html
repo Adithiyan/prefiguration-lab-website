@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Prefiguration Lab</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Prefiguration Lab is a research collective exploring how organizations can prefigure more sustainable, just futures."
+    />
+    <link rel="canonical" href="https://prefigurationlab.example.com/" />
+    <link rel="icon" href="favicon.ico" />
+    <meta name="theme-color" content="#111827" />
+    <meta property="og:title" content="Prefiguration Lab" />
+    <meta
+      property="og:description"
+      content="Research collective studying organizations, power, technology, and possible futures."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://prefigurationlab.example.com/" />
+    <meta property="og:image" content="https://prefigurationlab.example.com/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#home">Skip to main content</a>
+
+    <!-- Header & Navigation -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="logo">
+          <span class="logo-mark">PL</span>
+          <span class="logo-text">Prefiguration Lab</span>
+        </div>
+
+        <nav class="main-nav" id="main-nav" aria-label="Primary">
+          <a href="#home">Home</a>
+          <a href="#projects">Projects</a>
+          <a href="#team">Our Team</a>
+          <a href="#podcast">Podcast</a>
+          <a href="#resources">Resources</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <button
+          class="nav-toggle"
+          id="nav-toggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          <span aria-hidden="true">&#9776;</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- HERO / HOME -->
+    <main>
+      <section id="home" class="section hero">
+        <div class="container hero-inner">
+          <div class="hero-text">
+            <p class="eyebrow" id="hero-eyebrow">Research Collective</p>
+            <h1 id="hero-title">Prefiguration Lab</h1>
+            <p class="tagline" id="hero-tagline">
+              A research collective exploring how organizations can prefigure
+              more sustainable, just futures.
+            </p>
+            <p id="hero-body">
+              We study practices, technologies, and forms of organizing that
+              anticipate the world we want to build.
+            </p>
+            <a href="#projects" class="button" id="hero-cta">View Our Projects</a>
+          </div>
+
+          <div class="hero-card">
+            <h2>Current Focus</h2>
+            <ul id="focus-list"></ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Projects</h2>
+            <p id="projects-copy">
+              Our research projects explore how organizational practices shape
+              possible futures.
+            </p>
+          </div>
+
+          <div class="grid projects-grid" id="projects-grid"></div>
+        </div>
+      </section>
+
+      <!-- OUR TEAM -->
+      <section id="team" class="section section-alt">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Our Team</h2>
+            <p id="team-copy">
+              The Prefiguration Lab brings together a professor and student
+              researchers.
+            </p>
+          </div>
+
+          <div class="grid team-grid" id="team-grid"></div>
+        </div>
+      </section>
+
+      <!-- PODCAST -->
+      <section id="podcast" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Podcast</h2>
+            <p id="podcast-copy">
+              The Prefiguration Lab podcast hosts conversations about
+              organizations, power, and possible futures.
+            </p>
+          </div>
+
+          <div class="podcast-layout">
+            <div class="podcast-player card">
+              <h3>Latest Episode</h3>
+              <div class="embed-wrapper">
+                <iframe
+                  id="podcast-embed"
+                  width="100%"
+                  height="160"
+                  frameborder="0"
+                  allowtransparency="true"
+                  allow="encrypted-media"
+                  title="Podcast player"
+                ></iframe>
+              </div>
+              <p class="meta" id="podcast-meta">
+                If your podcast is hosted elsewhere, you can replace this embed
+                code or link to the external site.
+              </p>
+            </div>
+
+            <aside class="card podcast-links">
+              <h3>Listen & Subscribe</h3>
+              <ul id="podcast-links"></ul>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- RESOURCES / PDF LINKS -->
+      <section id="resources" class="section section-alt">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Resources</h2>
+            <p id="resources-copy">
+              Reports, working papers, syllabi, and other materials from the
+              Prefiguration Lab.
+            </p>
+          </div>
+
+          <ul class="resource-list" id="resource-list"></ul>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Contact</h2>
+            <p id="contact-copy">
+              To learn more about Prefiguration Lab or explore collaboration
+              opportunities, please get in touch.
+            </p>
+          </div>
+
+          <div class="card contact-card">
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:professor@example.com" class="link" id="contact-email">
+                professor@example.com
+              </a>
+            </p>
+            <p id="contact-institution">
+              <strong>Institution:</strong><br />
+              Department Name<br />
+              University of Ottawa, Ottawa, ON, Canada
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>
+          &copy; <span id="year"></span> Prefiguration Lab · University of Ottawa
+        </p>
+        <p class="footer-small">
+          Built by the Prefiguration Lab research team.
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

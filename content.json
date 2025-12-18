@@ -1,0 +1,113 @@
+{
+  "hero": {
+    "eyebrow": "Research Collective",
+    "title": "Prefiguration Lab",
+    "tagline": "A research collective exploring how organizations can prefigure more sustainable, just futures.",
+    "body": "We study practices, technologies, and forms of organizing that anticipate the world we want to build.",
+    "ctaLabel": "View Our Projects",
+    "ctaHref": "#projects",
+    "focus": [
+      "Clearview AI and surveillance capitalism",
+      "Sustainability and organizational change",
+      "Emerging projects and collaborations"
+    ]
+  },
+  "projectsCopy": "Our research projects explore how organizational practices shape possible futures.",
+  "projects": [
+    {
+      "title": "Clearview AI & Surveillance",
+      "blurb": "We examine the implications of facial recognition technologies in everyday organizational contexts, focusing on power, consent, and accountability.",
+      "lead": "Prof. Name",
+      "status": "In progress",
+      "pdf": "#",
+      "pdfLabel": "Project overview (coming soon)"
+    },
+    {
+      "title": "Sustainability & Prefiguration",
+      "blurb": "We explore how organizations experiment with sustainable practices today to prefigure low-carbon, socially just futures.",
+      "lead": "Student / Prof Name",
+      "status": "In progress",
+      "pdf": "#",
+      "pdfLabel": "Project overview (coming soon)"
+    },
+    {
+      "title": "Future Project Title",
+      "blurb": "Short description of a future or third project goes here.",
+      "lead": "Name",
+      "status": "Planned",
+      "pdf": "",
+      "pdfLabel": ""
+    }
+  ],
+  "teamCopy": "The Prefiguration Lab brings together a professor and student researchers.",
+  "team": [
+    {
+      "name": "Prof. Name",
+      "role": "Principal Investigator",
+      "bio": "Research interests, department at the University of Ottawa, and focus within the Prefiguration Lab.",
+      "email": "professor@example.com",
+      "affiliation": "Department, University of Ottawa"
+    },
+    {
+      "name": "Student Name 1",
+      "role": "Graduate / Undergraduate Researcher",
+      "bio": "Works on the Clearview AI project and supports data analysis and literature review."
+    },
+    {
+      "name": "Student Name 2",
+      "role": "Research Assistant",
+      "bio": "Focuses on sustainability and organizational change projects."
+    },
+    {
+      "name": "Student Name 3",
+      "role": "Research Assistant",
+      "bio": "Supports qualitative interviews, archives, and project responsibilities."
+    }
+  ],
+  "podcastCopy": "The Prefiguration Lab podcast hosts conversations about organizations, power, and possible futures.",
+  "podcastMeta": "If your podcast is hosted elsewhere, you can replace this embed code or link to the external site.",
+  "podcast": {
+    "embed": "https://open.spotify.com/embed/show/PLACEHOLDER",
+    "links": [
+    {
+      "label": "Example: Talking About Organizations",
+      "href": "https://www.talkingaboutorganizations.com/"
+    },
+    {
+      "label": "Prefiguration Lab on Spotify (coming soon)",
+        "href": "#"
+      },
+      {
+        "label": "Prefiguration Lab on Apple Podcasts (coming soon)",
+        "href": "#"
+      },
+      {
+        "label": "RSS feed (coming soon)",
+        "href": "#"
+      }
+    ]
+  },
+  "resourcesCopy": "Reports, working papers, syllabi, and other materials from the Prefiguration Lab.",
+  "resources": [
+    {
+      "title": "Lab Overview",
+      "pdf": "#",
+      "label": "PDF (coming soon)"
+    },
+    {
+      "title": "Clearview AI project brief",
+      "pdf": "#",
+      "label": "PDF (coming soon)"
+    },
+    {
+      "title": "Sustainability & prefiguration reading list",
+      "pdf": "#",
+      "label": "PDF (coming soon)"
+    }
+  ],
+  "contactCopy": "To learn more about Prefiguration Lab or explore collaboration opportunities, please get in touch.",
+  "contact": {
+    "email": "professor@example.com",
+    "institution": "Department Name\nUniversity of Ottawa, Ottawa, ON, Canada"
+  }
+}
