@@ -1,0 +1,82 @@
+backend:
+  name: git-gateway
+  branch: main
+
+local_backend: true
+
+media_folder: "static/images"
+public_folder: "/images"
+
+collections:
+  - name: site_content
+    label: "Site content"
+    files:
+      - label: "content.json"
+        name: content
+        file: content.json
+        fields:
+          - label: "Hero"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Eyebrow", name: eyebrow, widget: string }
+              - { label: "Title", name: title, widget: string }
+              - { label: "Tagline", name: tagline, widget: string }
+              - { label: "Body", name: body, widget: text }
+              - { label: "CTA label", name: ctaLabel, widget: string }
+              - { label: "CTA href", name: ctaHref, widget: string }
+              - label: "Focus items"
+                name: focus
+                widget: list
+                field:
+                  label: "Focus item"
+                  widget: string
+          - { label: "Projects section copy", name: projectsCopy, widget: text }
+          - label: "Projects"
+            name: projects
+            widget: list
+            fields:
+              - { label: "Title", name: title, widget: string }
+              - { label: "Blurb", name: blurb, widget: text }
+              - { label: "Lead", name: lead, widget: string }
+              - { label: "Status", name: status, widget: string }
+              - { label: "PDF URL", name: pdf, widget: string }
+              - { label: "PDF label", name: pdfLabel, widget: string }
+          - { label: "Team section copy", name: teamCopy, widget: text }
+          - label: "Team members"
+            name: team
+            widget: list
+            fields:
+              - { label: "Name", name: name, widget: string }
+              - { label: "Role", name: role, widget: string }
+              - { label: "Bio", name: bio, widget: text }
+              - { label: "Email", name: email, widget: string, required: false }
+              - { label: "Affiliation", name: affiliation, widget: string, required: false }
+          - { label: "Podcast section copy", name: podcastCopy, widget: text }
+          - { label: "Podcast meta copy", name: podcastMeta, widget: text }
+          - label: "Podcast"
+            name: podcast
+            widget: object
+            fields:
+              - { label: "Embed URL", name: embed, widget: string }
+              - label: "Podcast links"
+                name: links
+                widget: list
+                fields:
+                  - { label: "Label", name: label, widget: string }
+                  - { label: "URL", name: href, widget: string }
+          - { label: "Resources section copy", name: resourcesCopy, widget: text }
+          - label: "Resources"
+            name: resources
+            widget: list
+            fields:
+              - { label: "Title", name: title, widget: string }
+              - { label: "PDF URL", name: pdf, widget: string }
+              - { label: "Link label", name: label, widget: string }
+          - { label: "Contact section copy", name: contactCopy, widget: text }
+          - label: "Contact"
+            name: contact
+            widget: object
+            fields:
+              - { label: "Email", name: email, widget: string }
+              - { label: "Institution", name: institution, widget: text }
