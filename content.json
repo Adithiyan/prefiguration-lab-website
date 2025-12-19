@@ -3,18 +3,18 @@
     "eyebrow": "Research Collective",
     "title": "Prefiguration Lab",
     "tagline": "Researching activism for desirable futures.",
-    "ctaLabel": "View Our Projects",
+    "ctaLabel": "View our projects",
     "ctaHref": "#projects",
     "focus": [
-      "Clearview AI and surveillance capitalism",
-      "Sustainability and organizational change",
-      "Emerging projects and collaborations"
+      "Digital rights activism",
+      "Cycling activism",
+      "Pedagogical activism"
     ]
   },
   "projectsCopy": "Our research projects explore how organizational practices shape possible futures.",
   "projects": [
     {
-      "title": "Clearview AI & Surveillance",
+      "title": "Digital rights activism",
       "blurb": "We examine the implications of facial recognition technologies in everyday organizational contexts, focusing on power, consent, and accountability.",
       "lead": "Prof. Name",
       "status": "In progress",
@@ -22,7 +22,7 @@
       "pdfLabel": "Project overview (coming soon)"
     },
     {
-      "title": "Sustainability & Prefiguration",
+      "title": "Cycling activism",
       "blurb": "We explore how organizations experiment with sustainable practices today to prefigure low-carbon, socially just futures.",
       "lead": "Student / Prof Name",
       "status": "In progress",
@@ -30,7 +30,7 @@
       "pdfLabel": "Project overview (coming soon)"
     },
     {
-      "title": "Future Project Title",
+      "title": "Pedagogical activism",
       "blurb": "Short description of a future or third project goes here.",
       "lead": "Name",
       "status": "Planned",
@@ -63,7 +63,7 @@
       "bio": "Supports qualitative interviews, archives, and project responsibilities."
     }
   ],
-  "podcastCopy": "The Prefiguration Lab podcast hosts conversations about organizations, power, and possible futures.",
+  "podcastCopy": "The Living Without a Car podcast hosts conversations about activism for active and collective urban transportation.",
   "podcastMeta": "If your podcast is hosted elsewhere, you can replace this embed code or link to the external site.",
   "podcast": {
     "embed": "https://open.spotify.com/embed/show/PLACEHOLDER",
