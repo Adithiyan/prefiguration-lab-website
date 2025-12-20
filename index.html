@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -38,7 +38,6 @@
   </head>
   <body>
     <a class="skip-link" href="#home">Skip to main content</a>
-
     <!-- Header & Navigation -->
     <header class="site-header">
       <div class="container header-inner">
@@ -62,7 +61,7 @@
           aria-label="Toggle navigation"
           aria-expanded="false"
         >
-          <span aria-hidden="true">&#9776;</span>
+          <span aria-hidden="true">Menu</span>
         </button>
       </div>
     </header>
@@ -72,17 +71,10 @@
       <section id="home" class="section hero">
         <div class="container hero-inner">
           <div class="hero-text">
-            <p class="eyebrow" id="hero-eyebrow">Research Collective</p>
             <h1 id="hero-title">Prefiguration Lab</h1>
-            <p class="tagline" id="hero-tagline">
-              A research collective exploring how organizations can prefigure
-              more sustainable, just futures.
-            </p>
-            <p id="hero-body">
-              We study practices, technologies, and forms of organizing that
-              anticipate the world we want to build.
-            </p>
-            <a href="#projects" class="button" id="hero-cta">View Our Projects</a>
+            <p class="tagline" id="hero-tagline"></p>
+            <p id="hero-body"></p>
+            <a href="#projects" class="button" id="hero-cta"></a>
           </div>
 
           <div class="hero-card">
@@ -97,10 +89,7 @@
         <div class="container">
           <div class="section-heading">
             <h2>Projects</h2>
-            <p id="projects-copy">
-              Our research projects explore how organizational practices shape
-              possible futures.
-            </p>
+            <p id="projects-copy"></p>
           </div>
 
           <div class="grid projects-grid" id="projects-grid"></div>
@@ -112,30 +101,27 @@
         <div class="container">
           <div class="section-heading">
             <h2>Our Team</h2>
-            <p id="team-copy">
-              The Prefiguration Lab brings together a professor and student
-              researchers.
-            </p>
+            <p id="team-copy"></p>
           </div>
 
-          <div class="grid team-grid" id="team-grid"></div>
+          <div class="grid team-grid team-grid-people" id="team-grid"></div>
+          <div class="card team-detail-panel" id="team-detail-panel"></div>
         </div>
       </section>
+          
 
       <!-- PODCAST -->
       <section id="podcast" class="section">
         <div class="container">
           <div class="section-heading">
             <h2>Podcast</h2>
-            <p id="podcast-copy">
-              The Prefiguration Lab podcast hosts conversations about
-              organizations, power, and possible futures.
-            </p>
+            <p id="podcast-copy"></p>
           </div>
 
           <div class="podcast-layout">
             <div class="podcast-player card">
               <h3>Latest Episode</h3>
+              <!-- Replace the iframe src with your actual podcast embed (Spotify, Apple, etc.) -->
               <div class="embed-wrapper">
                 <iframe
                   id="podcast-embed"
@@ -147,10 +133,7 @@
                   title="Podcast player"
                 ></iframe>
               </div>
-              <p class="meta" id="podcast-meta">
-                If your podcast is hosted elsewhere, you can replace this embed
-                code or link to the external site.
-              </p>
+              <p class="meta" id="podcast-meta"></p>
             </div>
 
             <aside class="card podcast-links">
@@ -166,10 +149,7 @@
         <div class="container">
           <div class="section-heading">
             <h2>Resources</h2>
-            <p id="resources-copy">
-              Reports, working papers, syllabi, and other materials from the
-              Prefiguration Lab.
-            </p>
+            <p id="resources-copy"></p>
           </div>
 
           <ul class="resource-list" id="resource-list"></ul>
@@ -181,10 +161,7 @@
         <div class="container">
           <div class="section-heading">
             <h2>Contact</h2>
-            <p id="contact-copy">
-              To learn more about Prefiguration Lab or explore collaboration
-              opportunities, please get in touch.
-            </p>
+            <p id="contact-copy"></p>
           </div>
 
           <div class="card contact-card">
@@ -208,7 +185,7 @@
     <footer class="site-footer">
       <div class="container footer-inner">
         <p>
-          &copy; <span id="year"></span> Prefiguration Lab · University of Ottawa
+          &copy; <span id="year"></span> Prefiguration Lab - University of Ottawa
         </p>
         <p class="footer-small">
           Built by the Prefiguration Lab research team.
@@ -219,3 +196,4 @@
     <script src="script.js"></script>
   </body>
 </html>
+

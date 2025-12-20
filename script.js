@@ -1,11 +1,11 @@
-// Default site content for local fallback
 const defaultContent = {
   hero: {
-    eyebrow: "Research Collective",
     title: "Prefiguration Lab",
-    tagline: "A research collective exploring how organizations can prefigure more sustainable, just futures.",
-    body: "We study practices, technologies, and forms of organizing that anticipate the world we want to build.",
-    ctaLabel: "View Our Projects",
+    tagline:
+      "A research collective exploring how organizations can prefigure more sustainable, just futures.",
+    body:
+      "We study practices, technologies, and forms of organizing that anticipate the world we want to build - from AI and surveillance to sustainability and social justice.",
+    ctaLabel: "View our projects",
     ctaHref: "#projects",
     focus: [
       "Clearview AI and surveillance capitalism",
@@ -13,58 +13,85 @@ const defaultContent = {
       "Emerging projects and collaborations",
     ],
   },
-  projectsCopy: "Our research projects explore how organizational practices shape possible futures.",
+  projectsCopy:
+    "Our research projects explore how organizational practices shape possible futures.",
   projects: [
     {
       title: "Clearview AI & Surveillance",
       blurb:
-        "We examine the implications of facial recognition technologies in everyday organizational contexts, focusing on power, consent, and accountability.",
-      lead: "Prof. Name",
+        "This project examines the implications of facial recognition technologies in everyday organizational contexts, focusing on power, consent, and accountability.",
+      lead: "Prof. [Name]",
       status: "In progress",
-      pdf: "#",
-      pdfLabel: "Project overview (coming soon)",
+      pdf: "docs/clearview-ai-project.pdf",
+      pdfLabel: "Download project overview (PDF)",
     },
     {
       title: "Sustainability & Prefiguration",
       blurb:
         "We explore how organizations experiment with sustainable practices today to prefigure low-carbon, socially just futures.",
-      lead: "Student / Prof Name",
+      lead: "[Student / Prof Name]",
       status: "In progress",
-      pdf: "#",
-      pdfLabel: "Project overview (coming soon)",
+      pdf: "docs/sustainability-project.pdf",
+      pdfLabel: "Download project overview (PDF)",
     },
     {
-      title: "Future Project Title",
-      blurb: "Short description of a future or third project goes here.",
-      lead: "Name",
+      title: "[Future Project Title]",
+      blurb:
+        "Short description of a future or third project goes here. You can update this text once the project details are confirmed.",
+      lead: "[Name]",
       status: "Planned",
       pdf: "",
       pdfLabel: "",
     },
   ],
-  teamCopy: "The Prefiguration Lab brings together a professor and student researchers.",
+  teamCopy:
+    "A small research collective led by Prof. Mathieu Bouchard, with student researchers exploring activism, technology, and sustainable futures.",
   team: [
     {
-      name: "Prof. Name",
+      id: "mathieu",
+      name: "Prof. Mathieu Bouchard",
       role: "Principal Investigator",
-      bio: "Research interests, department at the University of Ottawa, and focus within the Prefiguration Lab.",
+      bio:
+        "Mathieu Bouchard is an assistant professor of strategy and organization at the University of Ottawa's Telfer School of Management. He studies activism for sustainable policymaking out of a belief that if we want to create a better future, we need to act in the present.",
+      photo: "images/1725373874280.jpeg",
+      linkedin: "https://www.linkedin.com/in/mathieubcd/",
       email: "professor@example.com",
-      affiliation: "Department, University of Ottawa",
     },
     {
-      name: "Student Name 1",
-      role: "Graduate / Undergraduate Researcher",
-      bio: "Works on the Clearview AI project and supports data analysis and literature review.",
+      id: "adi",
+      name: "Adithiyan Rajan",
+      role: "Graduate Student",
+      bio:
+        "Adithiyan Rajan is a Computer Science graduate student who specializes in transforming cutting-edge AI and Machine Learning research into practical, high-impact solutions for areas such as cybersecurity and real-time detection.",
+      photo: "images/1736718621383.jpeg",
+      linkedin: "https://www.linkedin.com/in/adithiyanrajan/",
+      email: "student@example.com",
     },
     {
-      name: "Student Name 2",
-      role: "Research Assistant",
-      bio: "Focuses on sustainability and organizational change projects.",
+      id: "phuong",
+      name: "Phuong Tran",
+      role: "Student Researcher",
+      bio:
+        "Phuong Tran is a Business Technology Management student at the Telfer School of Management, exploring the intersection of emerging technologies, digital policy, and user-centric design in research and practice.",
+      photo: "images/profile.jpg",
+      linkedin: "https://www.linkedin.com/in/phuongtran0204/",
+      email: "student@example.com",
     },
     {
-      name: "Student Name 3",
-      role: "Research Assistant",
-      bio: "Supports qualitative interviews, archives, and project responsibilities.",
+      id: "camila",
+      name: "Camila Estrada",
+      role: "Student Researcher",
+      bio:
+        "Camila Estrada is an accounting student at the University of Ottawa involved in research on cycling activism, with an interest in how people are motivated to create change in their communities.",
+      photo: "images/1758660234229.png",
+      linkedin: "https://www.linkedin.com/in/camila-estrada-523s/",
+      email: "student@example.com",
+    },
+    {
+      id: "hamza",
+      name: "Hamza",
+      role: "Student Researcher",
+      bio: "Bio coming soon.",
     },
   ],
   podcastCopy:
@@ -78,12 +105,22 @@ const defaultContent = {
         label: "Example: Talking About Organizations",
         href: "https://www.talkingaboutorganizations.com/",
       },
-      { label: "Prefiguration Lab on Spotify (coming soon)", href: "#" },
-      { label: "Prefiguration Lab on Apple Podcasts (coming soon)", href: "#" },
-      { label: "RSS feed (coming soon)", href: "#" },
+      {
+        label: "Prefiguration Lab on Spotify (coming soon)",
+        href: "#",
+      },
+      {
+        label: "Prefiguration Lab on Apple Podcasts (coming soon)",
+        href: "#",
+      },
+      {
+        label: "RSS feed (coming soon)",
+        href: "#",
+      },
     ],
   },
-  resourcesCopy: "Reports, working papers, syllabi, and other materials from the Prefiguration Lab.",
+  resourcesCopy:
+    "Reports, working papers, syllabi, and other materials from the Prefiguration Lab.",
   resources: [
     {
       title: "Lab Overview",
@@ -116,7 +153,14 @@ async function loadContent() {
       throw new Error("Content file not found");
     }
     const content = await response.json();
-    renderContent({ ...defaultContent, ...content });
+    const merged = {
+      ...defaultContent,
+      ...content,
+      hero: { ...defaultContent.hero, ...content.hero },
+      podcast: { ...defaultContent.podcast, ...content.podcast },
+      contact: { ...defaultContent.contact, ...content.contact },
+    };
+    renderContent(merged);
   } catch (error) {
     console.warn("Using default content because content.json could not be loaded.", error);
     renderContent(defaultContent);
@@ -124,8 +168,7 @@ async function loadContent() {
 }
 
 function renderContent(content) {
-  const hero = content.hero;
-  setText("hero-eyebrow", hero.eyebrow);
+  const hero = content.hero || defaultContent.hero;
   setText("hero-title", hero.title);
   setText("hero-tagline", hero.tagline);
   setText("hero-body", hero.body);
@@ -159,7 +202,7 @@ function setText(id, value) {
 function setLink(id, href, label) {
   const el = document.getElementById(id);
   if (el) {
-    el.textContent = label;
+    el.textContent = label || "";
     el.setAttribute("href", href || "#");
   }
 }
@@ -184,10 +227,10 @@ function renderProjects(projects = []) {
     article.className = "card project-card";
 
     const title = document.createElement("h3");
-    title.textContent = project.title;
+    title.textContent = project.title || "";
 
     const blurb = document.createElement("p");
-    blurb.textContent = project.blurb;
+    blurb.textContent = project.blurb || "";
 
     const meta = document.createElement("p");
     meta.className = "meta";
@@ -218,51 +261,159 @@ function renderProjects(projects = []) {
 
 function renderTeam(team = []) {
   const grid = document.getElementById("team-grid");
-  if (!grid) return;
+  const panel = document.getElementById("team-detail-panel");
+  if (!grid || !panel) return;
   grid.innerHTML = "";
-  team.forEach((member) => {
+  panel.innerHTML = "";
+
+  const members = team.map((member, index) => ({
+    ...member,
+    id: member.id || slugify(member.name || `member-${index + 1}`),
+  }));
+
+  members.forEach((member, index) => {
     const card = document.createElement("article");
-    card.className = "card team-card";
+    card.className = "card team-person-card";
+    if (index === 0) card.classList.add("active");
+    card.setAttribute("data-person", member.id);
+
+    const inner = document.createElement("div");
+    inner.className = "team-person-inner";
+
+    const photoBox = document.createElement("div");
+    photoBox.className = "team-person-photo-box";
+    if (member.photo) {
+      const img = document.createElement("img");
+      img.src = member.photo;
+      img.alt = `Portrait of ${member.name || "team member"}`;
+      photoBox.appendChild(img);
+    } else {
+      photoBox.classList.add("team-person-photo-placeholder");
+      const span = document.createElement("span");
+      span.textContent = (member.name || "T").trim().charAt(0).toUpperCase();
+      photoBox.appendChild(span);
+    }
+
+    const text = document.createElement("div");
+    text.className = "team-person-text";
 
     const name = document.createElement("h3");
-    name.textContent = member.name;
+    name.textContent = member.name || "";
 
     const role = document.createElement("p");
     role.className = "role";
     role.textContent = member.role || "";
 
-    const bio = document.createElement("p");
-    bio.textContent = member.bio || "";
+    text.appendChild(name);
+    text.appendChild(role);
+    inner.appendChild(photoBox);
+    inner.appendChild(text);
+    card.appendChild(inner);
+    grid.appendChild(card);
 
-    card.appendChild(name);
-    card.appendChild(role);
-    card.appendChild(bio);
-
-    if (member.email || member.affiliation) {
-      const meta = document.createElement("p");
-      meta.className = "meta";
-      meta.innerHTML = [
-        member.email ? `<a href="mailto:${member.email}" class="link">${member.email}</a>` : "",
-        member.affiliation || "",
-      ]
-        .filter(Boolean)
-        .join("<br />");
-      card.appendChild(meta);
+    const detail = document.createElement("div");
+    detail.className = "team-detail";
+    detail.setAttribute("data-person", member.id);
+    if (index !== 0) {
+      detail.hidden = true;
     }
 
-    grid.appendChild(card);
+    const detailMain = document.createElement("div");
+    detailMain.className = "team-detail-main";
+
+    const detailPhoto = document.createElement("div");
+    detailPhoto.className = "team-detail-photo";
+    if (member.photo) {
+      const img = document.createElement("img");
+      img.src = member.photo;
+      img.alt = `Portrait of ${member.name || "team member"}`;
+      detailPhoto.appendChild(img);
+    } else {
+      const placeholder = document.createElement("div");
+      placeholder.className = "team-person-photo-placeholder";
+      const span = document.createElement("span");
+      span.textContent = (member.name || "T").trim().charAt(0).toUpperCase();
+      placeholder.appendChild(span);
+      detailPhoto.appendChild(placeholder);
+    }
+
+    const detailText = document.createElement("div");
+    detailText.className = "team-detail-text";
+
+    const detailName = document.createElement("h3");
+    detailName.textContent = member.name || "";
+
+    const detailBio = document.createElement("p");
+    detailBio.textContent = member.bio || "";
+
+    detailText.appendChild(detailName);
+    detailText.appendChild(detailBio);
+    detailMain.appendChild(detailPhoto);
+    detailMain.appendChild(detailText);
+    detail.appendChild(detailMain);
+
+    const actions = document.createElement("div");
+    actions.className = "team-detail-actions";
+
+    if (member.linkedin) {
+      const link = document.createElement("a");
+      link.className = "team-icon-btn linkedin";
+      link.href = member.linkedin;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.setAttribute("aria-label", `Connect with ${member.name} on LinkedIn`);
+      link.textContent = "in";
+      actions.appendChild(link);
+    }
+
+    if (member.email) {
+      const mail = document.createElement("a");
+      mail.className = "team-icon-btn email";
+      mail.href = `mailto:${member.email}`;
+      mail.setAttribute("aria-label", `Email ${member.name}`);
+      mail.textContent = "@";
+      actions.appendChild(mail);
+    }
+
+    detail.appendChild(actions);
+    panel.appendChild(detail);
+  });
+
+  setupTeamInteractions();
+}
+
+function setupTeamInteractions() {
+  const personCards = document.querySelectorAll(".team-person-card");
+  const detailBlocks = document.querySelectorAll(".team-detail");
+
+  if (!personCards.length || !detailBlocks.length) return;
+
+  personCards.forEach((card) => {
+    card.addEventListener("click", () => {
+      const id = card.getAttribute("data-person");
+      if (!id) return;
+
+      personCards.forEach((item) => item.classList.remove("active"));
+      card.classList.add("active");
+
+      detailBlocks.forEach((block) => {
+        block.hidden = block.getAttribute("data-person") !== id;
+      });
+    });
   });
 }
 
 function setPodcast(podcast) {
   const iframe = document.getElementById("podcast-embed");
   if (iframe) {
-    iframe.src = podcast?.embed || defaultContent.podcast.embed;
+    const embed = podcast && podcast.embed ? podcast.embed : defaultContent.podcast.embed;
+    iframe.src = embed;
   }
   const list = document.getElementById("podcast-links");
   if (!list) return;
   list.innerHTML = "";
-  (podcast?.links || []).forEach((linkItem) => {
+  const links = podcast && Array.isArray(podcast.links) ? podcast.links : [];
+  links.forEach((linkItem) => {
     const li = document.createElement("li");
     if (linkItem.href && !isPlaceholder(linkItem.href)) {
       const link = document.createElement("a");
@@ -288,7 +439,7 @@ function renderResources(resources = []) {
   resources.forEach((resource) => {
     const li = document.createElement("li");
     const title = document.createElement("strong");
-    title.textContent = resource.title;
+    title.textContent = resource.title || "";
 
     li.appendChild(title);
 
@@ -313,12 +464,12 @@ function renderResources(resources = []) {
 
 function setContact(contact) {
   const emailEl = document.getElementById("contact-email");
-  if (emailEl && contact?.email) {
+  if (emailEl && contact && contact.email) {
     emailEl.href = `mailto:${contact.email}`;
     emailEl.textContent = contact.email;
   }
   const institutionEl = document.getElementById("contact-institution");
-  if (institutionEl && contact?.institution) {
+  if (institutionEl && contact && contact.institution) {
     institutionEl.innerHTML = `<strong>Institution:</strong><br />${contact.institution.replace(/\n/g, "<br />")}`;
   }
 }
@@ -361,8 +512,22 @@ function isPlaceholder(href) {
   return !href || href === "#" || href.toLowerCase() === "coming-soon";
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+function slugify(value) {
+  return String(value || "")
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+function initPage() {
   setupNavToggle();
   setCurrentYear();
   loadContent();
-});
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initPage);
+} else {
+  initPage();
+}
