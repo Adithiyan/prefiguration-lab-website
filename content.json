@@ -78,14 +78,14 @@
     },
     {
       "id": "hamza",
-      "name": "Hamza",
+      "name": "Hamza Tawdi",
       "role": "Student Researcher",
       "bio": "Hamza Tawdi is a graduate of the Telfer School of Management with a Bachelor of Commerce degree. His work focuses on analysis, synthesis, and writing, with an emphasis on making information accessible. He is actively involved in community and environmental initiatives.",
       "linkedin":"https://www.linkedin.com/in/hamza-tawdi-a6aa5925b/",
       "email": "htawd008@uottawa.ca"
     }
   ],
-  "podcastCopy": "The Living Without a Car podcast hosts conversations about activism for active and collective urban transportation.",
+  "podcastCopy": "The Vivre sans voiture / Living Without a Car podcast hosts conversations about activism for healthy and sustainable urban transportation.",
   "podcastMeta": "If your podcast is hosted elsewhere, you can replace this embed code or link to the external site.",
   "podcast": {
     "embed": "https://open.spotify.com/embed/show/PLACEHOLDER",
