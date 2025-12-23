@@ -6,10 +6,7 @@
     "ctaLabel": "View our projects",
     "ctaHref": "#projects",
     "focus": [
-      "Health",
-      "Education",
-      "Transportation",
-      "Technology"
+      "Not sure we need this box"
     ]
   },
   "projectsCopy": "Our research projects explore organizational processes and practices that open up pathways for desirable futures.",
