@@ -15,24 +15,16 @@
   "projectsCopy": "Our research projects explore how organizational practices shape possible futures.",
   "projects": [
     {
-      "title": "How activists rein in regulatory entrepreneurs: the case of Clearview AI",
-      "blurb": "This project examines how activists mobilize regulatory frameworks and public opinion to defend against the incursions of technology companies into citizens' digital rights.",
+      "title": "Liminal becomings: the professionalization project of peer support workers",
+      "blurb": "We examine how peer support workers are seeking to carve out a space for their practice within the professional sector of mental health care.",
       "lead": "Prof. [Name]",
       "status": "In progress",
       "pdf": "docs/clearview-ai-project.pdf",
       "pdfLabel": "Download project overview (PDF)"
     },
     {
-      "title": "Digital rights activism",
-      "blurb": "This project examines the implications of facial recognition technologies in everyday organizational contexts, focusing on power, consent, and accountability.",
-      "lead": "Prof. [Name]",
-      "status": "In progress",
-      "pdf": "docs/clearview-ai-project.pdf",
-      "pdfLabel": "Download project overview (PDF)"
-    }, 
-    {
-      "title": "Cycling activism",
-      "blurb": "We explore how organizations experiment with sustainable practices today to prefigure low-carbon, socially just futures.",
+      "title": "The shack: negotiating (dis)order in a center for homeschoolers",
+      "blurb": "We explore how board administrators, parents, and staff members influence an alternative pedagogal space operating outside of the formal school system.",
       "lead": "[Student / Prof Name]",
       "status": "In progress",
       "pdf": "docs/sustainability-project.pdf",
@@ -48,7 +40,7 @@
     },
     {
       "title": "How activists rein in regulatory entrepreneurs: the case of Clearview AI",
-      "blurb": "This project examines the implications of facial recognition technologies in everyday organizational contexts, focusing on power, consent, and accountability.",
+      "blurb": "We examine how activists mobilize regulatory frameworks and public opinion to defend against the incursions of technology companies into citizens' digital rights.",
       "lead": "Prof. [Name]",
       "status": "In progress",
       "pdf": "docs/clearview-ai-project.pdf",
