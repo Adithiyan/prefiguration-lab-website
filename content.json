@@ -15,13 +15,21 @@
   "projectsCopy": "Our research projects explore how organizational practices shape possible futures.",
   "projects": [
     {
+      "title": "How activists rein in regulatory entrepreneurs: the case of Clearview AI",
+      "blurb": "This project examines how activists mobilize regulatory frameworks and public opinion to defend against the incursions of technology companies into citizens' digital rights.",
+      "lead": "Prof. [Name]",
+      "status": "In progress",
+      "pdf": "docs/clearview-ai-project.pdf",
+      "pdfLabel": "Download project overview (PDF)"
+    },
+    {
       "title": "Digital rights activism",
       "blurb": "This project examines the implications of facial recognition technologies in everyday organizational contexts, focusing on power, consent, and accountability.",
       "lead": "Prof. [Name]",
       "status": "In progress",
       "pdf": "docs/clearview-ai-project.pdf",
       "pdfLabel": "Download project overview (PDF)"
-    },
+    }, 
     {
       "title": "Cycling activism",
       "blurb": "We explore how organizations experiment with sustainable practices today to prefigure low-carbon, socially just futures.",
@@ -37,6 +45,14 @@
       "status": "Planned",
       "pdf": "",
       "pdfLabel": ""
+    },
+    {
+      "title": "How activists rein in regulatory entrepreneurs: the case of Clearview AI",
+      "blurb": "This project examines the implications of facial recognition technologies in everyday organizational contexts, focusing on power, consent, and accountability.",
+      "lead": "Prof. [Name]",
+      "status": "In progress",
+      "pdf": "docs/clearview-ai-project.pdf",
+      "pdfLabel": "Download project overview (PDF)"
     }
   ],
   "teamCopy": "A research group led by Prof. Mathieu Bouchard, with student researchers exploring activism for desirable futures.",
