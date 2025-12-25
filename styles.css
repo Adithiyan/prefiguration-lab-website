@@ -482,7 +482,6 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.4rem;
   padding: 0.35rem 0.85rem;
   font-size: 0.85rem;
   font-weight: 600;
@@ -514,21 +513,6 @@ body {
   filter: brightness(1.05);
 }
 
-.team-icon-btn__icon {
-  display: inline-flex;
-  width: 18px;
-  height: 18px;
-}
-
-.team-icon-btn__icon svg {
-  width: 100%;
-  height: 100%;
-}
-
-.team-icon-btn__label {
-  font-size: 0.75rem;
-  letter-spacing: 0.02em;
-}
 
 /* Responsive adjustments */
 @media (max-width: 768px) {

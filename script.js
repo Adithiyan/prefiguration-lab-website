@@ -356,7 +356,7 @@ function renderTeam(team = []) {
           member.linkedin,
           "linkedin",
           `Connect with ${member.name} on LinkedIn`,
-          "in"
+          "LinkedIn"
         )
       );
     }
@@ -367,8 +367,7 @@ function renderTeam(team = []) {
           member.scholar,
           "scholar",
           `View ${member.name}'s Google Scholar profile`,
-          "Google Scholar",
-          ICONS.scholar
+          "Google Scholar"
         )
       );
     }
@@ -379,8 +378,7 @@ function renderTeam(team = []) {
           member.website,
           "website",
           `Visit ${member.name}'s profile page`,
-          "UOttawa profile",
-          ICONS.website
+          "UOttawa profile"
         )
       );
     }
@@ -391,7 +389,7 @@ function renderTeam(team = []) {
           `mailto:${member.email}`,
           "email",
           `Email ${member.name}`,
-          "@",
+          "Email",
           { newTab: false }
         )
       );
@@ -530,23 +528,12 @@ function setCurrentYear() {
   }
 }
 
-function createIconButton(href, className, ariaLabel, label, icon, options = {}) {
+function createIconButton(href, className, ariaLabel, label, options = {}) {
   const button = document.createElement("a");
   button.className = `team-icon-btn ${className}`;
   button.href = href;
   button.setAttribute("aria-label", ariaLabel);
-
-  if (icon) {
-    const iconWrapper = document.createElement("span");
-    iconWrapper.className = "team-icon-btn__icon";
-    iconWrapper.innerHTML = icon;
-    button.appendChild(iconWrapper);
-  }
-
-  const labelSpan = document.createElement("span");
-  labelSpan.className = "team-icon-btn__label";
-  labelSpan.textContent = label;
-  button.appendChild(labelSpan);
+  button.textContent = label;
 
   if (options.newTab !== false) {
     button.target = "_blank";
@@ -554,11 +541,6 @@ function createIconButton(href, className, ariaLabel, label, icon, options = {})
   }
   return button;
 }
-
-const ICONS = {
-  scholar: `<svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M6 4v16l7-3 7 3V4l-7 3z"/></svg>`,
-  website: `<svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M12 4a8 8 0 1 0 8 8 8 8 0 0 0-8-8zm0 2a6.006 6.006 0 0 1 5.774 4H16a13.07 13.07 0 0 0-.586-2.102A6.004 6.004 0 0 1 12 6zm-4.228 2H8.226A13.05 13.05 0 0 0 8 10H5.228A5.99 5.99 0 0 1 7.772 8zm-2.544 4H8a13.09 13.09 0 0 0-.11 2h-3.1a5.985 5.985 0 0 1 1.226-2zm4.972 6.002A6.003 6.003 0 0 1 6 16h3.952a11.97 11.97 0 0 0 .196 1.002zm.776 0H12a13.07 13.07 0 0 0 .586-2.102A6.004 6.004 0 0 1 12 18zm3.228-2H16a13.09 13.09 0 0 0 .11 2h3.1a5.985 5.985 0 0 1-1.226-2zm.572-4H16a13.09 13.09 0 0 0 .11-2h3.1a5.99 5.99 0 0 1-1.226 2z"/></svg>`,
-};
 
 function isPlaceholder(href) {
   return !href || href === "#" || href.toLowerCase() === "coming-soon";
