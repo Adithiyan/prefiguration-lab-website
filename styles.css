@@ -279,6 +279,21 @@ body {
   margin-top: 0.6rem;
 }
 
+.contact-card--stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-card__helper {
+  color: #475569;
+  margin: 0;
+}
+
+.contact-button {
+  align-self: flex-start;
+}
+
 /* Footer */
 .site-footer {
   background-color: #111111;
@@ -463,12 +478,12 @@ body {
 }
 
 .team-icon-btn {
-  width: 32px;
-  height: 32px;
   border-radius: 999px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.85rem;
   font-size: 0.85rem;
   font-weight: 600;
   text-decoration: none;
@@ -480,6 +495,16 @@ body {
   color: #ffffff;
 }
 
+.team-icon-btn.scholar {
+  background-color: #4285f4;
+  color: #ffffff;
+}
+
+.team-icon-btn.website {
+  background-color: #222244;
+  color: #ffffff;
+}
+
 .team-icon-btn.email {
   background-color: #555555;
   color: #ffffff;
@@ -487,6 +512,22 @@ body {
 
 .team-icon-btn:hover {
   filter: brightness(1.05);
+}
+
+.team-icon-btn__icon {
+  display: inline-flex;
+  width: 18px;
+  height: 18px;
+}
+
+.team-icon-btn__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.team-icon-btn__label {
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
 }
 
 /* Responsive adjustments */

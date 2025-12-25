@@ -37,7 +37,6 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <a class="skip-link" href="#home">Skip to main content</a>
     <!-- Header & Navigation -->
     <header class="site-header">
       <div class="container header-inner">
@@ -164,18 +163,16 @@
             <p id="contact-copy"></p>
           </div>
 
-          <div class="card contact-card">
-            <p>
-              <strong>Email:</strong>
-              <a href="mailto:professor@example.com" class="link" id="contact-email">
-                professor@example.com
-              </a>
-            </p>
+          <div class="card contact-card contact-card--stack">
             <p id="contact-institution">
               <strong>Institution:</strong><br />
               Department Name<br />
               University of Ottawa, Ottawa, ON, Canada
             </p>
+            <p class="contact-card__helper">
+              Have a question about the lab, want to collaborate, or provide feedback?
+            </p>
+            <a class="button contact-button" id="contact-button">Email the lab</a>
           </div>
         </div>
       </section>

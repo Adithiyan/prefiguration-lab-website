@@ -232,13 +232,8 @@ function renderProjects(projects = []) {
     const blurb = document.createElement("p");
     blurb.textContent = project.blurb || "";
 
-    const meta = document.createElement("p");
-    meta.className = "meta";
-    meta.innerHTML = `<strong>Project lead:</strong> ${project.lead || "TBD"}<br /><strong>Status:</strong> ${project.status || "In progress"}`;
-
     article.appendChild(title);
     article.appendChild(blurb);
-    article.appendChild(meta);
 
     if (project.pdf && !isPlaceholder(project.pdf)) {
       const link = document.createElement("a");
@@ -356,23 +351,50 @@ function renderTeam(team = []) {
     actions.className = "team-detail-actions";
 
     if (member.linkedin) {
-      const link = document.createElement("a");
-      link.className = "team-icon-btn linkedin";
-      link.href = member.linkedin;
-      link.target = "_blank";
-      link.rel = "noopener noreferrer";
-      link.setAttribute("aria-label", `Connect with ${member.name} on LinkedIn`);
-      link.textContent = "in";
-      actions.appendChild(link);
+      actions.appendChild(
+        createIconButton(
+          member.linkedin,
+          "linkedin",
+          `Connect with ${member.name} on LinkedIn`,
+          "in"
+        )
+      );
+    }
+
+    if (member.scholar) {
+      actions.appendChild(
+        createIconButton(
+          member.scholar,
+          "scholar",
+          `View ${member.name}'s Google Scholar profile`,
+          "Google Scholar",
+          ICONS.scholar
+        )
+      );
+    }
+
+    if (member.website) {
+      actions.appendChild(
+        createIconButton(
+          member.website,
+          "website",
+          `Visit ${member.name}'s profile page`,
+          "UOttawa profile",
+          ICONS.website
+        )
+      );
     }
 
     if (member.email) {
-      const mail = document.createElement("a");
-      mail.className = "team-icon-btn email";
-      mail.href = `mailto:${member.email}`;
-      mail.setAttribute("aria-label", `Email ${member.name}`);
-      mail.textContent = "@";
-      actions.appendChild(mail);
+      actions.appendChild(
+        createIconButton(
+          `mailto:${member.email}`,
+          "email",
+          `Email ${member.name}`,
+          "@",
+          { newTab: false }
+        )
+      );
     }
 
     detail.appendChild(actions);
@@ -463,10 +485,10 @@ function renderResources(resources = []) {
 }
 
 function setContact(contact) {
-  const emailEl = document.getElementById("contact-email");
-  if (emailEl && contact && contact.email) {
-    emailEl.href = `mailto:${contact.email}`;
-    emailEl.textContent = contact.email;
+  const button = document.getElementById("contact-button");
+  if (button && contact && contact.email) {
+    button.href = `mailto:${contact.email}`;
+    button.textContent = contact.buttonLabel || "Email the lab";
   }
   const institutionEl = document.getElementById("contact-institution");
   if (institutionEl && contact && contact.institution) {
@@ -507,6 +529,27 @@ function setCurrentYear() {
     yearSpan.textContent = new Date().getFullYear();
   }
 }
+
+function createIconButton(href, className, ariaLabel, label, icon, options = {}) {
+  const button = document.createElement("a");
+  button.className = `team-icon-btn ${className}`;
+  button.href = href;
+  button.setAttribute("aria-label", ariaLabel);
+  const iconMarkup = icon
+    ? `<span class="team-icon-btn__icon" aria-hidden="true">${icon}</span>`
+    : "";
+  button.innerHTML = `${iconMarkup}<span class="team-icon-btn__label">${label}</span>`;
+  if (options.newTab !== false) {
+    button.target = "_blank";
+    button.rel = "noopener noreferrer";
+  }
+  return button;
+}
+
+const ICONS = {
+  scholar: `<svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M6 4v16l7-3 7 3V4l-7 3z"/></svg>`,
+  website: `<svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M12 4a8 8 0 1 0 8 8 8 8 0 0 0-8-8zm0 2a6.006 6.006 0 0 1 5.774 4H16a13.07 13.07 0 0 0-.586-2.102A6.004 6.004 0 0 1 12 6zm-4.228 2H8.226A13.05 13.05 0 0 0 8 10H5.228A5.99 5.99 0 0 1 7.772 8zm-2.544 4H8a13.09 13.09 0 0 0-.11 2h-3.1a5.985 5.985 0 0 1 1.226-2zm4.972 6.002A6.003 6.003 0 0 1 6 16h3.952a11.97 11.97 0 0 0 .196 1.002zm.776 0H12a13.07 13.07 0 0 0 .586-2.102A6.004 6.004 0 0 1 12 18zm3.228-2H16a13.09 13.09 0 0 0 .11 2h3.1a5.985 5.985 0 0 1-1.226-2zm.572-4H16a13.09 13.09 0 0 0 .11-2h3.1a5.99 5.99 0 0 1-1.226 2z"/></svg>`,
+};
 
 function isPlaceholder(href) {
   return !href || href === "#" || href.toLowerCase() === "coming-soon";

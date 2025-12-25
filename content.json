@@ -33,7 +33,7 @@
       "lead": "[Name]",
       "status": "In progress",
       "pdf": "docs/pedagogy-project.pdf",
-      "pdfLabel": "https://telfer.uottawa.ca/en/telfer-knowledge-hub/greener/prefiguring-pedagogies-when-imagination-becomes-a-collective-practice/"
+      "pdfLabel": "Telfer Knowledge Hub: Prefiguring pedagogies"
     },
     {
       "title": "Cycling activism: unveiling the dynamics of bottom-up change for sustainable cities",
@@ -41,7 +41,7 @@
       "lead": "[Name]",
       "status": "In progress",
       "pdf": "docs/cycling-project.pdf",
-      "pdfLabel": "https://telfer.uottawa.ca/en/telfer-knowledge-hub/research-news/alternative-entrepreneurial-ecosystems-the-case-of-cycling-activism-in-ottawa/"
+      "pdfLabel": "Telfer Knowledge Hub: Alternative entrepreneurial ecosystems for cycling activism"
     },
     {
       "title": "How digital rights activists rein in regulatory entrepreneurs: the case of Clearview AI",
@@ -61,6 +61,8 @@
       "bio": "Mathieu Bouchard is an assistant professor of strategy and organization at the University of Ottawa's Telfer School of Management. He studies activism for desirable futures to create a better world in the present.",
       "photo": "images/1725373874280.jpeg",
       "linkedin": "https://www.linkedin.com/in/mathieubcd/",
+      "scholar": "https://scholar.google.com/citations?user=5KMSWeIAAAAJ&hl=en",
+      "website": "https://telfer.uottawa.ca/en/directory/mathieu-bouchard/",
       "email": "mbourcha@uottawa.ca"
     },
     {
@@ -94,13 +96,13 @@
       "id": "hamza",
       "name": "Hamza Tawdi",
       "role": "Student Researcher",
-      "bio": "Hamza Tawdi is a graduate of the Telfer School of Management with a Bachelor of Commerce degree. His work focuses on analysis, synthesis, and writing, with an emphasis on making information accessible. He is actively involved in community and environmental initiatives.",
+      "bio": "Hamza Tawdi is a graduate of the Telfer School of Management with a Bachelor of Commerce degree. His work focuses on analysis, synthesis, and writing, with an emphasis on making information accessible.",
       "linkedin":"https://www.linkedin.com/in/hamza-tawdi-a6aa5925b/",
       "email": "htawd008@uottawa.ca"
     }
   ],
   "podcastCopy": "The Vivre sans voiture / Living Without a Car podcast hosts conversations about activism for healthy and sustainable urban transportation.",
-  "podcastMeta": "If your podcast is hosted elsewhere, you can replace this embed code or link to the external site.",
+  "podcastMeta": "Podcast embed placeholder – we will link to the audio once it is available.",
   "podcast": {
     "embed": "https://open.spotify.com/embed/show/PLACEHOLDER",
     "links": [
@@ -143,6 +145,7 @@
   "contactCopy": "To learn more about Prefiguration Lab or explore collaboration opportunities, please get in touch.",
   "contact": {
     "email": "mbourcha@uottawa.ca",
+    "buttonLabel": "Email Us",
     "institution": "Telfer School of Management\nUniversity of Ottawa, Ottawa, ON, Canada"
   }
 }
