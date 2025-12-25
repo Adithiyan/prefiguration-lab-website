@@ -535,10 +535,19 @@ function createIconButton(href, className, ariaLabel, label, icon, options = {})
   button.className = `team-icon-btn ${className}`;
   button.href = href;
   button.setAttribute("aria-label", ariaLabel);
-  const iconMarkup = icon
-    ? `<span class="team-icon-btn__icon" aria-hidden="true">${icon}</span>`
-    : "";
-  button.innerHTML = `${iconMarkup}<span class="team-icon-btn__label">${label}</span>`;
+
+  if (icon) {
+    const iconWrapper = document.createElement("span");
+    iconWrapper.className = "team-icon-btn__icon";
+    iconWrapper.innerHTML = icon;
+    button.appendChild(iconWrapper);
+  }
+
+  const labelSpan = document.createElement("span");
+  labelSpan.className = "team-icon-btn__label";
+  labelSpan.textContent = label;
+  button.appendChild(labelSpan);
+
   if (options.newTab !== false) {
     button.target = "_blank";
     button.rel = "noopener noreferrer";
