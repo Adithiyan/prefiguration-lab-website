@@ -94,8 +94,20 @@ const defaultContent = {
       bio: "Bio coming soon.",
     },
   ],
+  collaboratorsCopy: "Partners and peers we work with across projects and research initiatives.",
+  collaborators: [
+    { name: "Collaborator one", role: "Role placeholder", bio: "Bio coming soon." },
+    { name: "Collaborator two", role: "Role placeholder", bio: "Bio coming soon." },
+    { name: "Collaborator three", role: "Role placeholder", bio: "Bio coming soon." },
+    { name: "Collaborator four", role: "Role placeholder", bio: "Bio coming soon." },
+    { name: "Collaborator five", role: "Role placeholder", bio: "Bio coming soon." },
+    { name: "Collaborator six", role: "Role placeholder", bio: "Bio coming soon." },
+    { name: "Collaborator seven", role: "Role placeholder", bio: "Bio coming soon." },
+    { name: "Collaborator eight", role: "Role placeholder", bio: "Bio coming soon." },
+    { name: "Collaborator nine", role: "Role placeholder", bio: "Bio coming soon." },
+  ],
   podcastCopy:
-    "The Prefiguration Lab podcast hosts conversations about organizations, power, and possible futures.",
+    "The vivre sans voiture / living without a car podcast hosts conversations about activism for healthy and sustainable urban transportation.",
   podcastMeta:
     "If your podcast is hosted elsewhere, you can replace this embed code or link to the external site.",
   podcast: {
@@ -180,6 +192,9 @@ function renderContent(content) {
 
   setText("team-copy", content.teamCopy);
   renderTeam(content.team);
+
+  setText("collaborators-copy", content.collaboratorsCopy);
+  renderCollaborators(content.collaborators);
 
   setText("podcast-copy", content.podcastCopy);
   setText("podcast-meta", content.podcastMeta);
@@ -400,6 +415,55 @@ function renderTeam(team = []) {
   });
 
   setupTeamInteractions();
+}
+
+function renderCollaborators(collaborators = []) {
+  const grid = document.getElementById("collaborators-grid");
+  if (!grid) return;
+  grid.innerHTML = "";
+
+  collaborators.forEach((member) => {
+    const card = document.createElement("article");
+    card.className = "card team-person-card";
+
+    const inner = document.createElement("div");
+    inner.className = "team-person-inner";
+
+    const photoBox = document.createElement("div");
+    photoBox.className = "team-person-photo-box";
+    if (member.photo) {
+      const img = document.createElement("img");
+      img.src = member.photo;
+      img.alt = `Portrait of ${member.name || "collaborator"}`;
+      photoBox.appendChild(img);
+    } else {
+      photoBox.classList.add("team-person-photo-placeholder");
+      const span = document.createElement("span");
+      span.textContent = (member.name || "C").trim().charAt(0).toUpperCase();
+      photoBox.appendChild(span);
+    }
+
+    const text = document.createElement("div");
+    text.className = "team-person-text";
+
+    const name = document.createElement("h3");
+    name.textContent = member.name || "";
+
+    const role = document.createElement("p");
+    role.className = "role";
+    role.textContent = member.role || "";
+
+    const bio = document.createElement("p");
+    bio.textContent = member.bio || "";
+
+    text.appendChild(name);
+    text.appendChild(role);
+    text.appendChild(bio);
+    inner.appendChild(photoBox);
+    inner.appendChild(text);
+    card.appendChild(inner);
+    grid.appendChild(card);
+  });
 }
 
 function setupTeamInteractions() {
