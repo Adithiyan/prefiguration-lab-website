@@ -96,15 +96,15 @@ const defaultContent = {
   ],
   collaboratorsCopy: "Partners and peers we work with across projects and research initiatives.",
   collaborators: [
-    { name: "Collaborator one", role: "Role placeholder", bio: "Bio coming soon." },
-    { name: "Collaborator two", role: "Role placeholder", bio: "Bio coming soon." },
-    { name: "Collaborator three", role: "Role placeholder", bio: "Bio coming soon." },
-    { name: "Collaborator four", role: "Role placeholder", bio: "Bio coming soon." },
-    { name: "Collaborator five", role: "Role placeholder", bio: "Bio coming soon." },
-    { name: "Collaborator six", role: "Role placeholder", bio: "Bio coming soon." },
-    { name: "Collaborator seven", role: "Role placeholder", bio: "Bio coming soon." },
-    { name: "Collaborator eight", role: "Role placeholder", bio: "Bio coming soon." },
-    { name: "Collaborator nine", role: "Role placeholder", bio: "Bio coming soon." },
+    { id: "collab-1", name: "Collaborator one", role: "Role placeholder", bio: "Bio coming soon.", link: "#" },
+    { id: "collab-2", name: "Collaborator two", role: "Role placeholder", bio: "Bio coming soon.", link: "#" },
+    { id: "collab-3", name: "Collaborator three", role: "Role placeholder", bio: "Bio coming soon.", link: "#" },
+    { id: "collab-4", name: "Collaborator four", role: "Role placeholder", bio: "Bio coming soon.", link: "#" },
+    { id: "collab-5", name: "Collaborator five", role: "Role placeholder", bio: "Bio coming soon.", link: "#" },
+    { id: "collab-6", name: "Collaborator six", role: "Role placeholder", bio: "Bio coming soon.", link: "#" },
+    { id: "collab-7", name: "Collaborator seven", role: "Role placeholder", bio: "Bio coming soon.", link: "#" },
+    { id: "collab-8", name: "Collaborator eight", role: "Role placeholder", bio: "Bio coming soon.", link: "#" },
+    { id: "collab-9", name: "Collaborator nine", role: "Role placeholder", bio: "Bio coming soon.", link: "#" },
   ],
   podcastCopy:
     "The vivre sans voiture / living without a car podcast hosts conversations about activism for healthy and sustainable urban transportation.",
@@ -419,15 +419,24 @@ function renderTeam(team = []) {
 
 function renderCollaborators(collaborators = []) {
   const grid = document.getElementById("collaborators-grid");
-  if (!grid) return;
+  const panel = document.getElementById("collaborators-detail-panel");
+  if (!grid || !panel) return;
   grid.innerHTML = "";
+  panel.innerHTML = "";
 
   const items =
     collaborators && collaborators.length ? collaborators : defaultContent.collaborators;
 
-  items.forEach((member) => {
+  const members = items.map((member, index) => ({
+    ...member,
+    id: member.id || slugify(member.name || `collaborator-${index + 1}`),
+  }));
+
+  members.forEach((member, index) => {
     const card = document.createElement("article");
     card.className = "card team-person-card";
+    if (index === 0) card.classList.add("active");
+    card.setAttribute("data-person", member.id);
 
     const inner = document.createElement("div");
     inner.className = "team-person-inner";
@@ -456,16 +465,76 @@ function renderCollaborators(collaborators = []) {
     role.className = "role";
     role.textContent = member.role || "";
 
-    const bio = document.createElement("p");
-    bio.textContent = member.bio || "";
-
     text.appendChild(name);
     text.appendChild(role);
-    text.appendChild(bio);
     inner.appendChild(photoBox);
     inner.appendChild(text);
     card.appendChild(inner);
     grid.appendChild(card);
+
+    const detail = document.createElement("div");
+    detail.className = "team-detail";
+    detail.setAttribute("data-person", member.id);
+    if (index !== 0) {
+      detail.hidden = true;
+    }
+
+    const detailMain = document.createElement("div");
+    detailMain.className = "team-detail-main";
+
+    const detailText = document.createElement("div");
+    detailText.className = "team-detail-text";
+
+    const detailName = document.createElement("h3");
+    detailName.textContent = member.name || "";
+
+    const detailRole = document.createElement("p");
+    detailRole.className = "role";
+    detailRole.textContent = member.role || "";
+
+    const detailBio = document.createElement("p");
+    detailBio.textContent = member.bio || "Bio coming soon.";
+
+    detailText.appendChild(detailName);
+    detailText.appendChild(detailRole);
+    detailText.appendChild(detailBio);
+    detailMain.appendChild(detailText);
+    detail.appendChild(detailMain);
+
+    const actions = document.createElement("div");
+    actions.className = "team-detail-actions";
+
+    if (member.link && !isPlaceholder(member.link)) {
+      const link = document.createElement("a");
+      link.href = member.link;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.className = "team-icon-btn website";
+      link.textContent = "Visit profile";
+      actions.appendChild(link);
+    } else {
+      const badge = document.createElement("span");
+      badge.className = "badge badge-muted";
+      badge.textContent = "Link coming soon";
+      actions.appendChild(badge);
+    }
+
+    detail.appendChild(actions);
+    panel.appendChild(detail);
+  });
+
+  const cards = grid.querySelectorAll(".team-person-card");
+  const details = panel.querySelectorAll(".team-detail");
+  cards.forEach((card) => {
+    card.addEventListener("click", () => {
+      const id = card.getAttribute("data-person");
+      if (!id) return;
+      cards.forEach((c) => c.classList.remove("active"));
+      card.classList.add("active");
+      details.forEach((block) => {
+        block.hidden = block.getAttribute("data-person") !== id;
+      });
+    });
   });
 }
 
