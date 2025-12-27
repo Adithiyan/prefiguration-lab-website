@@ -378,7 +378,7 @@ function renderTeam(team = []) {
           member.website,
           "website",
           `Visit ${member.name}'s profile page`,
-          "UOttawa profile"
+          "uOttawa profile"
         )
       );
     }
