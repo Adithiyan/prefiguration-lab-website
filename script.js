@@ -422,7 +422,10 @@ function renderCollaborators(collaborators = []) {
   if (!grid) return;
   grid.innerHTML = "";
 
-  collaborators.forEach((member) => {
+  const items =
+    collaborators && collaborators.length ? collaborators : defaultContent.collaborators;
+
+  items.forEach((member) => {
     const card = document.createElement("article");
     card.className = "card team-person-card";
 
