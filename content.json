@@ -1,4 +1,4 @@
-{
+﻿{
   "hero": {
     "title": "Prefiguration Lab",
     "tagline": "Researching activism for desirable futures.",
@@ -26,13 +26,13 @@
     {
       "title": "Prefigurative pedagogy: reimagining the business school for sustainable futures",
       "blurb": "We experiment with new ways of learning together that harness utopian imagination to guide action in the present toward sustainable futures.",
-      "pdf": "https://telfer.uottawa.ca/en/latest/greener/prefiguring-pedagogies-when-imagination-becomes-a-collective-practice/",
+      "pdf": "https://telfer.uottawa.ca/en/telfer-knowledge-hub/greener/prefiguring-pedagogies-when-imagination-becomes-a-collective-practice/",
       "pdfLabel": "Telfer Knowledge Hub: Prefiguring pedagogies"
     },
     {
       "title": "Cycling activism: unveiling the dynamics of bottom-up change for sustainable cities",
       "blurb": "We investigate the formation of entrepreneurial ecosystems for social change to create urban communities where active transportation is the norm and car is the exception.",
-      "pdf": "https://telfer.uottawa.ca/en/latest/research-news/alternative-entrepreneurial-ecosystems-the-case-of-cycling-activism-in-ottawa/",
+      "pdf": "https://telfer.uottawa.ca/en/telfer-knowledge-hub/research-news/alternative-entrepreneurial-ecosystems-the-case-of-cycling-activism-in-ottawa/",
       "pdfLabel": "Telfer Knowledge Hub: Alternative entrepreneurial ecosystems for cycling activism"
     },
     {
@@ -91,7 +91,7 @@
       "email": "htawd008@uottawa.ca"
     }
   ],
-  "podcastCopy": "The vivre sans voiture / living without a car podcast hosts conversations about activism for healthy and sustainable urban transportation.",
+  "podcastCopy": "The Vivre Sans Voiture / Living Without a Car Podcast hosts conversations about activism for healthy and sustainable urban transportation.",
   "podcastMeta": "Podcast embed placeholder \u2013 we will link to the audio once it is available.",
   "podcast": {
     "embed": "https://open.spotify.com/embed/show/PLACEHOLDER",
