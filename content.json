@@ -141,49 +141,39 @@
   "collaboratorsCopy": "Partners and peers we work with across projects and research initiatives.",
   "collaborators": [
     {
-      "name": "Collaborator one",
-      "role": "Role placeholder",
+      "name": "Mayur Joshi",
+      "role": "Coauthor on digital rights activism project",
+      "bio": "Assistant professor of information systems at Telfer School of Management, University of Ottawa."
+    },
+    {
+      "name": "Samia Chreim",
+      "role": "Coauthor on homeschooling project",
+      "bio": "Full professor of organization studies at Telfer School of Management, University of Ottawa."
+    },
+    {
+      "name": "Ann Langley",
+      "role": "Coauthor on peer support work project",
       "bio": "Bio coming soon."
     },
     {
-      "name": "Collaborator two",
-      "role": "Role placeholder",
+      "name": "Siddhant Ritwick",
+      "role": "Coauthor on digital rights activism project",
       "bio": "Bio coming soon."
     },
     {
-      "name": "Collaborator three",
-      "role": "Role placeholder",
+      "name": "Yao Yao",
+      "role": "Lead author on HR analytics and AI adoption project",
       "bio": "Bio coming soon."
     },
     {
-      "name": "Collaborator four",
-      "role": "Role placeholder",
+      "name": "Luciano Barin Cruz",
+      "role": "Coauthor on peer support work project",
       "bio": "Bio coming soon."
     },
     {
-      "name": "Collaborator five",
-      "role": "Role placeholder",
+      "name": "Steve Maguire",
+      "role": "Coauthor on peer support work project",
       "bio": "Bio coming soon."
     },
-    {
-      "name": "Collaborator six",
-      "role": "Role placeholder",
-      "bio": "Bio coming soon."
-    },
-    {
-      "name": "Collaborator seven",
-      "role": "Role placeholder",
-      "bio": "Bio coming soon."
-    },
-    {
-      "name": "Collaborator eight",
-      "role": "Role placeholder",
-      "bio": "Bio coming soon."
-    },
-    {
-      "name": "Collaborator nine",
-      "role": "Role placeholder",
-      "bio": "Bio coming soon."
-    }
   ]
 }
