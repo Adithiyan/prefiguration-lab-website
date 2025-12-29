@@ -9,7 +9,7 @@
       "Not sure we need this box... perhaps some creative drawing or illustration that evokes the vibe of the lab and what we're trying to accomplish?"
     ]
   },
-  "projectsCopy": "Our research projects explore processes and practices that open pathways toward desirable futures.",
+  "projectsCopy": "Take a look at what keeps us busy right now.",
   "projects": [
     {
       "title": "Liminal becomings: the professionalization project of peer support workers",
@@ -42,7 +42,7 @@
       "pdfLabel": "Project overview"
     }
   ],
-  "teamCopy": "A research group led by Prof. Mathieu Bouchard and a group of student researchers exploring activism for desirable futures.",
+  "teamCopy": "A research group led by Prof. Mathieu Bouchard with an amazing group of student researchers.",
   "team": [
     {
       "id": "mathieu",
