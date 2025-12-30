@@ -32,12 +32,24 @@ async function checkHttpLink(href) {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 5000);
   try {
+    // Some hosts block HEAD; fall back to GET with a short timeout.
     const res = await fetch(href, { method: "HEAD", signal: controller.signal });
+    if (res.ok) return true;
+  } catch (_) {
+    // ignore and try GET below
+  } finally {
+    clearTimeout(timeout);
+  }
+
+  const controllerGet = new AbortController();
+  const timeoutGet = setTimeout(() => controllerGet.abort(), 5000);
+  try {
+    const res = await fetch(href, { method: "GET", signal: controllerGet.signal });
     return res.ok;
   } catch (error) {
     return false;
   } finally {
-    clearTimeout(timeout);
+    clearTimeout(timeoutGet);
   }
 }
 
