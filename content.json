@@ -1,4 +1,4 @@
-{
+﻿{
   "hero": {
     "title": "Prefiguration Lab",
     "tagline": "Researching activism for desirable futures.",
@@ -174,6 +174,6 @@
       "name": "Steve Maguire",
       "role": "Coauthor on peer support work project",
       "bio": "Bio coming soon."
-    },
+    }
   ]
 }
