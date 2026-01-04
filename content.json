@@ -1,8 +1,8 @@
 {
   "hero": {
     "title": "Prefiguration Lab",
-    "tagline": "Researching activism for desirable futures.",
-    "body": "We study the collective processes and practices of positive social change in the health, education, transportation, and technology sectors.",
+    "tagline": "Researching activism for sustainable policymaking.",
+    "body": "We study the collective processes and practices of social change for desirable futures in the health, education, transportation, and technology sectors.",
     "ctaLabel": "View our projects",
     "ctaHref": "#projects",
     "focus": [
@@ -141,39 +141,39 @@
   "collaboratorsCopy": "Partners and peers we work with across projects and research initiatives.",
   "collaborators": [
     {
-      "name": "Mayur Joshi",
-      "role": "Coauthor on digital rights activism project",
-      "bio": "Assistant professor of information systems at Telfer School of Management, University of Ottawa."
+      "name": "Luciano Barin Cruz",
+      "role": "Full professor of management at HEC Montréal",
+      "bio": "Coauthor on the peer support work project."
     },
     {
       "name": "Samia Chreim",
-      "role": "Coauthor on homeschooling project",
-      "bio": "Full professor of organization studies at Telfer School of Management, University of Ottawa."
+      "role": "Full professor of organization studies at Telfer School of Management, University of Ottawa.",
+      "bio": "Coauthor on the homeschooling project."
+    },
+    {
+      "name": "Mayur Joshi",
+      "role": "Assistant professor of information systems at Telfer School of Management, University of Ottawa.",
+      "bio": "Coauthor on the digital rights activism project."
     },
     {
       "name": "Ann Langley",
-      "role": "Coauthor on peer support work project",
-      "bio": "Bio coming soon."
-    },
-    {
-      "name": "Siddhant Ritwick",
-      "role": "Coauthor on digital rights activism project",
-      "bio": "Bio coming soon."
-    },
-    {
-      "name": "Yao Yao",
-      "role": "Lead author on HR analytics and AI adoption project",
-      "bio": "Bio coming soon."
-    },
-    {
-      "name": "Luciano Barin Cruz",
-      "role": "Coauthor on peer support work project",
-      "bio": "Bio coming soon."
+      "role": "Emerita professor of management at HEC Montréal and distinguished research environment professor at University of Warwick",
+      "bio": "Coauthor on the peer support work project."
     },
     {
       "name": "Steve Maguire",
-      "role": "Coauthor on peer support work project",
-      "bio": "Bio coming soon."
-    }
-  ]
+      "role": "Full professor of strategy, innovation & entrepreneurship at University of Sydney Business School",
+      "bio": "Coauthor on the peer support work project."
+    },
+    {
+      "name": "Siddhant Ritwick",
+      "role": "Postdoctoral fellow at University of Zurich",
+      "bio": "Coauthor on the digital rights activism project and lead author on the epistemic polarization project."
+    },
+    {
+      "name": "Yao Yao",
+      "role": "Assistant professor of human resources and management at the McMaster University's DeGroote School of Business.",
+      "bio": "Lead author on the HR analytics project."
+    }    
+    ]
 }
