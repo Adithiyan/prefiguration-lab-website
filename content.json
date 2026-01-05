@@ -18,10 +18,22 @@
       "pdfLabel": "Project overview"
     },
     {
+      "title": "Constructing spaces to share vulnerability at work",
+      "blurb": "Description to come.",
+      "pdf": "#",
+      "pdfLabel": "Coming soon"
+    },    
+    {
       "title": "Prefigurative pedagogy: reimagining the business school toward sustainable futures",
       "blurb": "We experiment with new ways of learning together that harness utopian imagination to guide action in the present toward sustainable futures.",
       "pdf": "https://telfer.uottawa.ca/en/telfer-knowledge-hub/greener/prefiguring-pedagogies-when-imagination-becomes-a-collective-practice/",
       "pdfLabel": "Project overview"
+    },
+    {
+      "title": "Negotiating (dis)order in a learning center for homeschoolers",
+      "blurb": "We explore how board administrators, parents, and staff educators influence an alternative pedagogal space operating outside of the formal school system.",
+      "pdf": "#",
+      "pdfLabel": "Coming soon"
     },
     {
       "title": "Cycling activism: unveiling the bottom-up dynamics of change toward sustainable transportation systems",
@@ -34,12 +46,6 @@
       "blurb": "We reveal how activists mobilize regulatory frameworks and public opinion to defend against the incursions of technology companies into citizens' digital rights.",
       "pdf": "docs/clearview-ai-project.pdf",
       "pdfLabel": "Project overview"
-    },
-    {
-      "title": "Negotiating (dis)order in a learning center for homeschoolers",
-      "blurb": "We explore how board administrators, parents, and staff educators influence an alternative pedagogal space operating outside of the formal school system.",
-      "pdf": "#",
-      "pdfLabel": "Coming soon"
     }
   ],
   "teamCopy": "An amazing group of student researchers led by Prof. Mathieu Bouchard.",
