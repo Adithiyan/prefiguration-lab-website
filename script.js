@@ -1,8 +1,16 @@
 const CATEGORY_ICONS = {
+  // Classic set; tech uses a crisp silicon chip
   health: `<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M10 4h4v6h6v4h-6v6h-4v-6H4v-4h6z"/></svg>`,
   education: `<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12 4 3 8l9 4 9-4-9-4zm-6 7v6.2L12 20l6-2.8V11l-6 2.7L6 11z"/></svg>`,
   transportation: `<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M7 6h10l2 6v6h-2a2 2 0 1 1-4 0H11a2 2 0 1 1-4 0H5v-6l2-6zm0 6h10l-1.2-4H8.2L7 12zm2 6a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm8 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/></svg>`,
-  technology: `<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M9 3h6v4h4v6h-4v4H9v-4H5V7h4V3zm2 6v6h2V9h-2z"/></svg>`,
+  technology: `<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M9 4h6a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm2 4v8h2V8h-2Z"/><path fill="currentColor" d="M11 2h2v2h-2zM11 20h2v2h-2zM4 9h2v2H4zM18 9h2v2h-2zM4 13h2v2H4zM18 13h2v2h-2z"/></svg>`,
+};
+
+const CATEGORY_LABELS = {
+  health: "Health",
+  education: "Education",
+  transportation: "Transportation",
+  technology: "Technology",
 };
 
 const defaultContent = {
@@ -203,8 +211,10 @@ function renderContent(content) {
   setLink("hero-cta", hero.ctaHref, hero.ctaLabel);
   renderThemes(hero.themes);
 
+  const peopleIndex = buildPeopleIndex(content.team, content.collaborators);
+
   setText("projects-copy", content.projectsCopy);
-  renderProjects(content.projects);
+  renderProjects(content.projects, peopleIndex);
 
   setText("team-copy", content.teamCopy);
   renderTeam(content.team);
@@ -273,26 +283,70 @@ function renderThemes(themes = []) {
   });
 }
 
-function renderProjects(projects = []) {
+function buildPeopleIndex(team = [], collaborators = []) {
+  const index = {};
+  const add = (person, group) => {
+    if (!person) return;
+    const slug = slugify(person.id || person.name || "");
+    const keys = [person.id, person.name, slug].filter(Boolean);
+    keys.forEach((k) => {
+      index[String(k).toLowerCase()] = { ...person, group };
+    });
+  };
+  team.forEach((p) => add(p, "team"));
+  collaborators.forEach((p) => add(p, "collaborator"));
+  return index;
+}
+
+function findPerson(ref, peopleIndex) {
+  if (!ref) return null;
+  const key =
+    typeof ref === "string"
+      ? ref.toLowerCase()
+      : String(ref.id || ref.name || "").toLowerCase();
+  return peopleIndex[key] || null;
+}
+
+function renderProjects(projects = [], peopleIndex = {}) {
   const grid = document.getElementById("projects-grid");
   if (!grid) return;
   grid.innerHTML = "";
   projects.forEach((project) => {
-    const article = document.createElement("article");
-    article.className = "card project-card";
+    const hasPdf = project.pdf && !isPlaceholder(project.pdf);
+    const cardTag = hasPdf ? "a" : "article";
+    const card = document.createElement(cardTag);
+    card.className = "card project-card";
     if (project.category) {
-      article.classList.add(`project-card--${project.category}`);
+      card.classList.add(`project-card--${project.category}`);
+    }
+    if (hasPdf) {
+      card.href = project.pdf;
+      card.target = "_blank";
+      card.rel = "noopener noreferrer";
     }
 
-    const titleRow = document.createElement("div");
-    titleRow.className = "project-title-row";
+    const head = document.createElement("div");
+    head.className = "project-head";
 
-    const categoryIcon = document.createElement("span");
-    categoryIcon.className = `project-category-icon project-category-icon--${project.category || "default"}`;
-    categoryIcon.innerHTML = CATEGORY_ICONS[project.category] || "";
+    if (project.category) {
+      const pill = document.createElement("span");
+      pill.className = "project-category-pill";
+
+      const iconWrap = document.createElement("span");
+      iconWrap.innerHTML = CATEGORY_ICONS[project.category] || "";
+      pill.appendChild(iconWrap);
+
+      const label = document.createElement("span");
+      label.textContent =
+        CATEGORY_LABELS[project.category] || project.category || "Project";
+      pill.appendChild(label);
+
+      head.appendChild(pill);
+    }
 
     const title = document.createElement("h3");
     title.textContent = project.title || "";
+    head.appendChild(title);
 
     if (project.category) {
       titleRow.appendChild(categoryIcon);
@@ -302,38 +356,110 @@ function renderProjects(projects = []) {
     const blurb = document.createElement("p");
     blurb.textContent = project.blurb || "";
 
-    article.appendChild(titleRow);
-    article.appendChild(blurb);
+    card.appendChild(head);
+    if (project.blurb) {
+      card.appendChild(blurb);
+    }
 
-    if (project.pdf && !isPlaceholder(project.pdf)) {
-      const link = document.createElement("a");
-      link.href = project.pdf;
-      link.target = "_blank";
-      link.rel = "noopener noreferrer";
-      link.className = "link";
-      link.textContent = project.pdfLabel || "Download (PDF)";
-      article.appendChild(link);
+    const authorsRow = createPeopleRow("Authors", project.authors, peopleIndex);
+    if (authorsRow) card.appendChild(authorsRow);
+
+    const studentsRow = createPeopleRow(
+      "Student researchers",
+      project.studentResearchers,
+      peopleIndex
+    );
+    if (studentsRow) card.appendChild(studentsRow);
+
+    const footer = document.createElement("div");
+    footer.className = "project-footer";
+
+    if (hasPdf) {
+      const action =
+        cardTag === "a" ? document.createElement("span") : document.createElement("a");
+      action.className = "project-action";
+      action.textContent = project.pdfLabel || "Open PDF";
+      if (cardTag !== "a") {
+        action.href = project.pdf;
+        action.target = "_blank";
+        action.rel = "noopener noreferrer";
+      }
+      footer.appendChild(action);
     } else {
       const badge = document.createElement("span");
       badge.className = "badge badge-muted";
       badge.textContent = project.pdfLabel || "More details coming soon";
-      article.appendChild(badge);
+      footer.appendChild(badge);
     }
 
     if (project.supporters && project.supporters.length) {
       const supporters = document.createElement("div");
       supporters.className = "project-supporters";
-      project.supporters.forEach((supporter) => {
+      const supporterList = project.supporters || [];
+      const topSupporters = supporterList.slice(0, 3);
+      topSupporters.forEach((supporter) => {
         const tag = document.createElement("span");
         tag.className = "supporter-badge";
         tag.textContent = supporter;
         supporters.appendChild(tag);
       });
-      article.appendChild(supporters);
+      if (supporterList.length > topSupporters.length) {
+        const remaining = supporterList.length - topSupporters.length;
+        const more = document.createElement("span");
+        more.className = "supporter-badge";
+        more.textContent = `+${remaining} more`;
+        supporters.appendChild(more);
+      }
+      footer.appendChild(supporters);
     }
 
-    grid.appendChild(article);
+    card.appendChild(footer);
+    grid.appendChild(card);
   });
+}
+
+function createPeopleRow(label, people, peopleIndex) {
+  if (!Array.isArray(people) || !people.length) return null;
+
+  const row = document.createElement("div");
+  row.className = "project-people-row";
+
+  const labelEl = document.createElement("span");
+  labelEl.className = "project-people-label";
+  labelEl.textContent = `${label}:`;
+  row.appendChild(labelEl);
+
+  const list = document.createElement("div");
+  list.className = "project-people-list";
+
+  people.forEach((item) => {
+    const person = findPerson(item, peopleIndex);
+    const name =
+      (person && person.name) ||
+      (typeof item === "string" ? item : item?.name) ||
+      "Unknown";
+    const href =
+      (person && person.website) ||
+      (person && person.linkedin) ||
+      (person && person.scholar) ||
+      "";
+    const tag = document.createElement(
+      href && !isPlaceholder(href) ? "a" : "span"
+    );
+    tag.className = "person-tag";
+    tag.textContent = name;
+    if (href && !isPlaceholder(href)) {
+      tag.href = href;
+      tag.target = "_blank";
+      tag.rel = "noopener noreferrer";
+    } else {
+      tag.classList.add("person-tag--disabled");
+    }
+    list.appendChild(tag);
+  });
+
+  row.appendChild(list);
+  return row;
 }
 
 function renderTeam(team = []) {
