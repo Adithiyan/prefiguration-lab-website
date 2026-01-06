@@ -691,6 +691,22 @@ function renderCollaborators(collaborators = []) {
     const detailMain = document.createElement("div");
     detailMain.className = "team-detail-main";
 
+    const detailPhoto = document.createElement("div");
+    detailPhoto.className = "team-detail-photo";
+    if (member.photo) {
+      const img = document.createElement("img");
+      img.src = member.photo;
+      img.alt = `Portrait of ${member.name || "collaborator"}`;
+      detailPhoto.appendChild(img);
+    } else {
+      const placeholder = document.createElement("div");
+      placeholder.className = "team-person-photo-placeholder";
+      const span = document.createElement("span");
+      span.textContent = (member.name || "C").trim().charAt(0).toUpperCase();
+      placeholder.appendChild(span);
+      detailPhoto.appendChild(placeholder);
+    }
+
     const detailText = document.createElement("div");
     detailText.className = "team-detail-text";
 
@@ -707,6 +723,7 @@ function renderCollaborators(collaborators = []) {
     detailText.appendChild(detailName);
     detailText.appendChild(detailRole);
     detailText.appendChild(detailBio);
+    detailMain.appendChild(detailPhoto);
     detailMain.appendChild(detailText);
     detail.appendChild(detailMain);
 

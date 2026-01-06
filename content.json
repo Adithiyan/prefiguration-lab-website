@@ -248,5 +248,33 @@
       "linkedin": "",
       "scholar": ""
     }
+  ],
+  "supportersCopy": "Support comes from grants and partnerships that fund our work.",
+  "supporters": [
+    {
+      "name": "FRQSC",
+      "url": "https://frq.gouv.qc.ca/",
+      "logo": "https://frq.gouv.qc.ca/app/uploads/2024/06/frq_logo_couleur.png"
+    },
+    {
+      "name": "SSHRC",
+      "url": "https://sshrc-crsh.canada.ca/en.aspx",
+      "logo": "https://www.brandonu.ca/research/files/SSHRC-CRSH-1.png"
+    },
+    {
+      "name": "Telfer",
+      "url": "https://telfer.uottawa.ca/en/",
+      "logo": "https://telfer.uottawa.ca/assets/images/brand/Tertiary_Black3.png"
+    },
+    {
+      "name": "uOttawa",
+      "url": "https://www.uottawa.ca/en",
+      "logo": "https://www.uottawa.ca/themes/custom/uottawa/dist/assets/logo.svg"
+    },
+    {
+      "name": "Green Academy",
+      "url": "https://telfer.uottawa.ca/en/the-green-academy-at-telfer/",
+      "logo": "https://telfer.uottawa.ca/assets/cache/webp/6d/e8/6de809b66b1d2ed43a4d7662a8aa9bed.webp"
+    }
   ]
 }
