@@ -1,81 +1,66 @@
 {
   "hero": {
     "title": "Prefiguration Lab",
-    "tagline": "Researching activism for desirable futures.",
-    "body": "We study the collective processes and practices of positive social change in the health, education, transportation, and technology sectors.",
+    "tagline": "Researching activism for sustainable policymaking.",
+    "body": "We study the collective processes and practices of social change for desirable futures in the health, education, transportation, and technology sectors.",
     "ctaLabel": "View our projects",
     "ctaHref": "#projects",
-    "themes": [
-      {
-        "label": "Health",
-        "category": "health"
-      },
-      {
-        "label": "Education",
-        "category": "education"
-      },
-      {
-        "label": "Transportation",
-        "category": "transportation"
-      },
-      {
-        "label": "Technology",
-        "category": "technology"
-      }
+    "focus": [
+      "Not sure we need this box... perhaps some creative drawing or illustration that evokes the vibe of the lab and what we're trying to accomplish?"
     ]
   },
-  "projectsCopy": "Take a look at what keeps us busy right now.",
+  "projectsCopy": "Take a look at what keeps us busy.",
   "projects": [
     {
       "title": "Liminal becomings: the professionalization project of peer support workers",
       "blurb": "We examine how peer support workers have sought over the last two decades to carve out a space for their practice within the professional sector of mental health care.",
       "pdf": "docs/peer-support-project.pdf",
-      "pdfLabel": "Project overview",
-      "category": "health",
-      "supporters": [
-        "FRQSC"
-      ]
+      "pdfLabel": "Project overview"
     },
     {
-      "title": "Prefigurative pedagogy: reimagining the business school for sustainable futures",
+      "title": "Constructing spaces to share vulnerability at work",
+      "blurb": "We reveal the ritualized process of creating supportive spaces that strengthen trust and foster collective learning in the workplace.",
+      "pdf": "#",
+      "pdfLabel": "Coming soon"
+    },
+    {
+      "title": "Prefigurative pedagogy: reimagining the business school toward sustainable futures",
       "blurb": "We experiment with new ways of learning together that harness utopian imagination to guide action in the present toward sustainable futures.",
       "pdf": "https://telfer.uottawa.ca/en/telfer-knowledge-hub/greener/prefiguring-pedagogies-when-imagination-becomes-a-collective-practice/",
-      "pdfLabel": "Project overview",
-      "category": "education"
+      "pdfLabel": "Project overview"
     },
     {
-      "title": "Cycling activism: unveiling the dynamics of bottom-up change for sustainable cities",
+      "title": "Negotiating (dis)order in a learning center for homeschoolers",
+      "blurb": "We explore how board administrators, parents, and staff educators influence an alternative pedagogal space operating outside of the formal school system.",
+      "pdf": "#",
+      "pdfLabel": "Coming soon"
+    },
+    {
+      "title": "Cycling activism: unveiling the bottom-up dynamics of change toward sustainable transportation systems",
       "blurb": "We investigate the formation of entrepreneurial ecosystems for social change to create urban communities where active transportation is the norm and car is the exception.",
       "pdf": "https://telfer.uottawa.ca/en/telfer-knowledge-hub/research-news/alternative-entrepreneurial-ecosystems-the-case-of-cycling-activism-in-ottawa/",
-      "pdfLabel": "Project overview",
-      "category": "education",
-      "supporters": [
-        "Telfer",
-        "Green Academy"
-      ]
+      "pdfLabel": "Project overview"
     },
     {
       "title": "How digital rights activists rein in regulatory entrepreneurs: the case of Clearview AI",
-      "blurb": "We examine how activists mobilize regulatory frameworks and public opinion to defend against the incursions of technology companies into citizens' digital rights.",
+      "blurb": "We reveal how activists mobilize regulatory frameworks and public opinion to defend against the incursions of technology companies into citizens' digital rights.",
       "pdf": "docs/clearview-ai-project.pdf",
-      "pdfLabel": "Project overview",
-      "category": "transportation",
-      "supporters": [
-        "uOttawa"
-      ]
+      "pdfLabel": "Project overview"
     },
     {
-      "title": "The shack: negotiating (dis)order in a learning center for homeschoolers",
-      "blurb": "We explore how board administrators, parents, and staff educators influence an alternative pedagogal space operating outside of the formal school system.",
+      "title": "When laypersons claim to know: digital platforms and the epistemic dynamics of polarization",
+      "blurb": "Description to come.",
       "pdf": "#",
-      "pdfLabel": "Coming soon",
-      "category": "technology",
-      "supporters": [
-        "SSHRC"
-      ]
+      "pdfLabel": "Coming soon"
+    },
+    {
+      "title": "Strategic ambivalence in response to technology adoption: the case of HR analytics",
+      "blurb": "Description to come.",
+      "pdf": "#",
+      "pdfLabel": "Coming soon"
     }
   ],
-  "teamCopy": "A research group led by Prof. Mathieu Bouchard with an amazing group of student researchers.",
+  "teamCopy": "An amazing group of student researchers led by Prof. Mathieu Bouchard.",
   "team": [
     {
       "id": "mathieu",
@@ -89,24 +74,6 @@
       "email": "mbourcha@uottawa.ca"
     },
     {
-      "id": "adi",
-      "name": "Adithiyan Rajan",
-      "role": "Student Researcher",
-      "bio": "Adithiyan Rajan is a Computer Science graduate student who specializes in transforming cutting-edge AI and Machine Learning research into practical, high-impact solutions that address complex, multidisciplinary challenges.",
-      "photo": "images/1736718621383.jpeg",
-      "linkedin": "https://www.linkedin.com/in/adithiyanrajan/",
-      "email": "aindi023@uottawa.ca"
-    },
-    {
-      "id": "phuong",
-      "name": "Phuong Tran",
-      "role": "Student Researcher",
-      "bio": "Phuong Tran is a Business Technology Management student at the Telfer School of Management, exploring the intersection of emerging technologies, digital policy, and user-centric design in research and practice.",
-      "photo": "images/profile.jpg",
-      "linkedin": "https://www.linkedin.com/in/phuongtran0204/",
-      "email": "ptran071@uottawa.ca"
-    },
-    {
       "id": "camila",
       "name": "Camila Estrada",
       "role": "Student Researcher",
@@ -116,12 +83,30 @@
       "email": "cestr073@uottawa.ca"
     },
     {
+      "id": "adi",
+      "name": "Adithiyan Rajan",
+      "role": "Student Researcher",
+      "bio": "Adithiyan Rajan is a Computer Science graduate student who specializes in transforming cutting-edge AI and Machine Learning research into practical, high-impact solutions that address complex, multidisciplinary challenges.",
+      "photo": "images/1736718621383.jpeg",
+      "linkedin": "https://www.linkedin.com/in/adithiyanrajan/",
+      "email": "aindi023@uottawa.ca"
+    },
+    {
       "id": "hamza",
       "name": "Hamza Tawdi",
       "role": "Student Researcher",
       "bio": "Hamza Tawdi is a graduate of the Telfer School of Management with a Bachelor of Commerce degree. His work focuses on analysis, synthesis, and writing, with an emphasis on making information accessible.",
       "linkedin": "https://www.linkedin.com/in/hamza-tawdi-a6aa5925b/",
       "email": "htawd008@uottawa.ca"
+    },
+    {
+      "id": "phuong",
+      "name": "Phuong Tran",
+      "role": "Student Researcher",
+      "bio": "Phuong Tran is a Business Technology Management student at the Telfer School of Management, exploring the intersection of emerging technologies, digital policy, and user-centric design in research and practice.",
+      "photo": "images/profile.jpg",
+      "linkedin": "https://www.linkedin.com/in/phuongtran0204/",
+      "email": "ptran071@uottawa.ca"
     }
   ],
   "podcastCopy": "The vivre sans voiture / living without a car podcast hosts conversations about activism for healthy and sustainable urban transportation.",
@@ -165,104 +150,67 @@
       "label": "PDF (coming soon)"
     }
   ],
-  "contactCopy": "To learn more about Prefiguration Lab or explore collaboration opportunities, please get in touch.",
+  "contactCopy": "Get in touch to learn more about Prefiguration Lab and explore collaboration opportunities.",
   "contact": {
     "email": "mbourcha@uottawa.ca",
     "buttonLabel": "Email us",
     "institution": "Telfer School of Management\nUniversity of Ottawa, Ottawa, ON, Canada"
   },
-  "collaboratorsCopy": "Partners and peers we work with across projects and research initiatives.",
+  "collaboratorsCopy": "Coauthors and contributors we work with across research projects.",
   "collaborators": [
     {
-      "name": "Mayur Joshi",
-      "role": "Coauthor on digital rights activism project",
-      "bio": "Assistant professor of information systems at the Telfer School of Management, University of Ottawa.",
-      "id": "collab-1",
-      "website": "https://telfer.uottawa.ca/en/directory/mayur-joshi/",
-      "linkedin": "https://ca.linkedin.com/in/mayurpjoshi",
-      "scholar": "https://scholar.google.com/citations?user=5lvshU4AAAAJ&hl=en"
-    },
-    {
-      "name": "Samia Chreim",
-      "role": "Coauthor on homeschooling project",
-      "bio": "Full professor of organization studies at the Telfer School of Management, University of Ottawa.",
-      "id": "collab-2",
-      "website": "https://telfer.uottawa.ca/en/directory/samia-chreim/",
-      "linkedin": "https://ca.linkedin.com/in/samia-chreim-she-her-29031924a",
-      "scholar": "https://scholar.google.com/citations?user=NL_0L1YAAAAJ&hl=en"
-    },
-    {
-      "name": "Ann Langley",
-      "role": "Coauthor on peer support work project",
-      "bio": "Emerita professor at HEC Montreal and Distinguished Research Environment Professor at the University of Warwick.",
-      "id": "collab-3",
-      "website": "https://annlangley.ca/profile/",
-      "linkedin": "https://ca.linkedin.com/in/ann-langley-b8332a244",
-      "scholar": "https://scholar.google.ca/citations?user=N_Dy1J8AAAAJ&hl=en"
-    },
-    {
-      "name": "Siddhant Ritwick",
-      "role": "Coauthor on digital rights activism project",
-      "bio": "Doctoral researcher in the Department of Management Studies at Aalto University.",
-      "id": "collab-4",
-      "website": "https://research.aalto.fi/en/persons/siddhant-ritwick/",
-      "linkedin": "https://fi.linkedin.com/in/siddhantritwick",
-      "scholar": "https://scholar.google.com/citations?user=WnM0BqwAAAAJ&hl=en"
-    },
-    {
-      "name": "Yao Yao",
-      "role": "Lead author on HR analytics and AI adoption project",
-      "bio": "Assistant professor in human resources and management at the DeGroote School of Business, McMaster University.",
-      "id": "collab-5",
-      "website": "https://dtiuottawa.ca/faculties/yao-yao/",
-      "linkedin": "https://ca.linkedin.com/in/yao-yao-04a08335",
-      "scholar": "https://scholar.google.com/citations?user=UudkYf8AAAAJ&hl=en"
+      "name": "Ayman Ajaj",
+      "role": "PhD student in the Digital Transformation and Innovation program at University of Ottawa",
+      "bio": "Lead author on the 'spoiled expertise' project.",
+      "photo": "images/Ayman_Ajaj.jpg"
     },
     {
       "name": "Luciano Barin Cruz",
-      "role": "Coauthor on peer support work project",
-      "bio": "Professor in the Department of Management at HEC Montreal.",
-      "id": "collab-6",
-      "website": "https://www.hec.ca/en/profs/luciano.barin-cruz.html",
-      "linkedin": "https://ca.linkedin.com/in/luciano-barin-cruz-71a1b816",
-      "scholar": "http://scholar.google.ca/citations?user=Srx-7KEAAAAJ&hl=en"
+      "role": "Full professor of management at HEC Montréal",
+      "bio": "Coauthor on the 'peer support work' project.",
+      "photo": "images/Luciano_Barin_Cruz.jpg"
+    },
+    {
+      "name": "Samia Chreim",
+      "role": "Full professor of organization studies at Telfer School of Management, University of Ottawa",
+      "bio": "Coauthor on the 'homeschooling' project.",
+      "photo": "images/Samia_Chreim.jpg"
+    },
+    {
+      "name": "Mayur Joshi",
+      "role": "Assistant professor of information systems at Telfer School of Management, University of Ottawa",
+      "bio": "Coauthor on the 'digital rights activism' and 'spoiled expertise' projects.",
+      "photo": "images/Mayur_Joshi.jpg"
+    },
+    {
+      "name": "Ann Langley",
+      "role": "Emerita professor of management at HEC Montréal and distinguished research environment professor at University of Warwick",
+      "bio": "Coauthor on the 'peer support work' project.",
+      "photo": "images/Ann_Langley.jpg"
     },
     {
       "name": "Steve Maguire",
-      "role": "Coauthor on peer support work project",
-      "bio": "Professor and Deputy Dean (Research) at the University of Sydney Business School.",
-      "id": "collab-7",
-      "website": "https://www.sydney.edu.au/business/about/our-people/academic-staff/steven-maguire.html",
-      "linkedin": "",
-      "scholar": "http://scholar.google.ca/citations?user=Q2yaqb4AAAAJ&hl=en"
+      "role": "Full professor of strategy, innovation & entrepreneurship at University of Sydney Business School",
+      "bio": "Coauthor on the 'peer support work' project.",
+      "photo": "images/Steve_Maguire.jpg"
+    },
+    {
+      "name": "Siddhant Ritwick",
+      "role": "Postdoctoral fellow at University of Zurich",
+      "bio": "Coauthor on the 'digital rights activism' project and lead author on the 'epistemic polarization' project.",
+      "photo": "images/Siddhant_Ritwick.jpg"
+    },
+    {
+      "name": "Yao Yao",
+      "role": "Assistant professor of human resources and management at the McMaster University's DeGroote School of Business",
+      "bio": "Lead author on the 'HR analytics' project.",
+      "photo": "images/Yao_Yao.jpg"
+    },
+    {
+      "name": "Qingyi Zhu",
+      "role": "PhD student in Strategy and Organization at Telfer School of Management, University of Ottawa",
+      "bio": "Coauthor on the 'spaces for vulnerability' project.",
+      "photo": "images/Qingyi_Zhu.jpg"
     }
-  ],
-  "supportersCopy": "Support comes from grants and partnerships that fund our work.",
-  "supporters": [
-    {
-      "name": "FRQSC",
-      "url": "https://frq.gouv.qc.ca/",
-      "logo": "https://frq.gouv.qc.ca/app/uploads/2024/06/frq_logo_couleur.png"
-    },
-    {
-      "name": "SSHRC",
-      "url": "https://sshrc-crsh.canada.ca/en.aspx",
-      "logo": "https://www.brandonu.ca/research/files/SSHRC-CRSH-1.png"
-    },
-    {
-      "name": "Telfer",
-      "url": "https://telfer.uottawa.ca/en/",
-      "logo": "https://telfer.uottawa.ca/assets/images/brand/Tertiary_Black3.png"
-    },
-    {
-      "name": "uOttawa",
-      "url": "https://www.uottawa.ca/en",
-      "logo": "https://www.uottawa.ca/themes/custom/uottawa/dist/assets/logo.svg"
-    },
-    {
-      "name": "Green Academy",
-      "url": "https://telfer.uottawa.ca/en/the-green-academy-at-telfer/",
-      "logo": "https://telfer.uottawa.ca/assets/cache/webp/6d/e8/6de809b66b1d2ed43a4d7662a8aa9bed.webp"
-    }
-  ]
+    ]
 }
