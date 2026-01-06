@@ -1,3 +1,10 @@
+const CATEGORY_ICONS = {
+  health: `<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M10 4h4v6h6v4h-6v6h-4v-6H4v-4h6z"/></svg>`,
+  education: `<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12 4 3 8l9 4 9-4-9-4zm-6 7v6.2L12 20l6-2.8V11l-6 2.7L6 11z"/></svg>`,
+  transportation: `<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M7 6h10l2 6v6h-2a2 2 0 1 1-4 0H11a2 2 0 1 1-4 0H5v-6l2-6zm0 6h10l-1.2-4H8.2L7 12zm2 6a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm8 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/></svg>`,
+  technology: `<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M9 3h6v4h4v6h-4v4H9v-4H5V7h4V3zm2 6v6h2V9h-2z"/></svg>`,
+};
+
 const defaultContent = {
   hero: {
     title: "Prefiguration Lab",
@@ -7,10 +14,11 @@ const defaultContent = {
       "We study practices, technologies, and forms of organizing that anticipate the world we want to build - from AI and surveillance to sustainability and social justice.",
     ctaLabel: "View our projects",
     ctaHref: "#projects",
-    focus: [
-      "Clearview AI and surveillance capitalism",
-      "Sustainability and organizational change",
-      "Emerging projects and collaborations",
+    themes: [
+      { label: "Health", category: "health" },
+      { label: "Education", category: "education" },
+      { label: "Transportation", category: "transportation" },
+      { label: "Technology", category: "technology" },
     ],
   },
   projectsCopy:
@@ -20,8 +28,8 @@ const defaultContent = {
       title: "Clearview AI & Surveillance",
       blurb:
         "This project examines the implications of facial recognition technologies in everyday organizational contexts, focusing on power, consent, and accountability.",
-      lead: "Prof. [Name]",
-      status: "In progress",
+      category: "technology",
+      supporters: ["SSHRC"],
       pdf: "docs/clearview-ai-project.pdf",
       pdfLabel: "Download project overview (PDF)",
     },
@@ -29,8 +37,8 @@ const defaultContent = {
       title: "Sustainability & Prefiguration",
       blurb:
         "We explore how organizations experiment with sustainable practices today to prefigure low-carbon, socially just futures.",
-      lead: "[Student / Prof Name]",
-      status: "In progress",
+      category: "education",
+      supporters: ["Telfer", "Green Academy"],
       pdf: "docs/sustainability-project.pdf",
       pdfLabel: "Download project overview (PDF)",
     },
@@ -38,8 +46,8 @@ const defaultContent = {
       title: "[Future Project Title]",
       blurb:
         "Short description of a future or third project goes here. You can update this text once the project details are confirmed.",
-      lead: "[Name]",
-      status: "Planned",
+      category: "health",
+      supporters: ["FRQSC"],
       pdf: "",
       pdfLabel: "",
     },
@@ -96,18 +104,26 @@ const defaultContent = {
   ],
   collaboratorsCopy: "Partners and peers we work with across projects and research initiatives.",
   collaborators: [
-    { id: "collab-1", name: "Collaborator one", role: "Role placeholder", bio: "Bio coming soon.", link: "#" },
-    { id: "collab-2", name: "Collaborator two", role: "Role placeholder", bio: "Bio coming soon.", link: "#" },
-    { id: "collab-3", name: "Collaborator three", role: "Role placeholder", bio: "Bio coming soon.", link: "#" },
-    { id: "collab-4", name: "Collaborator four", role: "Role placeholder", bio: "Bio coming soon.", link: "#" },
-    { id: "collab-5", name: "Collaborator five", role: "Role placeholder", bio: "Bio coming soon.", link: "#" },
-    { id: "collab-6", name: "Collaborator six", role: "Role placeholder", bio: "Bio coming soon.", link: "#" },
-    { id: "collab-7", name: "Collaborator seven", role: "Role placeholder", bio: "Bio coming soon.", link: "#" },
-    { id: "collab-8", name: "Collaborator eight", role: "Role placeholder", bio: "Bio coming soon.", link: "#" },
-    { id: "collab-9", name: "Collaborator nine", role: "Role placeholder", bio: "Bio coming soon.", link: "#" },
+    { id: "collab-1", name: "Collaborator one", role: "Role placeholder", bio: "Bio coming soon.", website: "#", linkedin: "#" },
+    { id: "collab-2", name: "Collaborator two", role: "Role placeholder", bio: "Bio coming soon.", website: "#", linkedin: "#" },
+    { id: "collab-3", name: "Collaborator three", role: "Role placeholder", bio: "Bio coming soon.", website: "#", linkedin: "#" },
+    { id: "collab-4", name: "Collaborator four", role: "Role placeholder", bio: "Bio coming soon.", website: "#", linkedin: "#" },
+    { id: "collab-5", name: "Collaborator five", role: "Role placeholder", bio: "Bio coming soon.", website: "#", linkedin: "#" },
+    { id: "collab-6", name: "Collaborator six", role: "Role placeholder", bio: "Bio coming soon.", website: "#", linkedin: "#" },
+    { id: "collab-7", name: "Collaborator seven", role: "Role placeholder", bio: "Bio coming soon.", website: "#", linkedin: "#" },
+    { id: "collab-8", name: "Collaborator eight", role: "Role placeholder", bio: "Bio coming soon.", website: "#", linkedin: "#" },
+    { id: "collab-9", name: "Collaborator nine", role: "Role placeholder", bio: "Bio coming soon.", website: "#", linkedin: "#" },
   ],
   podcastCopy:
     "The vivre sans voiture / living without a car podcast hosts conversations about activism for healthy and sustainable urban transportation.",
+  supportersCopy: "Supported by grants and partnerships that fund our research.",
+  supporters: [
+    { name: "FRQSC", url: "#" },
+    { name: "SSHRC", url: "#" },
+    { name: "Telfer", url: "#" },
+    { name: "uOttawa", url: "#" },
+    { name: "Green Academy", url: "#" },
+  ],
   podcastMeta:
     "If your podcast is hosted elsewhere, you can replace this embed code or link to the external site.",
   podcast: {
@@ -185,7 +201,7 @@ function renderContent(content) {
   setText("hero-tagline", hero.tagline);
   setText("hero-body", hero.body);
   setLink("hero-cta", hero.ctaHref, hero.ctaLabel);
-  renderList("focus-list", hero.focus);
+  renderThemes(hero.themes);
 
   setText("projects-copy", content.projectsCopy);
   renderProjects(content.projects);
@@ -195,6 +211,9 @@ function renderContent(content) {
 
   setText("collaborators-copy", content.collaboratorsCopy);
   renderCollaborators(content.collaborators);
+
+  setText("supporters-copy", content.supportersCopy);
+  renderSupporters(content.supporters);
 
   setText("podcast-copy", content.podcastCopy);
   setText("podcast-meta", content.podcastMeta);
@@ -233,6 +252,27 @@ function renderList(id, items = []) {
   });
 }
 
+function renderThemes(themes = []) {
+  const list = document.getElementById("theme-list");
+  if (!list) return;
+  list.innerHTML = "";
+  (themes || []).forEach((theme) => {
+    const li = document.createElement("li");
+    li.className = "theme-item";
+
+    const icon = document.createElement("span");
+    icon.className = `theme-icon theme-icon--${theme.category || "default"}`;
+    icon.innerHTML = CATEGORY_ICONS[theme.category] || "";
+
+    const label = document.createElement("span");
+    label.textContent = theme.label || "";
+
+    li.appendChild(icon);
+    li.appendChild(label);
+    list.appendChild(li);
+  });
+}
+
 function renderProjects(projects = []) {
   const grid = document.getElementById("projects-grid");
   if (!grid) return;
@@ -240,14 +280,29 @@ function renderProjects(projects = []) {
   projects.forEach((project) => {
     const article = document.createElement("article");
     article.className = "card project-card";
+    if (project.category) {
+      article.classList.add(`project-card--${project.category}`);
+    }
+
+    const titleRow = document.createElement("div");
+    titleRow.className = "project-title-row";
+
+    const categoryIcon = document.createElement("span");
+    categoryIcon.className = `project-category-icon project-category-icon--${project.category || "default"}`;
+    categoryIcon.innerHTML = CATEGORY_ICONS[project.category] || "";
 
     const title = document.createElement("h3");
     title.textContent = project.title || "";
 
+    if (project.category) {
+      titleRow.appendChild(categoryIcon);
+    }
+    titleRow.appendChild(title);
+
     const blurb = document.createElement("p");
     blurb.textContent = project.blurb || "";
 
-    article.appendChild(title);
+    article.appendChild(titleRow);
     article.appendChild(blurb);
 
     if (project.pdf && !isPlaceholder(project.pdf)) {
@@ -263,6 +318,18 @@ function renderProjects(projects = []) {
       badge.className = "badge badge-muted";
       badge.textContent = project.pdfLabel || "More details coming soon";
       article.appendChild(badge);
+    }
+
+    if (project.supporters && project.supporters.length) {
+      const supporters = document.createElement("div");
+      supporters.className = "project-supporters";
+      project.supporters.forEach((supporter) => {
+        const tag = document.createElement("span");
+        tag.className = "supporter-badge";
+        tag.textContent = supporter;
+        supporters.appendChild(tag);
+      });
+      article.appendChild(supporters);
     }
 
     grid.appendChild(article);
@@ -504,18 +571,82 @@ function renderCollaborators(collaborators = []) {
     const actions = document.createElement("div");
     actions.className = "team-detail-actions";
 
-    if (member.link && !isPlaceholder(member.link)) {
-      const link = document.createElement("a");
-      link.href = member.link;
-      link.target = "_blank";
-      link.rel = "noopener noreferrer";
-      link.className = "team-icon-btn website";
-      link.textContent = "Visit profile";
-      actions.appendChild(link);
-    } else {
+    if (member.website) {
+      if (isPlaceholder(member.website)) {
+        actions.appendChild(createPlaceholderButton("Profile"));
+      } else {
+        actions.appendChild(
+          createIconButton(
+            member.website,
+            "website",
+            `Visit ${member.name}'s profile page`,
+            "Profile"
+          )
+        );
+      }
+    }
+
+    if (member.scholar) {
+      if (isPlaceholder(member.scholar)) {
+        actions.appendChild(createPlaceholderButton("Scholar"));
+      } else {
+        actions.appendChild(
+          createIconButton(
+            member.scholar,
+            "scholar",
+            `View ${member.name}'s Google Scholar profile`,
+            "Scholar"
+          )
+        );
+      }
+    }
+
+    if (member.linkedin) {
+      if (isPlaceholder(member.linkedin)) {
+        actions.appendChild(createPlaceholderButton("LinkedIn"));
+      } else {
+        actions.appendChild(
+          createIconButton(
+            member.linkedin,
+            "linkedin",
+            `Connect with ${member.name} on LinkedIn`,
+            "LinkedIn"
+          )
+        );
+      }
+    }
+
+    if (member.scholar) {
+      if (isPlaceholder(member.scholar)) {
+        actions.appendChild(createPlaceholderButton("Scholar"));
+      } else {
+        actions.appendChild(
+          createIconButton(
+            member.scholar,
+            "scholar",
+            `View ${member.name}'s Google Scholar profile`,
+            "Google Scholar"
+          )
+        );
+      }
+    }
+
+    if (member.email) {
+      actions.appendChild(
+        createIconButton(
+          `mailto:${member.email}`,
+          "email",
+          `Email ${member.name}`,
+          "Email",
+          { newTab: false }
+        )
+      );
+    }
+
+    if (!actions.children.length) {
       const badge = document.createElement("span");
       badge.className = "badge badge-muted";
-      badge.textContent = "Link coming soon";
+      badge.textContent = "Links coming soon";
       actions.appendChild(badge);
     }
 
@@ -556,6 +687,61 @@ function setupTeamInteractions() {
         block.hidden = block.getAttribute("data-person") !== id;
       });
     });
+  });
+}
+
+function renderSupporters(supporters = []) {
+  const grid = document.getElementById("supporters-grid");
+  if (!grid) return;
+  grid.innerHTML = "";
+
+  const items =
+    supporters && supporters.length ? supporters : defaultContent.supporters;
+
+  items.forEach((supporter) => {
+    const card = document.createElement("div");
+    card.className = "supporter-card";
+
+    const logoBox = document.createElement("div");
+    logoBox.className = "supporter-logo-box";
+
+    const ensureInitial = () => {
+      const initial = document.createElement("div");
+      initial.className = "supporter-initial";
+      initial.textContent = supporter.name ? supporter.name.trim().charAt(0).toUpperCase() : "?";
+      logoBox.classList.add("supporter-logo-box--text");
+      card.classList.add("supporter-card--initial");
+      logoBox.appendChild(initial);
+    };
+
+    if (supporter.logo) {
+      const img = document.createElement("img");
+      img.src = supporter.logo;
+      img.alt = supporter.name || "Supporter logo";
+      img.addEventListener("error", () => {
+        img.remove();
+        ensureInitial();
+      });
+      logoBox.appendChild(img);
+    } else {
+      ensureInitial();
+    }
+
+    const nameLabel = document.createElement("span");
+    nameLabel.className = "supporter-name";
+    nameLabel.textContent = supporter.name || "Supporter";
+
+    logoBox.appendChild(nameLabel);
+    card.appendChild(logoBox);
+
+    if (supporter.url && !isPlaceholder(supporter.url)) {
+      card.addEventListener("click", () => {
+        window.open(supporter.url, "_blank", "noopener");
+      });
+      card.classList.add("supporter-card--clickable");
+    }
+
+    grid.appendChild(card);
   });
 }
 
@@ -675,6 +861,13 @@ function createIconButton(href, className, ariaLabel, label, options = {}) {
     button.target = "_blank";
     button.rel = "noopener noreferrer";
   }
+  return button;
+}
+
+function createPlaceholderButton(label) {
+  const button = document.createElement("span");
+  button.className = "team-icon-btn team-icon-btn--disabled";
+  button.textContent = label;
   return button;
 }
 
