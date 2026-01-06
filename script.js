@@ -369,11 +369,6 @@ function renderProjects(projects = [], peopleIndex = {}) {
     title.textContent = project.title || "";
     head.appendChild(title);
 
-    if (project.category) {
-      titleRow.appendChild(categoryIcon);
-    }
-    titleRow.appendChild(title);
-
     const blurb = document.createElement("p");
     blurb.textContent = project.blurb || "";
 
