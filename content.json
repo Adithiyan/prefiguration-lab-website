@@ -1,4 +1,4 @@
-﻿{
+{
   "hero": {
     "title": "Prefiguration Lab",
     "tagline": "Researching activism for sustainable policymaking.",
@@ -150,7 +150,7 @@
       "label": "PDF (coming soon)"
     }
   ],
-  "contactCopy": "Get in touch to learn more about Prefiguration Lab and explore collaboration opportunities.",
+  "contactCopy": "To learn more about Prefiguration Lab or explore collaboration opportunities, please get in touch.",
   "contact": {
     "email": "mbourcha@uottawa.ca",
     "buttonLabel": "Email us",
@@ -159,58 +159,94 @@
   "collaboratorsCopy": "Coauthors and contributors we work with across research projects.",
   "collaborators": [
     {
-      "name": "Ayman Ajaj",
-      "role": "PhD student in the Digital Transformation and Innovation program at University of Ottawa",
-      "bio": "Lead author on the 'spoiled expertise' project.",
-      "photo": "images/Ayman_Ajaj.jpg"
-    },
-    {
-      "name": "Luciano Barin Cruz",
-      "role": "Full professor of management at HEC Montréal",
-      "bio": "Coauthor on the 'peer support work' project.",
-      "photo": "images/Luciano_Barin_Cruz.jpg"
+      "name": "Mayur Joshi",
+      "role": "Coauthor on digital rights activism project",
+      "bio": "Assistant professor of information systems at the Telfer School of Management, University of Ottawa.",
+      "id": "collab-1",
+      "photo": "images/Mayur_Joshi.jpg",
+      "website": "https://telfer.uottawa.ca/en/directory/mayur-joshi/",
+      "linkedin": "https://ca.linkedin.com/in/mayurpjoshi",
+      "scholar": "https://scholar.google.com/citations?user=5lvshU4AAAAJ&hl=en"
     },
     {
       "name": "Samia Chreim",
-      "role": "Full professor of organization studies at Telfer School of Management, University of Ottawa",
-      "bio": "Coauthor on the 'homeschooling' project.",
-      "photo": "images/Samia_Chreim.jpg"
-    },
-    {
-      "name": "Mayur Joshi",
-      "role": "Assistant professor of information systems at Telfer School of Management, University of Ottawa",
-      "bio": "Coauthor on the 'digital rights activism' and 'spoiled expertise' projects.",
-      "photo": "images/Mayur_Joshi.jpg"
+      "role": "Coauthor on homeschooling project",
+      "bio": "Full professor of organization studies at the Telfer School of Management, University of Ottawa.",
+      "id": "collab-2",
+      "photo": "images/Samia_Chreim.jpg",
+      "website": "https://telfer.uottawa.ca/en/directory/samia-chreim/",
+      "linkedin": "https://ca.linkedin.com/in/samia-chreim-she-her-29031924a",
+      "scholar": "https://scholar.google.com/citations?user=NL_0L1YAAAAJ&hl=en"
     },
     {
       "name": "Ann Langley",
-      "role": "Emerita professor of management at HEC Montréal and distinguished research environment professor at University of Warwick",
-      "bio": "Coauthor on the 'peer support work' project.",
-      "photo": "images/Ann_Langley.jpg"
-    },
-    {
-      "name": "Steve Maguire",
-      "role": "Full professor of strategy, innovation & entrepreneurship at University of Sydney Business School",
-      "bio": "Coauthor on the 'peer support work' project.",
-      "photo": "images/Steve_Maguire.jpg"
+      "role": "Coauthor on peer support work project",
+      "bio": "Emerita professor at HEC Montreal and Distinguished Research Environment Professor at the University of Warwick.",
+      "id": "collab-3",
+      "photo": "images/Ann_Langley.jpg",
+      "website": "https://annlangley.ca/profile/",
+      "linkedin": "https://ca.linkedin.com/in/ann-langley-b8332a244",
+      "scholar": "https://scholar.google.ca/citations?user=N_Dy1J8AAAAJ&hl=en"
     },
     {
       "name": "Siddhant Ritwick",
-      "role": "Postdoctoral fellow at University of Zurich",
-      "bio": "Coauthor on the 'digital rights activism' project and lead author on the 'epistemic polarization' project.",
-      "photo": "images/Siddhant_Ritwick.jpg"
+      "role": "Coauthor on digital rights activism project",
+      "bio": "Doctoral researcher in the Department of Management Studies at Aalto University.",
+      "id": "collab-4",
+      "photo": "images/Siddhant_Ritwick.jpg",
+      "website": "https://research.aalto.fi/en/persons/siddhant-ritwick/",
+      "linkedin": "https://fi.linkedin.com/in/siddhantritwick",
+      "scholar": "https://scholar.google.com/citations?user=WnM0BqwAAAAJ&hl=en"
     },
     {
       "name": "Yao Yao",
-      "role": "Assistant professor of human resources and management at the McMaster University's DeGroote School of Business",
-      "bio": "Lead author on the 'HR analytics' project.",
-      "photo": "images/Yao_Yao.jpg"
+      "role": "Lead author on HR analytics and AI adoption project",
+      "bio": "Assistant professor in human resources and management at the DeGroote School of Business, McMaster University.",
+      "id": "collab-5",
+      "photo": "images/Yao_Yao.jpg",
+      "website": "https://dtiuottawa.ca/faculties/yao-yao/",
+      "linkedin": "https://ca.linkedin.com/in/yao-yao-04a08335",
+      "scholar": "https://scholar.google.com/citations?user=UudkYf8AAAAJ&hl=en"
+    },
+    {
+      "name": "Luciano Barin Cruz",
+      "role": "Coauthor on peer support work project",
+      "bio": "Professor in the Department of Management at HEC Montreal.",
+      "id": "collab-6",
+      "photo": "images/Luciano_Barin_Cruz.jpg",
+      "website": "https://www.hec.ca/en/profs/luciano.barin-cruz.html",
+      "linkedin": "https://ca.linkedin.com/in/luciano-barin-cruz-71a1b816",
+      "scholar": "http://scholar.google.ca/citations?user=Srx-7KEAAAAJ&hl=en"
+    },
+    {
+      "name": "Steve Maguire",
+      "role": "Coauthor on peer support work project",
+      "bio": "Professor and Deputy Dean (Research) at the University of Sydney Business School.",
+      "id": "collab-7",
+      "photo": "images/Steve_Maguire.jpg",
+      "website": "https://www.sydney.edu.au/business/about/our-people/academic-staff/steven-maguire.html",
+      "linkedin": "",
+      "scholar": "http://scholar.google.ca/citations?user=Q2yaqb4AAAAJ&hl=en"
+    },
+    {
+      "name": "Ayman Ajaj",
+      "role": "PhD student in the Digital Transformation and Innovation program at University of Ottawa",
+      "bio": "Lead author on the 'spoiled expertise' project.",
+      "id": "collab-8",
+      "photo": "images/Ayman_Ajaj.jpg",
+      "website": "",
+      "linkedin": "",
+      "scholar": ""
     },
     {
       "name": "Qingyi Zhu",
       "role": "PhD student in Strategy and Organization at Telfer School of Management, University of Ottawa",
       "bio": "Coauthor on the 'spaces for vulnerability' project.",
-      "photo": "images/Qingyi_Zhu.jpg"
+      "id": "collab-9",
+      "photo": "images/Qingyi_Zhu.jpg",
+      "website": "",
+      "linkedin": "",
+      "scholar": ""
     }
-    ]
+  ]
 }
