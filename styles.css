@@ -380,26 +380,24 @@ body {
 .person-tag {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  padding: 0.3rem 0.7rem;
-  border-radius: 999px;
-  font-size: 0.85rem;
+  justify-content: flex-start;
+  padding: 0;
+  border-radius: 0;
+  font-size: 0.9rem;
   font-weight: 600;
   text-decoration: none;
-  background-color: #eef2f7;
+  background: none;
   color: #1f2937;
-  border: 1px solid #dce3ed;
+  border: none;
 }
 
 .person-tag:hover {
-  filter: brightness(1.04);
+  text-decoration: underline;
 }
 
 .person-tag--disabled {
   cursor: default;
-  background-color: #f3f4f6;
   color: #6b7280;
-  border-color: #e5e7eb;
 }
 
 .project-footer {
@@ -460,32 +458,28 @@ body {
 .org-tag {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  padding: 0.2rem 0.55rem;
-  border-radius: 10px;
-  background-color: #eef2f7;
+  justify-content: flex-start;
+  padding: 0;
+  border-radius: 0;
+  background: none;
   color: #1f2937;
   font-weight: 600;
-  font-size: 0.82rem;
+  font-size: 0.9rem;
   text-decoration: none;
-  border: 1px solid #dce3ed;
+  border: none;
 }
 
 .org-tag:hover {
-  filter: brightness(1.05);
+  text-decoration: underline;
 }
 
 .org-tag--disabled {
   cursor: default;
   color: #6b7280;
-  background-color: #f3f4f6;
-  border-color: #e5e7eb;
 }
 
 .org-tag--placeholder {
   color: #6b7280;
-  background-color: #f3f4f6;
-  border-color: #e5e7eb;
 }
 
 .project-card--health {

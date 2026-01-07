@@ -17,7 +17,10 @@
       "pdf": "docs/peer-support-project.pdf",
       "pdfLabel": "Project overview",
       "category": "health",
-      "organizations": []
+      "organizations": [],
+      "authors": [
+        "Mathieu Bouchard"
+      ]
     },
     {
       "title": "Constructing spaces to share vulnerability at work",
@@ -25,7 +28,10 @@
       "pdf": "#",
       "pdfLabel": "Coming soon",
       "category": "health",
-      "organizations": []
+      "organizations": [],
+      "authors": [
+        "Mathieu Bouchard"
+      ]
     },
     {
       "title": "Prefigurative pedagogy: reimagining the business school toward sustainable futures",
@@ -33,7 +39,19 @@
       "pdf": "https://telfer.uottawa.ca/en/telfer-knowledge-hub/greener/prefiguring-pedagogies-when-imagination-becomes-a-collective-practice/",
       "pdfLabel": "Project overview",
       "category": "education",
-      "organizations": []
+      "organizations": [
+        {
+          "name": "Telfer",
+          "url": "https://telfer.uottawa.ca/en/"
+        },
+        {
+          "name": "uOttawa",
+          "url": "https://www.uottawa.ca/en"
+        }
+      ],
+      "authors": [
+        "Mathieu Bouchard"
+      ]
     },
     {
       "title": "Negotiating (dis)order in a learning center for homeschoolers",
@@ -41,7 +59,10 @@
       "pdf": "#",
       "pdfLabel": "Coming soon",
       "category": "education",
-      "organizations": []
+      "organizations": [],
+      "authors": [
+        "Mathieu Bouchard"
+      ]
     },
     {
       "title": "Cycling activism: unveiling the bottom-up dynamics of change toward sustainable transportation systems",
@@ -49,7 +70,14 @@
       "pdf": "https://telfer.uottawa.ca/en/telfer-knowledge-hub/research-news/alternative-entrepreneurial-ecosystems-the-case-of-cycling-activism-in-ottawa/",
       "pdfLabel": "Project overview",
       "category": "transportation",
-      "organizations": []
+      "organizations": [],
+      "authors": [
+        "Mathieu Bouchard"
+      ],
+      "studentResearchers": [
+        "Adithiyan Rajan",
+        "Camila Estrada"
+      ]
     },
     {
       "title": "How digital rights activists rein in regulatory entrepreneurs: the case of Clearview AI",
@@ -57,7 +85,10 @@
       "pdf": "docs/clearview-ai-project.pdf",
       "pdfLabel": "Project overview",
       "category": "technology",
-      "organizations": []
+      "organizations": [],
+      "authors": [
+        "Mathieu Bouchard"
+      ]
     },
     {
       "title": "When laypersons claim to know: digital platforms and the epistemic dynamics of polarization",
@@ -65,7 +96,10 @@
       "pdf": "#",
       "pdfLabel": "Coming soon",
       "category": "technology",
-      "organizations": []
+      "organizations": [],
+      "authors": [
+        "Mathieu Bouchard"
+      ]
     },
     {
       "title": "Strategic ambivalence in response to technology adoption: the case of HR analytics",
@@ -73,7 +107,10 @@
       "pdf": "#",
       "pdfLabel": "Coming soon",
       "category": "technology",
-      "organizations": []
+      "organizations": [],
+      "authors": [
+        "Mathieu Bouchard"
+      ]
     }
   ],
   "teamCopy": "An motivated group of student researchers led by Prof. Mathieu Bouchard.",
