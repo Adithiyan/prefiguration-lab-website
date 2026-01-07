@@ -307,6 +307,24 @@ body {
   font-size: 0.96rem;
 }
 
+.project-line {
+  width: 100%;
+  display: block;
+  margin: 0.12rem 0;
+  color: #2a3340;
+  font-size: 0.94rem;
+  line-height: 1.45;
+}
+
+.project-line-label {
+  font-weight: 600;
+  margin-right: 0.25rem;
+}
+
+.project-line-text {
+  font-weight: 400;
+}
+
 .project-category-pill {
   display: inline-flex;
   align-items: center;
@@ -356,50 +374,6 @@ body {
   display: block;
 }
 
-.project-people-row {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.6rem;
-}
-
-.project-people-label {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: #1f2937;
-  min-width: 5.5rem;
-}
-
-.project-people-list {
-  flex: 1;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.25rem 0.4rem;
-  align-items: center;
-}
-
-.person-tag {
-  display: inline-flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 0;
-  border-radius: 0;
-  font-size: 0.9rem;
-  font-weight: 600;
-  text-decoration: none;
-  background: none;
-  color: #1f2937;
-  border: none;
-}
-
-.person-tag:hover {
-  text-decoration: underline;
-}
-
-.person-tag--disabled {
-  cursor: default;
-  color: #6b7280;
-}
-
 .project-footer {
   display: flex;
   align-items: center;
@@ -434,52 +408,6 @@ body {
 
 .project-card:hover .project-action {
   filter: brightness(1.05);
-}
-
-.project-orgs-line {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.9rem;
-  color: #4b5563;
-}
-
-.project-orgs-label {
-  font-weight: 700;
-  color: #1f2937;
-}
-
-.project-orgs-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem;
-}
-
-.org-tag {
-  display: inline-flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 0;
-  border-radius: 0;
-  background: none;
-  color: #1f2937;
-  font-weight: 600;
-  font-size: 0.9rem;
-  text-decoration: none;
-  border: none;
-}
-
-.org-tag:hover {
-  text-decoration: underline;
-}
-
-.org-tag--disabled {
-  cursor: default;
-  color: #6b7280;
-}
-
-.org-tag--placeholder {
-  color: #6b7280;
 }
 
 .project-card--health {

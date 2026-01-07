@@ -225,10 +225,8 @@ function renderContent(content) {
   setLink("hero-cta", hero.ctaHref, hero.ctaLabel);
   renderThemes(hero.themes);
 
-  const peopleIndex = buildPeopleIndex(content.team, content.collaborators);
-
   setText("projects-copy", content.projectsCopy);
-  renderProjects(content.projects, peopleIndex);
+  renderProjects(content.projects);
 
   setText("team-copy", content.teamCopy);
   renderTeam(content.team);
@@ -297,31 +295,7 @@ function renderThemes(themes = []) {
   });
 }
 
-function buildPeopleIndex(team = [], collaborators = []) {
-  const index = {};
-  const add = (person, group) => {
-    if (!person) return;
-    const slug = slugify(person.id || person.name || "");
-    const keys = [person.id, person.name, slug].filter(Boolean);
-    keys.forEach((k) => {
-      index[String(k).toLowerCase()] = { ...person, group };
-    });
-  };
-  team.forEach((p) => add(p, "team"));
-  collaborators.forEach((p) => add(p, "collaborator"));
-  return index;
-}
-
-function findPerson(ref, peopleIndex) {
-  if (!ref) return null;
-  const key =
-    typeof ref === "string"
-      ? ref.toLowerCase()
-      : String(ref.id || ref.name || "").toLowerCase();
-  return peopleIndex[key] || null;
-}
-
-function renderProjects(projects = [], peopleIndex = {}) {
+function renderProjects(projects = []) {
   const grid = document.getElementById("projects-grid");
   if (!grid) return;
   grid.innerHTML = "";
@@ -355,20 +329,19 @@ function renderProjects(projects = [], peopleIndex = {}) {
     const blurb = document.createElement("p");
     blurb.textContent = project.blurb || "";
 
-    card.appendChild(head);
-    if (project.blurb) {
-      card.appendChild(blurb);
-    }
+      card.appendChild(head);
+      if (project.blurb) {
+        card.appendChild(blurb);
+      }
 
-    const authorsRow = createPeopleRow("Authors", project.authors, peopleIndex);
-    if (authorsRow) card.appendChild(authorsRow);
+      const authorsRow = createTextLine("Authors", formatList(project.authors));
+      if (authorsRow) card.appendChild(authorsRow);
 
-    const studentsRow = createPeopleRow(
-      "Student researchers",
-      project.studentResearchers,
-      peopleIndex
-    );
-    if (studentsRow) card.appendChild(studentsRow);
+      const studentsRow = createTextLine(
+        "Student researchers",
+        formatList(project.studentResearchers)
+      );
+      if (studentsRow) card.appendChild(studentsRow);
 
     const orgRow = createOrgRow(project.organizations);
     if (orgRow) card.appendChild(orgRow);
@@ -431,96 +404,61 @@ card.appendChild(footer);
   });
 }
 
-function createPeopleRow(label, people, peopleIndex) {
+function createTextLine(label, text) {
   const row = document.createElement("div");
-  row.className = "project-people-row";
-
+  row.className = "project-line";
   const labelEl = document.createElement("span");
-  labelEl.className = "project-people-label";
+  labelEl.className = "project-line-label";
   labelEl.textContent = `${label}:`;
+  const textEl = document.createElement("span");
+  textEl.className = "project-line-text";
+  textEl.textContent = text || "Coming soon";
   row.appendChild(labelEl);
-
-  const list = document.createElement("div");
-  list.className = "project-people-list";
-
-  const hasPeople = Array.isArray(people) && people.length;
-
-  if (hasPeople) {
-    people.forEach((item) => {
-      const person = findPerson(item, peopleIndex);
-      const name =
-        (person && person.name) ||
-        (typeof item === "string" ? item : item?.name) ||
-        "Unknown";
-      const href =
-        (person && person.website) ||
-        (person && person.linkedin) ||
-        (person && person.scholar) ||
-        "";
-      const tag = document.createElement(
-        href && !isPlaceholder(href) ? "a" : "span"
-      );
-      tag.className = "person-tag";
-      tag.textContent = name;
-      if (href && !isPlaceholder(href)) {
-        tag.href = href;
-        tag.target = "_blank";
-        tag.rel = "noopener noreferrer";
-      } else {
-        tag.classList.add("person-tag--disabled");
-      }
-      list.appendChild(tag);
-    });
-  } else {
-    const badge = document.createElement("span");
-    badge.className = "badge badge-muted";
-    badge.textContent = "Coming soon";
-    list.appendChild(badge);
-  }
-
-  row.appendChild(list);
+  row.appendChild(textEl);
   return row;
 }
 
 function createOrgRow(orgs) {
   const hasOrgs = Array.isArray(orgs) && orgs.length;
   const row = document.createElement("div");
-  row.className = "project-orgs-line";
+  row.className = "project-line";
 
   const label = document.createElement("span");
-  label.className = "project-orgs-label";
+  label.className = "project-line-label";
   label.textContent = "Organizations:";
   row.appendChild(label);
 
-  const list = document.createElement("div");
-  list.className = "project-orgs-list";
+  const list = document.createElement("span");
+  list.className = "project-line-text";
 
   if (hasOrgs) {
-    orgs.forEach((item) => {
-      const name = typeof item === "string" ? item : item?.name;
-      const href = typeof item === "object" ? item?.url : "";
-      if (!name) return;
-      const tag = document.createElement(href && !isPlaceholder(href) ? "a" : "span");
-      tag.className = "org-tag";
-      tag.textContent = name;
-      if (href && !isPlaceholder(href)) {
-        tag.href = href;
-        tag.target = "_blank";
-        tag.rel = "noopener noreferrer";
-      } else {
-        tag.classList.add("org-tag--disabled");
-      }
-      list.appendChild(tag);
-    });
+    const names = orgs
+      .map((item) => (typeof item === "string" ? item : item?.name || ""))
+      .map((s) => String(s).trim())
+      .filter(Boolean);
+    list.textContent = names.length ? names.join(", ") : "Coming soon";
   } else {
-    const placeholder = document.createElement("span");
-    placeholder.className = "org-tag org-tag--placeholder";
-    placeholder.textContent = "Coming soon";
-    list.appendChild(placeholder);
+    list.textContent = "Coming soon";
   }
 
   row.appendChild(list);
   return row;
+}
+
+function formatList(value) {
+  if (Array.isArray(value)) {
+    const cleaned = value
+      .map((item) =>
+        typeof item === "string" ? item : item?.name || item?.id || ""
+      )
+      .map((s) => String(s).trim())
+      .filter(Boolean);
+    return cleaned.length ? cleaned.join(", ") : "Coming soon";
+  }
+  if (typeof value === "string" && value.trim().length) {
+    return value.trim();
+  }
+  return "Coming soon";
 }
 
 
@@ -579,6 +517,7 @@ function renderTeam(team = []) {
     const detail = document.createElement("div");
     detail.className = "team-detail";
     detail.setAttribute("data-person", member.id);
+    detail.id = `person-${member.id}`;
     if (index !== 0) {
       detail.hidden = true;
     }
@@ -631,16 +570,16 @@ function renderTeam(team = []) {
       );
     }
 
-    if (member.scholar) {
-      actions.appendChild(
-        createIconButton(
-          member.scholar,
-          "scholar",
-          `View ${member.name}'s Google Scholar profile`,
-          "Google Scholar"
-        )
-      );
-    }
+      if (member.scholar) {
+        actions.appendChild(
+          createIconButton(
+            member.scholar,
+            "scholar",
+            `View ${member.name}'s Google Scholar profile`,
+            "Google Scholar"
+          )
+        );
+      }
 
     if (member.website) {
       actions.appendChild(
@@ -730,6 +669,7 @@ function renderCollaborators(collaborators = []) {
     const detail = document.createElement("div");
     detail.className = "team-detail";
     detail.setAttribute("data-person", member.id);
+    detail.id = `person-${member.id}`;
     if (index !== 0) {
       detail.hidden = true;
     }
@@ -776,35 +716,35 @@ function renderCollaborators(collaborators = []) {
     const actions = document.createElement("div");
     actions.className = "team-detail-actions";
 
-    if (member.website) {
-      if (isPlaceholder(member.website)) {
-        actions.appendChild(createPlaceholderButton("Profile"));
-      } else {
-        actions.appendChild(
+      if (member.website) {
+        if (isPlaceholder(member.website)) {
+          actions.appendChild(createPlaceholderButton("Profile"));
+        } else {
+          actions.appendChild(
           createIconButton(
             member.website,
             "website",
             `Visit ${member.name}'s profile page`,
             "Profile"
-          )
-        );
+            )
+          );
+        }
       }
-    }
 
-    if (member.scholar) {
-      if (isPlaceholder(member.scholar)) {
-        actions.appendChild(createPlaceholderButton("Scholar"));
-      } else {
-        actions.appendChild(
-          createIconButton(
-            member.scholar,
-            "scholar",
-            `View ${member.name}'s Google Scholar profile`,
-            "Scholar"
-          )
-        );
+      if (member.scholar) {
+        if (isPlaceholder(member.scholar)) {
+          actions.appendChild(createPlaceholderButton("Google Scholar"));
+        } else {
+          actions.appendChild(
+            createIconButton(
+              member.scholar,
+              "scholar",
+              `View ${member.name}'s Google Scholar profile`,
+              "Google Scholar"
+            )
+          );
+        }
       }
-    }
 
     if (member.linkedin) {
       if (isPlaceholder(member.linkedin)) {
@@ -816,21 +756,6 @@ function renderCollaborators(collaborators = []) {
             "linkedin",
             `Connect with ${member.name} on LinkedIn`,
             "LinkedIn"
-          )
-        );
-      }
-    }
-
-    if (member.scholar) {
-      if (isPlaceholder(member.scholar)) {
-        actions.appendChild(createPlaceholderButton("Scholar"));
-      } else {
-        actions.appendChild(
-          createIconButton(
-            member.scholar,
-            "scholar",
-            `View ${member.name}'s Google Scholar profile`,
-            "Google Scholar"
           )
         );
       }
