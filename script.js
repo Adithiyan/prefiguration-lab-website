@@ -1,9 +1,9 @@
 const CATEGORY_ICONS = {
-  // Classic set; tech uses a crisp silicon chip
-  health: `<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M10 4h4v6h6v4h-6v6h-4v-6H4v-4h6z"/></svg>`,
-  education: `<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12 4 3 8l9 4 9-4-9-4zm-6 7v6.2L12 20l6-2.8V11l-6 2.7L6 11z"/></svg>`,
-  transportation: `<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M7 6h10l2 6v6h-2a2 2 0 1 1-4 0H11a2 2 0 1 1-4 0H5v-6l2-6zm0 6h10l-1.2-4H8.2L7 12zm2 6a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm8 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/></svg>`,
-  technology: `<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M9 4h6a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm2 4v8h2V8h-2Z"/><path fill="currentColor" d="M11 2h2v2h-2zM11 20h2v2h-2zM4 9h2v2H4zM18 9h2v2h-2zM4 13h2v2H4zM18 13h2v2h-2z"/></svg>`,
+  // Updated silhouettes for stronger recognition
+  health: `<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 4a5 5 0 0 1 5 5c0 3.02-2.53 5.57-4.7 7.27a1.9 1.9 0 0 1-2.6 0C7.53 14.57 5 12.02 5 9a5 5 0 0 1 8-3.86A5 5 0 0 1 12 4Zm1 3h-2v2H9v2h2v2h2v-2h2V9h-2Z"/></svg>`,
+  education: `<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 10 5-10 5-10-5 10-5Zm6 7.21v5.03a6 6 0 0 1-12 0V10.2l6 3 6-3Z"/></svg>`,
+  transportation: `<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 4h10a2 2 0 0 1 1.9 1.37l2.1 6.33V19h-2a2 2 0 1 1-4 0H9a2 2 0 1 1-4 0H3v-3.3L5.1 5.37A2 2 0 0 1 7 4Zm0 7h10l-1.2-4H8.2L7 11Z"/></svg>`,
+  technology: `<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 4h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm3 4v8h2V8h-2Zm0-4h2v2h-2V4Z"/><path fill="currentColor" d="M5 10h2v2H5v-2Zm12 0h2v2h-2v-2Zm-12 4h2v2H5v-2Zm12 0h2v2h-2v-2Z"/></svg>`,
 };
 
 const CATEGORY_LABELS = {
@@ -348,23 +348,6 @@ function renderProjects(projects = [], peopleIndex = {}) {
 
     const head = document.createElement("div");
     head.className = "project-head";
-
-    if (project.category) {
-      const pill = document.createElement("span");
-      pill.className = "project-category-pill";
-
-      const iconWrap = document.createElement("span");
-      iconWrap.innerHTML = CATEGORY_ICONS[project.category] || "";
-      pill.appendChild(iconWrap);
-
-      const label = document.createElement("span");
-      label.textContent =
-        CATEGORY_LABELS[project.category] || project.category || "Project";
-      pill.appendChild(label);
-
-      head.appendChild(pill);
-    }
-
     const title = document.createElement("h3");
     title.textContent = project.title || "";
     head.appendChild(title);
@@ -386,6 +369,9 @@ function renderProjects(projects = [], peopleIndex = {}) {
       peopleIndex
     );
     if (studentsRow) card.appendChild(studentsRow);
+
+    const orgRow = createOrgRow(project.organizations);
+    if (orgRow) card.appendChild(orgRow);
 
     const footer = document.createElement("div");
     footer.className = "project-footer";
@@ -429,14 +415,23 @@ function renderProjects(projects = [], peopleIndex = {}) {
       footer.appendChild(supporters);
     }
 
-    card.appendChild(footer);
+    if (project.category) {
+      const pill = document.createElement("span");
+      pill.className = "project-category-pill project-category-pill--footer";
+
+      const iconWrap = document.createElement("span");
+      iconWrap.className = `project-category-icon project-category-icon--${project.category}`;
+      iconWrap.innerHTML = CATEGORY_ICONS[project.category] || "";
+      pill.appendChild(iconWrap);
+
+      footer.appendChild(pill);
+    }
+card.appendChild(footer);
     grid.appendChild(card);
   });
 }
 
 function createPeopleRow(label, people, peopleIndex) {
-  if (!Array.isArray(people) || !people.length) return null;
-
   const row = document.createElement("div");
   row.className = "project-people-row";
 
@@ -448,35 +443,86 @@ function createPeopleRow(label, people, peopleIndex) {
   const list = document.createElement("div");
   list.className = "project-people-list";
 
-  people.forEach((item) => {
-    const person = findPerson(item, peopleIndex);
-    const name =
-      (person && person.name) ||
-      (typeof item === "string" ? item : item?.name) ||
-      "Unknown";
-    const href =
-      (person && person.website) ||
-      (person && person.linkedin) ||
-      (person && person.scholar) ||
-      "";
-    const tag = document.createElement(
-      href && !isPlaceholder(href) ? "a" : "span"
-    );
-    tag.className = "person-tag";
-    tag.textContent = name;
-    if (href && !isPlaceholder(href)) {
-      tag.href = href;
-      tag.target = "_blank";
-      tag.rel = "noopener noreferrer";
-    } else {
-      tag.classList.add("person-tag--disabled");
-    }
-    list.appendChild(tag);
-  });
+  const hasPeople = Array.isArray(people) && people.length;
+
+  if (hasPeople) {
+    people.forEach((item) => {
+      const person = findPerson(item, peopleIndex);
+      const name =
+        (person && person.name) ||
+        (typeof item === "string" ? item : item?.name) ||
+        "Unknown";
+      const href =
+        (person && person.website) ||
+        (person && person.linkedin) ||
+        (person && person.scholar) ||
+        "";
+      const tag = document.createElement(
+        href && !isPlaceholder(href) ? "a" : "span"
+      );
+      tag.className = "person-tag";
+      tag.textContent = name;
+      if (href && !isPlaceholder(href)) {
+        tag.href = href;
+        tag.target = "_blank";
+        tag.rel = "noopener noreferrer";
+      } else {
+        tag.classList.add("person-tag--disabled");
+      }
+      list.appendChild(tag);
+    });
+  } else {
+    const badge = document.createElement("span");
+    badge.className = "badge badge-muted";
+    badge.textContent = "Coming soon";
+    list.appendChild(badge);
+  }
 
   row.appendChild(list);
   return row;
 }
+
+function createOrgRow(orgs) {
+  const hasOrgs = Array.isArray(orgs) && orgs.length;
+  const row = document.createElement("div");
+  row.className = "project-orgs-line";
+
+  const label = document.createElement("span");
+  label.className = "project-orgs-label";
+  label.textContent = "Organizations:";
+  row.appendChild(label);
+
+  const list = document.createElement("div");
+  list.className = "project-orgs-list";
+
+  if (hasOrgs) {
+    orgs.forEach((item) => {
+      const name = typeof item === "string" ? item : item?.name;
+      const href = typeof item === "object" ? item?.url : "";
+      if (!name) return;
+      const tag = document.createElement(href && !isPlaceholder(href) ? "a" : "span");
+      tag.className = "org-tag";
+      tag.textContent = name;
+      if (href && !isPlaceholder(href)) {
+        tag.href = href;
+        tag.target = "_blank";
+        tag.rel = "noopener noreferrer";
+      } else {
+        tag.classList.add("org-tag--disabled");
+      }
+      list.appendChild(tag);
+    });
+  } else {
+    const placeholder = document.createElement("span");
+    placeholder.className = "org-tag org-tag--placeholder";
+    placeholder.textContent = "Coming soon";
+    list.appendChild(placeholder);
+  }
+
+  row.appendChild(list);
+  return row;
+}
+
 
 function renderTeam(team = []) {
   const grid = document.getElementById("team-grid");

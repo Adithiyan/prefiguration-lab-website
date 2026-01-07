@@ -15,52 +15,68 @@
       "title": "Liminal becomings: the professionalization project of peer support workers",
       "blurb": "We examine how peer support workers have sought over the last two decades to carve out a space for their practice within the professional sector of mental health care.",
       "pdf": "docs/peer-support-project.pdf",
-      "pdfLabel": "Project overview"
+      "pdfLabel": "Project overview",
+      "category": "health",
+      "organizations": []
     },
     {
       "title": "Constructing spaces to share vulnerability at work",
       "blurb": "We reveal the ritualized process of creating supportive spaces that strengthen trust and foster collective learning in the workplace.",
       "pdf": "#",
-      "pdfLabel": "Coming soon"
+      "pdfLabel": "Coming soon",
+      "category": "health",
+      "organizations": []
     },
     {
       "title": "Prefigurative pedagogy: reimagining the business school toward sustainable futures",
       "blurb": "We experiment with new ways of learning together that harness utopian imagination to guide action in the present toward sustainable futures.",
       "pdf": "https://telfer.uottawa.ca/en/telfer-knowledge-hub/greener/prefiguring-pedagogies-when-imagination-becomes-a-collective-practice/",
-      "pdfLabel": "Project overview"
+      "pdfLabel": "Project overview",
+      "category": "education",
+      "organizations": []
     },
     {
       "title": "Negotiating (dis)order in a learning center for homeschoolers",
       "blurb": "We explore how board administrators, parents, and staff educators influence an alternative pedagogal space operating outside of the formal school system.",
       "pdf": "#",
-      "pdfLabel": "Coming soon"
+      "pdfLabel": "Coming soon",
+      "category": "education",
+      "organizations": []
     },
     {
       "title": "Cycling activism: unveiling the bottom-up dynamics of change toward sustainable transportation systems",
       "blurb": "We investigate the formation of entrepreneurial ecosystems for social change to create urban communities where active transportation is the norm and car is the exception.",
       "pdf": "https://telfer.uottawa.ca/en/telfer-knowledge-hub/research-news/alternative-entrepreneurial-ecosystems-the-case-of-cycling-activism-in-ottawa/",
-      "pdfLabel": "Project overview"
+      "pdfLabel": "Project overview",
+      "category": "transportation",
+      "organizations": []
     },
     {
       "title": "How digital rights activists rein in regulatory entrepreneurs: the case of Clearview AI",
       "blurb": "We reveal how activists mobilize regulatory frameworks and public opinion to defend against the incursions of technology companies into citizens' digital rights.",
       "pdf": "docs/clearview-ai-project.pdf",
-      "pdfLabel": "Project overview"
+      "pdfLabel": "Project overview",
+      "category": "technology",
+      "organizations": []
     },
     {
       "title": "When laypersons claim to know: digital platforms and the epistemic dynamics of polarization",
       "blurb": "Description to come.",
       "pdf": "#",
-      "pdfLabel": "Coming soon"
+      "pdfLabel": "Coming soon",
+      "category": "technology",
+      "organizations": []
     },
     {
       "title": "Strategic ambivalence in response to technology adoption: the case of HR analytics",
       "blurb": "Description to come.",
       "pdf": "#",
-      "pdfLabel": "Coming soon"
+      "pdfLabel": "Coming soon",
+      "category": "technology",
+      "organizations": []
     }
   ],
-  "teamCopy": "An amazing group of student researchers led by Prof. Mathieu Bouchard.",
+  "teamCopy": "An motivated group of student researchers led by Prof. Mathieu Bouchard.",
   "team": [
     {
       "id": "mathieu",
