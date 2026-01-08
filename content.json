@@ -62,6 +62,9 @@
       "organizations": [],
       "authors": [
         "Mathieu Bouchard"
+      ],
+      "studentResearchers": [
+        "Hamza Tawdi"
       ]
     },
     {
@@ -88,10 +91,14 @@
       "organizations": [],
       "authors": [
         "Mathieu Bouchard"
+      ],
+      "studentResearchers": [
+        "Adithiyan Rajan",
+        "Phuong Tran"
       ]
     }
   ],
-  "teamCopy": "An motivated group of student researchers led by Prof. Mathieu Bouchard.",
+  "teamCopy": "An amazing group of student researchers led by Prof. Mathieu Bouchard.",
   "team": [
     {
       "id": "mathieu",
