@@ -91,17 +91,6 @@
       ]
     },
     {
-      "title": "When laypersons claim to know: digital platforms and the epistemic dynamics of polarization",
-      "blurb": "Description to come.",
-      "pdf": "#",
-      "pdfLabel": "Coming soon",
-      "category": "technology",
-      "organizations": [],
-      "authors": [
-        "Mathieu Bouchard"
-      ]
-    },
-    {
       "title": "Strategic ambivalence in response to technology adoption: the case of HR analytics",
       "blurb": "Description to come.",
       "pdf": "#",
@@ -158,6 +147,7 @@
       "name": "Hamza Tawdi",
       "role": "Student Researcher",
       "bio": "Hamza Tawdi is a graduate of the Telfer School of Management with a Bachelor of Commerce degree. His work focuses on analysis, synthesis, and writing, with an emphasis on making information accessible.",
+      "photo": "images/Hamza_Tawdi.jpg",
       "linkedin": "https://www.linkedin.com/in/hamza-tawdi-a6aa5925b/",
       "email": "htawd008@uottawa.ca"
     }
@@ -213,8 +203,7 @@
   "collaborators": [
     {
       "name": "Mayur Joshi",
-      "role": "Coauthor on digital rights activism project",
-      "bio": "Assistant professor of information systems at the Telfer School of Management, University of Ottawa.",
+      "role": "Assistant professor of information systems at Telfer School of Management, University of Ottawa.",
       "id": "collab-1",
       "photo": "images/Mayur_Joshi.jpg",
       "website": "https://telfer.uottawa.ca/en/directory/mayur-joshi/",
@@ -223,8 +212,7 @@
     },
     {
       "name": "Samia Chreim",
-      "role": "Coauthor on homeschooling project",
-      "bio": "Full professor of organization studies at the Telfer School of Management, University of Ottawa.",
+      "role": "Full professor of organization studies at the Telfer School of Management, University of Ottawa.",
       "id": "collab-2",
       "photo": "images/Samia_Chreim.jpg",
       "website": "https://telfer.uottawa.ca/en/directory/samia-chreim/",
@@ -233,8 +221,7 @@
     },
     {
       "name": "Ann Langley",
-      "role": "Coauthor on peer support work project",
-      "bio": "Emerita professor at HEC Montreal and Distinguished Research Environment Professor at the University of Warwick.",
+      "role": "Emerita professor at HEC Montreal and Distinguished Research Environment Professor at the University of Warwick.",
       "id": "collab-3",
       "photo": "images/Ann_Langley.jpg",
       "website": "https://annlangley.ca/profile/",
@@ -243,8 +230,7 @@
     },
     {
       "name": "Siddhant Ritwick",
-      "role": "Coauthor on digital rights activism project",
-      "bio": "Doctoral researcher in the Department of Management Studies at Aalto University.",
+      "role": "Postdoctoral fellow at University of Zurich.",
       "id": "collab-4",
       "photo": "images/Siddhant_Ritwick.jpg",
       "website": "https://research.aalto.fi/en/persons/siddhant-ritwick/",
@@ -253,8 +239,7 @@
     },
     {
       "name": "Yao Yao",
-      "role": "Lead author on HR analytics and AI adoption project",
-      "bio": "Assistant professor in human resources and management at the DeGroote School of Business, McMaster University.",
+      "role": "Assistant professor in human resources and management at the DeGroote School of Business, McMaster University.",
       "id": "collab-5",
       "photo": "images/Yao_Yao.jpg",
       "website": "https://dtiuottawa.ca/faculties/yao-yao/",
@@ -263,8 +248,7 @@
     },
     {
       "name": "Luciano Barin Cruz",
-      "role": "Coauthor on peer support work project",
-      "bio": "Professor in the Department of Management at HEC Montreal.",
+      "role": "Professor in the Department of Management at HEC Montreal.",
       "id": "collab-6",
       "photo": "images/Luciano_Barin_Cruz.jpg",
       "website": "https://www.hec.ca/en/profs/luciano.barin-cruz.html",
@@ -273,8 +257,7 @@
     },
     {
       "name": "Steve Maguire",
-      "role": "Coauthor on peer support work project",
-      "bio": "Professor and Deputy Dean (Research) at the University of Sydney Business School.",
+      "role": "Professor and Deputy Dean for Research at University of Sydney Business School.",
       "id": "collab-7",
       "photo": "images/Steve_Maguire.jpg",
       "website": "https://www.sydney.edu.au/business/about/our-people/academic-staff/steven-maguire.html",
@@ -283,8 +266,7 @@
     },
     {
       "name": "Ayman Ajaj",
-      "role": "PhD student in the Digital Transformation and Innovation program at University of Ottawa",
-      "bio": "Lead author on the 'spoiled expertise' project.",
+      "role": "PhD student in Digital Transformation and Innovation at University of Ottawa",
       "id": "collab-8",
       "photo": "images/Ayman_Ajaj.jpg",
       "website": "",
@@ -294,7 +276,6 @@
     {
       "name": "Qingyi Zhu",
       "role": "PhD student in Strategy and Organization at Telfer School of Management, University of Ottawa",
-      "bio": "Coauthor on the 'spaces for vulnerability' project.",
       "id": "collab-9",
       "photo": "images/Qingyi_Zhu.jpg",
       "website": "",
@@ -302,7 +283,7 @@
       "scholar": ""
     }
   ],
-  "supportersCopy": "Support comes from grants and partnerships that fund our work.",
+  "supportersCopy": "Organizations and institutions that fund our work.",
   "supporters": [
     {
       "name": "FRQSC",
