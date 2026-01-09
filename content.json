@@ -17,7 +17,9 @@
       "pdf": "docs/peer-support-project.pdf",
       "pdfLabel": "Project overview",
       "category": "health",
-      "organizations": [],
+      "organizations": [
+        "FRQSC"
+      ],
       "authors": [
         "Mathieu Bouchard",
         "Steve Maguire",
@@ -33,7 +35,9 @@
       "pdf": "#",
       "pdfLabel": "Coming soon",
       "category": "health",
-      "organizations": [],
+      "organizations": [
+        "SSHRC"
+      ],
       "authors": [
         "Mathieu Bouchard",
         "Qingyi Zhu",
@@ -68,7 +72,9 @@
       "pdf": "#",
       "pdfLabel": "Coming soon",
       "category": "education",
-      "organizations": [],
+      "organizations": [
+        "SSHRC"
+      ],
       "authors": [
         "Mathieu Bouchard",
         "Samia Chreim"
@@ -78,12 +84,15 @@
       ]
     },
     {
-      "title": "Cycling activism: shifting mindsets for sustainable transportation systems",
+      "title": "Cycling activism for sustainable transportation systems: turning imagination into action",
       "blurb": "We investigate the formation of entrepreneurial ecosystems for social change to create urban communities where active transportation is the norm and car is the exception.",
       "pdf": "https://telfer.uottawa.ca/en/telfer-knowledge-hub/research-news/alternative-entrepreneurial-ecosystems-the-case-of-cycling-activism-in-ottawa/",
       "pdfLabel": "Project overview",
       "category": "transportation",
-      "organizations": [],
+      "organizations": [
+        "uOttawa",
+        "Telfer"
+      ],
       "authors": [
         "Mathieu Bouchard"
       ],
@@ -98,7 +107,9 @@
       "pdf": "docs/clearview-ai-project.pdf",
       "pdfLabel": "Project overview",
       "category": "technology",
-      "organizations": [],
+      "organizations": [
+        "SSHRC"
+      ],
       "authors": [
         "Mathieu Bouchard",
         "Siddhant Ritwick",
