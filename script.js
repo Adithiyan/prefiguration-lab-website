@@ -425,7 +425,7 @@ function createOrgRow(orgs) {
 
   const label = document.createElement("span");
   label.className = "project-line-label";
-  label.textContent = "Organizations:";
+  label.textContent = "Supporters:";
   row.appendChild(label);
 
   const list = document.createElement("span");
