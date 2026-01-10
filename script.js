@@ -1,9 +1,9 @@
 const CATEGORY_ICONS = {
-  // Updated silhouettes for stronger recognition
-  health: `<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 4a5 5 0 0 1 5 5c0 3.02-2.53 5.57-4.7 7.27a1.9 1.9 0 0 1-2.6 0C7.53 14.57 5 12.02 5 9a5 5 0 0 1 8-3.86A5 5 0 0 1 12 4Zm1 3h-2v2H9v2h2v2h2v-2h2V9h-2Z"/></svg>`,
-  education: `<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 3 10 5-10 5-10-5 10-5Zm6 7.21v5.03a6 6 0 0 1-12 0V10.2l6 3 6-3Z"/></svg>`,
-  transportation: `<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 4h10a2 2 0 0 1 1.9 1.37l2.1 6.33V19h-2a2 2 0 1 1-4 0H9a2 2 0 1 1-4 0H3v-3.3L5.1 5.37A2 2 0 0 1 7 4Zm0 7h10l-1.2-4H8.2L7 11Z"/></svg>`,
-  technology: `<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 4h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm3 4v8h2V8h-2Zm0-4h2v2h-2V4Z"/><path fill="currentColor" d="M5 10h2v2H5v-2Zm12 0h2v2h-2v-2Zm-12 4h2v2H5v-2Zm12 0h2v2h-2v-2Z"/></svg>`,
+  // New icons: health (plus), education (book), transportation (bicycle), technology (chip)
+  health: `<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 4a7 7 0 1 1 0 14 7 7 0 0 1 0-14Zm1 3h-2v3H8v2h3v3h2v-3h3v-2h-3V7Z"/></svg>`,
+  education: `<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 6.5 12 3l8 3.5v12l-8-3.5-8 3.5v-12Zm2 .9v7.23l6-2.63 6 2.63V7.4l-6-2.63L6 7.4Z"/></svg>`,
+  transportation: `<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5.5 17A3.5 3.5 0 1 1 8.9 12h2.35l1.05-1.12-.67-1.38H10V7h4v2h-1.1l.5 1 2.1 3.24A3.5 3.5 0 1 1 14 16.99h-2a1.5 1.5 0 1 0-2.74-1H7.1A3.5 3.5 0 0 1 5.5 17Zm10 0a1.5 1.5 0 1 0 1.5-1.5 1.5 1.5 0 0 0-1.5 1.5Zm-10 0a1.5 1.5 0 1 0 1.5-1.5A1.5 1.5 0 0 0 5.5 17Z"/></svg>`,
+  technology: `<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v14H7V5Zm2 0v12h6V5H9Zm1-3h2v2h-2V2Zm4 0h2v2h-2V2ZM6 8H4v2h2V8Zm0 4H4v2h2v-2Zm0 4H4v2h2v-2Zm12-8h2v2h-2V8Zm0 4h2v2h-2v-2Zm0 4h2v2h-2v-2ZM9 20h2v2H9v-2Zm4 0h2v2h-2v-2Z"/></svg>`,
 };
 
 const CATEGORY_LABELS = {

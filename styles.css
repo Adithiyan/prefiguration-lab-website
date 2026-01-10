@@ -285,8 +285,8 @@ body {
 
 .project-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 30px rgba(196, 103, 168, 0.16);
-  border-color: #c467a8;
+  box-shadow: 0 12px 30px rgba(15, 45, 80, 0.12);
+  border-color: #b6c4de;
 }
 
 .project-head {
@@ -400,12 +400,12 @@ body {
   gap: 0.35rem;
   padding: 0.45rem 0.9rem;
   border-radius: 999px;
-  background-color: #c467a8;
+  background-color: #1f3a8a;
   color: #ffffff;
   font-weight: 700;
   font-size: 0.92rem;
   text-decoration: none;
-  border: 1px solid #c467a8;
+  border: 1px solid #1b2f74;
 }
 
 .project-card:hover .project-action {
