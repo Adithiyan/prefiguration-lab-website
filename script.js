@@ -1,9 +1,9 @@
+// Lucide icons
 const CATEGORY_ICONS = {
-  // New icons: health (plus), education (book), transportation (bicycle), technology (chip)
-  health: `<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 4a7 7 0 1 1 0 14 7 7 0 0 1 0-14Zm1 3h-2v3H8v2h3v3h2v-3h3v-2h-3V7Z"/></svg>`,
-  education: `<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 6.5 12 3l8 3.5v12l-8-3.5-8 3.5v-12Zm2 .9v7.23l6-2.63 6 2.63V7.4l-6-2.63L6 7.4Z"/></svg>`,
-  transportation: `<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5.5 17A3.5 3.5 0 1 1 8.9 12h2.35l1.05-1.12-.67-1.38H10V7h4v2h-1.1l.5 1 2.1 3.24A3.5 3.5 0 1 1 14 16.99h-2a1.5 1.5 0 1 0-2.74-1H7.1A3.5 3.5 0 0 1 5.5 17Zm10 0a1.5 1.5 0 1 0 1.5-1.5 1.5 1.5 0 0 0-1.5 1.5Zm-10 0a1.5 1.5 0 1 0 1.5-1.5A1.5 1.5 0 0 0 5.5 17Z"/></svg>`,
-  technology: `<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v14H7V5Zm2 0v12h6V5H9Zm1-3h2v2h-2V2Zm4 0h2v2h-2V2ZM6 8H4v2h2V8Zm0 4H4v2h2v-2Zm0 4H4v2h2v-2Zm12-8h2v2h-2V8Zm0 4h2v2h-2v-2Zm0 4h2v2h-2v-2ZM9 20h2v2H9v-2Zm4 0h2v2h-2v-2Z"/></svg>`,
+  health: `<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m3 13 2.5 2.5L8 13l2 2 2-6 2.5 7L18 13l3 3"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.5 8.5a5 5 0 0 0-9-2.5L12 6l-.5-.5a5 5 0 0 0-9 2.5c0 5 9 9 9 9s9-4 9-9Z"/></svg>`, // heart-pulse
+  education: `<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m4 19 8 3 8-3"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m4 5 8-3 8 3-8 3-8-3v10"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m4 15 8 3 8-3"/></svg>`, // book-open-text
+  transportation: `<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5.5" cy="17.5" r="3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="18.5" cy="17.5" r="3" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 17.5h-6l3-6.5h3l-1 2.5h-3M12 11l-2-4H7M5.5 11H9"/></svg>`, // bike
+  technology: `<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" d="M10 2h4M12 2v3M10 22h4M12 22v-3M2 10v4M2 12h3M22 10v4M22 12h-3M17.5 6.5 15 9M17.5 17.5 15 15M6.5 6.5 9 9M6.5 17.5 9 15"/></svg>`, // cpu
 };
 
 const CATEGORY_LABELS = {
