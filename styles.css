@@ -115,7 +115,7 @@ body {
 
 /* Hero */
 .hero {
-  background: linear-gradient(135deg, #222244, #2a4c6f);
+  background: #53bbbc;
   color: #ffffff;
   padding: 5rem 0 4rem;
 }
@@ -214,15 +214,16 @@ body {
   margin-top: 1.5rem;
   padding: 0.7rem 1.4rem;
   border-radius: 999px;
-  background-color: #f3b33d;
+  background-color: #c8d958;
   color: #1a1a1a;
-  font-weight: 600;
+  font-weight: 700;
   text-decoration: none;
   font-size: 0.95rem;
+  box-shadow: 0 8px 18px rgba(200, 217, 88, 0.25);
 }
 
 .button:hover {
-  background-color: #ffd15e;
+  background-color: #d8e676;
 }
 
 .link {
@@ -271,7 +272,7 @@ body {
   flex-direction: column;
   gap: 0.85rem;
   background-color: #ffffff;
-  border: 1px solid #d7deeb;
+  border: 1px solid #c8d958;
   border-radius: 1rem;
   padding: 1.75rem;
   transition:
@@ -284,8 +285,8 @@ body {
 
 .project-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 30px rgba(15, 45, 80, 0.12);
-  border-color: #b6c4de;
+  box-shadow: 0 12px 30px rgba(196, 103, 168, 0.16);
+  border-color: #c467a8;
 }
 
 .project-head {
@@ -388,8 +389,9 @@ body {
   margin-left: auto;
   padding: 0.28rem 0.5rem;
   gap: 0.28rem;
-  background-color: #f1f5f9;
-  border-color: #d7deeb;
+  background-color: rgba(83, 187, 188, 0.12);
+  border-color: #53bbbc;
+  color: #0f5253;
 }
 
 .project-action {
@@ -398,12 +400,12 @@ body {
   gap: 0.35rem;
   padding: 0.45rem 0.9rem;
   border-radius: 999px;
-  background-color: #1f3a8a;
+  background-color: #c467a8;
   color: #ffffff;
   font-weight: 700;
   font-size: 0.92rem;
   text-decoration: none;
-  border: 1px solid #1b2f74;
+  border: 1px solid #c467a8;
 }
 
 .project-card:hover .project-action {
@@ -716,9 +718,11 @@ body {
 
 /* Person card */
 .team-person-card {
+  display: flex;
+  align-items: center;
   border-radius: 1rem;
-  border: 1px solid #8d0033; /* Telfer red outline */
-  padding: 1rem;
+  border: 1px solid #53bbbc;
+  padding: 0.8rem;
   cursor: pointer;
   transition:
     transform 0.18s ease-out,
@@ -729,25 +733,37 @@ body {
 }
 
 .team-person-inner {
-  display: flex;
-  flex-direction: column;
-  gap: 0.7rem;
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 0.55rem;
+  align-items: center;
+  width: 100%;
 }
 
 /* Inner box for the photo */
 .team-person-photo-box {
-  width: 100%;
-  border-radius: 0.8rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 0.7rem;
   background-color: #f7f1f3;
-  padding: 0.6rem;
+  padding: 0.3rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
-.team-person-photo-box img {
-  width: 80px;
-  height: 80px;
+.team-detail-photo {
+  width: 64px;
+  height: 64px;
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+.team-person-photo-box img,
+.team-detail-photo img {
+  width: 100%;
+  height: 100%;
   border-radius: 0.75rem;
   object-fit: cover;
 }
@@ -774,13 +790,13 @@ body {
 /* Hover + active state */
 .team-person-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
-  border-color: #b11a46;
+  box-shadow: 0 12px 28px rgba(83, 187, 188, 0.14);
+  border-color: #53bbbc;
 }
 
 .team-person-card.active {
-  border-color: #b11a46;
-  box-shadow: 0 12px 30px rgba(141, 0, 51, 0.12);
+  border-color: #c467a8;
+  box-shadow: 0 12px 30px rgba(196, 103, 168, 0.18);
 }
 
 /* Detail bar under grid */

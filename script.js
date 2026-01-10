@@ -310,7 +310,8 @@ function renderProjects(projects = []) {
     const hasPdf = project.pdf && !isPlaceholder(project.pdf);
     const cardTag = hasPdf ? "a" : "article";
     const card = document.createElement(cardTag);
-    card.className = "card project-card";
+    card.className =
+      "card project-card shadow-sm border border-slate-200 rounded-xl bg-white hover:shadow-lg transition hover:-translate-y-0.5";
     if (project.category) {
       card.classList.add(`project-card--${project.category}`);
     }
