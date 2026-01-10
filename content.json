@@ -2,7 +2,7 @@
   "hero": {
     "title": "Prefiguration Lab",
     "tagline": "Researching activism for sustainable policymaking.",
-    "body": "Our mission is to explain the practices of those who try to make our world a better place to live in.",
+    "body": "Our mission is to illuminate the practices of those who try to make our world a better place to live in.",
     "ctaLabel": "View our projects",
     "ctaHref": "#projects"
   },
@@ -94,7 +94,7 @@
     },
     {
       "title": "How digital rights activists rein in regulatory entrepreneurs: the case of Clearview AI",
-      "blurb": "We reveal how activists mobilize regulatory frameworks and public opinion to defend against the incursions of technology companies into citizens' digital rights.",
+      "blurb": "We explain how activists mobilize regulatory frameworks and public opinion to defend against the incursions of technology companies into citizens' digital rights.",
       "pdf": "docs/clearview-ai-project.pdf",
       "pdfLabel": "Project overview",
       "category": "technology",
