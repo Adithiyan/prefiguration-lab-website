@@ -115,7 +115,7 @@ body {
 
 /* Hero */
 .hero {
-  background: #53bbbc;
+  background: #90191d;
   color: #ffffff;
   padding: 5rem 0 4rem;
 }
@@ -129,6 +129,8 @@ body {
 .hero-text h1 {
   font-size: 2.4rem;
   margin-bottom: 1rem;
+  color: #ffffff;
+  font-weight: 700;
 }
 
 .hero-text .tagline {
@@ -214,16 +216,16 @@ body {
   margin-top: 1.5rem;
   padding: 0.7rem 1.4rem;
   border-radius: 999px;
-  background-color: #c8d958;
-  color: #1a1a1a;
+  background-color: #53bbbc;
+  color: #ffffff;
   font-weight: 700;
   text-decoration: none;
   font-size: 0.95rem;
-  box-shadow: 0 8px 18px rgba(200, 217, 88, 0.25);
+  box-shadow: 0 8px 18px rgba(83, 187, 188, 0.28);
 }
 
 .button:hover {
-  background-color: #d8e676;
+  background-color: #6cced0;
 }
 
 .link {
