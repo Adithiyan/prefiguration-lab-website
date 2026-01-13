@@ -614,9 +614,12 @@ function renderTeam(team = []) {
 function renderCollaborators(collaborators = []) {
   const grid = document.getElementById("collaborators-grid");
   const panel = document.getElementById("collaborators-detail-panel");
-  if (!grid || !panel) return;
+  if (!grid) return;
   grid.innerHTML = "";
-  panel.innerHTML = "";
+  if (panel) {
+    panel.innerHTML = "";
+    panel.style.display = "none";
+  }
 
   const items =
     collaborators && collaborators.length ? collaborators : defaultContent.collaborators;
@@ -626,11 +629,9 @@ function renderCollaborators(collaborators = []) {
     id: member.id || slugify(member.name || `collaborator-${index + 1}`),
   }));
 
-  members.forEach((member, index) => {
+  members.forEach((member) => {
     const card = document.createElement("article");
-    card.className = "card team-person-card";
-    if (index === 0) card.classList.add("active");
-    card.setAttribute("data-person", member.id);
+    card.className = "card team-person-card collaborator-card";
 
     const inner = document.createElement("div");
     inner.className = "team-person-inner";
@@ -664,83 +665,39 @@ function renderCollaborators(collaborators = []) {
     inner.appendChild(photoBox);
     inner.appendChild(text);
     card.appendChild(inner);
-    grid.appendChild(card);
-
-    const detail = document.createElement("div");
-    detail.className = "team-detail";
-    detail.setAttribute("data-person", member.id);
-    detail.id = `person-${member.id}`;
-    if (index !== 0) {
-      detail.hidden = true;
-    }
-
-    const detailMain = document.createElement("div");
-    detailMain.className = "team-detail-main";
-
-    const detailPhoto = document.createElement("div");
-    detailPhoto.className = "team-detail-photo";
-    if (member.photo) {
-      const img = document.createElement("img");
-      img.src = member.photo;
-      img.alt = `Portrait of ${member.name || "collaborator"}`;
-      detailPhoto.appendChild(img);
-    } else {
-      const placeholder = document.createElement("div");
-      placeholder.className = "team-person-photo-placeholder";
-      const span = document.createElement("span");
-      span.textContent = (member.name || "C").trim().charAt(0).toUpperCase();
-      placeholder.appendChild(span);
-      detailPhoto.appendChild(placeholder);
-    }
-
-    const detailText = document.createElement("div");
-    detailText.className = "team-detail-text";
-
-    const detailName = document.createElement("h3");
-    detailName.textContent = member.name || "";
-
-    const detailRole = document.createElement("p");
-    detailRole.className = "role";
-    detailRole.textContent = member.role || "";
-
-    detailText.appendChild(detailName);
-    detailText.appendChild(detailRole);
-    detailMain.appendChild(detailPhoto);
-    detailMain.appendChild(detailText);
-    detail.appendChild(detailMain);
 
     const actions = document.createElement("div");
-    actions.className = "team-detail-actions";
+    actions.className = "team-detail-actions collaborator-actions";
 
-      if (member.website) {
-        if (isPlaceholder(member.website)) {
-          actions.appendChild(createPlaceholderButton("Profile"));
-        } else {
-          actions.appendChild(
+    if (member.website) {
+      if (isPlaceholder(member.website)) {
+        actions.appendChild(createPlaceholderButton("Profile"));
+      } else {
+        actions.appendChild(
           createIconButton(
             member.website,
             "website",
             `Visit ${member.name}'s profile page`,
             "Profile"
-            )
-          );
-        }
+          )
+        );
       }
+    }
 
-      if (member.scholar) {
-        if (isPlaceholder(member.scholar)) {
-          actions.appendChild(createPlaceholderButton("Google Scholar"));
-        } else {
-          actions.appendChild(
-            createIconButton(
-              member.scholar,
-              "scholar",
-              `View ${member.name}'s Google Scholar profile`,
-              "Google Scholar"
-            )
-          );
-        }
+    if (member.scholar) {
+      if (isPlaceholder(member.scholar)) {
+        actions.appendChild(createPlaceholderButton("Google Scholar"));
+      } else {
+        actions.appendChild(
+          createIconButton(
+            member.scholar,
+            "scholar",
+            `View ${member.name}'s Google Scholar profile`,
+            "Google Scholar"
+          )
+        );
       }
+    }
 
     if (member.linkedin) {
       if (isPlaceholder(member.linkedin)) {
@@ -776,22 +733,8 @@ function renderCollaborators(collaborators = []) {
       actions.appendChild(badge);
     }
 
-    detail.appendChild(actions);
-    panel.appendChild(detail);
-  });
-
-  const cards = grid.querySelectorAll(".team-person-card");
-  const details = panel.querySelectorAll(".team-detail");
-  cards.forEach((card) => {
-    card.addEventListener("click", () => {
-      const id = card.getAttribute("data-person");
-      if (!id) return;
-      cards.forEach((c) => c.classList.remove("active"));
-      card.classList.add("active");
-      details.forEach((block) => {
-        block.hidden = block.getAttribute("data-person") !== id;
-      });
-    });
+    card.appendChild(actions);
+    grid.appendChild(card);
   });
 }
 

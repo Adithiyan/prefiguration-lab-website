@@ -755,12 +755,27 @@ body {
   background-color: #ffffff;
 }
 
+.collaborator-card {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.6rem;
+  min-height: 100%;
+}
+
 .team-person-inner {
   display: grid;
   grid-template-columns: 64px 1fr;
   gap: 0.55rem;
   align-items: center;
   width: 100%;
+}
+
+.collaborator-card .team-person-inner {
+  margin: 0;
+  align-content: center;
+  justify-items: start;
+  flex: 1 1 auto;
 }
 
 /* Inner box for the photo */
@@ -886,6 +901,27 @@ body {
 .team-detail-actions {
   display: flex;
   gap: 0.5rem;
+}
+
+.collaborator-actions {
+  flex-wrap: wrap;
+  padding-top: 0.15rem;
+  gap: 0.3rem;
+  margin-top: auto;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.collaborator-actions .team-icon-btn {
+  padding: 0.18rem 0.42rem;
+  font-size: 0.72rem;
+  min-width: 0;
+  border-radius: 10px;
+}
+
+.collaborator-actions .team-icon-btn svg {
+  width: 12px;
+  height: 12px;
 }
 
 .team-icon-btn {
