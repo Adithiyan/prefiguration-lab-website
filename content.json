@@ -75,7 +75,7 @@
       ]
     },
     {
-      "title": "Cycling activism for sustainable transportation systems: turning imagination into action",
+      "title": "Cycling activism: turning imagination into action for sustainable transportation systems",
       "blurb": "We investigate the formation of entrepreneurial ecosystems for social change to create urban communities where active transportation is the norm and car is the exception.",
       "pdf": "https://telfer.uottawa.ca/en/telfer-knowledge-hub/research-news/alternative-entrepreneurial-ecosystems-the-case-of-cycling-activism-in-ottawa/",
       "pdfLabel": "Project overview",
@@ -109,6 +109,29 @@
       ],
       "studentResearchers": [
         "Phuong Tran"
+      ]
+    },
+    {
+      "title": "Digital platforms and polarization: an epistemic perspective",
+      "blurb": "We theorize how the process through which experts and laypersons interact through digital platforms may either exacerbate or alleviate ongoing societal polarization.",
+      "pdf": "#",
+      "pdfLabel": "Project overview",
+      "category": "technology",
+      "authors": [
+        "Siddhant Ritwick",
+        "Mathieu Bouchard"
+      ]
+    },
+    {
+      "title": "Damned if you do(n't): how epistemic technology spoils expertise",
+      "blurb": "We theorize the relational dynamics through which the stigma attached to adopting or not artificial intelligence technologies taints knowledge work.",
+      "pdf": "#",
+      "pdfLabel": "Project overview",
+      "category": "technology",
+      "authors": [
+        "Ayman Ajaj",
+        "Mayur Joshi",
+        "Mathieu Bouchard"
       ]
     }
   ],
