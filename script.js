@@ -406,6 +406,7 @@ card.appendChild(footer);
 }
 
 function createTextLine(label, text) {
+  if (!text || String(text).trim().toLowerCase() === "coming soon") return null;
   const row = document.createElement("div");
   row.className = "project-line";
   const labelEl = document.createElement("span");
@@ -421,6 +422,12 @@ function createTextLine(label, text) {
 
 function createOrgRow(orgs) {
   const hasOrgs = Array.isArray(orgs) && orgs.length;
+  if (!hasOrgs) return null;
+  const names = orgs
+    .map((item) => (typeof item === "string" ? item : item?.name || ""))
+    .map((s) => String(s).trim())
+    .filter(Boolean);
+  if (!names.length) return null;
   const row = document.createElement("div");
   row.className = "project-line";
 
@@ -432,15 +439,7 @@ function createOrgRow(orgs) {
   const list = document.createElement("span");
   list.className = "project-line-text";
 
-  if (hasOrgs) {
-    const names = orgs
-      .map((item) => (typeof item === "string" ? item : item?.name || ""))
-      .map((s) => String(s).trim())
-      .filter(Boolean);
-    list.textContent = names.length ? names.join(", ") : "Coming soon";
-  } else {
-    list.textContent = "Coming soon";
-  }
+  list.textContent = names.join(", ");
 
   row.appendChild(list);
   return row;
@@ -824,6 +823,13 @@ function renderSupporters(supporters = []) {
 
   const items =
     supporters && supporters.length ? supporters : defaultContent.supporters;
+
+  const section = document.getElementById("supporters");
+  if (!items || items.length === 0) {
+    if (section) section.style.display = "none";
+    return;
+  }
+  if (section) section.style.display = "";
 
   items.forEach((supporter) => {
     const card = document.createElement("div");
