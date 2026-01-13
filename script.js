@@ -704,12 +704,8 @@ function renderCollaborators(collaborators = []) {
     detailRole.className = "role";
     detailRole.textContent = member.role || "";
 
-    const detailBio = document.createElement("p");
-    detailBio.textContent = member.bio || "Bio coming soon.";
-
     detailText.appendChild(detailName);
     detailText.appendChild(detailRole);
-    detailText.appendChild(detailBio);
     detailMain.appendChild(detailPhoto);
     detailMain.appendChild(detailText);
     detail.appendChild(detailMain);
