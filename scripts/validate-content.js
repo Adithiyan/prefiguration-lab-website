@@ -6,7 +6,9 @@ const contentPath = path.join(process.cwd(), "content.json");
 
 function loadContent() {
   const raw = fs.readFileSync(contentPath, "utf8");
-  return JSON.parse(raw);
+  // Strip UTF-8 BOM if present to avoid JSON parse errors from editors adding it.
+  const sanitized = raw.replace(/^\uFEFF/, "");
+  return JSON.parse(sanitized);
 }
 
 function collectLinks(content) {
