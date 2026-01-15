@@ -799,7 +799,7 @@ function setPodcast(podcast) {
       }
       body {
         margin: 0;
-        font-family: "Work Sans", system-ui, -apple-system, sans-serif;
+        font-family: "Roboto", system-ui, -apple-system, sans-serif;
         background: #f8fafc;
         color: #334155;
         display: grid;
