@@ -464,10 +464,8 @@ function formatList(value) {
 
 function renderTeam(team = []) {
   const grid = document.getElementById("team-grid");
-  const panel = document.getElementById("team-detail-panel");
-  if (!grid || !panel) return;
+  if (!grid) return;
   grid.innerHTML = "";
-  panel.innerHTML = "";
 
   const members = team.map((member, index) => ({
     ...member,
@@ -476,12 +474,11 @@ function renderTeam(team = []) {
 
   members.forEach((member, index) => {
     const card = document.createElement("article");
-    card.className = "card team-person-card";
-    if (index === 0) card.classList.add("active");
+    card.className = "card team-person-card team-person-card--full";
     card.setAttribute("data-person", member.id);
 
-    const inner = document.createElement("div");
-    inner.className = "team-person-inner";
+    const header = document.createElement("div");
+    header.className = "team-card-header";
 
     const photoBox = document.createElement("div");
     photoBox.className = "team-person-photo-box";
@@ -503,61 +500,22 @@ function renderTeam(team = []) {
     const name = document.createElement("h3");
     name.textContent = member.name || "";
 
-    const role = document.createElement("p");
-    role.className = "role";
-    role.textContent = member.role || "";
-
     text.appendChild(name);
-    text.appendChild(role);
-    inner.appendChild(photoBox);
-    inner.appendChild(text);
-    card.appendChild(inner);
-    grid.appendChild(card);
-
-    const detail = document.createElement("div");
-    detail.className = "team-detail";
-    detail.setAttribute("data-person", member.id);
-    detail.id = `person-${member.id}`;
-    if (index !== 0) {
-      detail.hidden = true;
-    }
+    header.appendChild(photoBox);
+    header.appendChild(text);
+    card.appendChild(header);
 
     const detailMain = document.createElement("div");
-    detailMain.className = "team-detail-main";
+    detailMain.className = "team-card-detail";
 
-    const detailPhoto = document.createElement("div");
-    detailPhoto.className = "team-detail-photo";
-    if (member.photo) {
-      const img = document.createElement("img");
-      img.src = member.photo;
-      img.alt = `Portrait of ${member.name || "team member"}`;
-      detailPhoto.appendChild(img);
-    } else {
-      const placeholder = document.createElement("div");
-      placeholder.className = "team-person-photo-placeholder";
-      const span = document.createElement("span");
-      span.textContent = (member.name || "T").trim().charAt(0).toUpperCase();
-      placeholder.appendChild(span);
-      detailPhoto.appendChild(placeholder);
+    if (member.bio) {
+      const detailBio = document.createElement("p");
+      detailBio.textContent = member.bio;
+      detailMain.appendChild(detailBio);
     }
 
-    const detailText = document.createElement("div");
-    detailText.className = "team-detail-text";
-
-    const detailName = document.createElement("h3");
-    detailName.textContent = member.name || "";
-
-    const detailBio = document.createElement("p");
-    detailBio.textContent = member.bio || "";
-
-    detailText.appendChild(detailName);
-    detailText.appendChild(detailBio);
-    detailMain.appendChild(detailPhoto);
-    detailMain.appendChild(detailText);
-    detail.appendChild(detailMain);
-
     const actions = document.createElement("div");
-    actions.className = "team-detail-actions";
+    actions.className = "team-card-actions";
 
     if (member.linkedin) {
       actions.appendChild(
@@ -604,22 +562,18 @@ function renderTeam(team = []) {
       );
     }
 
-    detail.appendChild(actions);
-    panel.appendChild(detail);
+    if (actions.children.length) {
+      detailMain.appendChild(actions);
+    }
+    card.appendChild(detailMain);
+    grid.appendChild(card);
   });
-
-  setupTeamInteractions();
 }
 
 function renderCollaborators(collaborators = []) {
   const grid = document.getElementById("collaborators-grid");
-  const panel = document.getElementById("collaborators-detail-panel");
   if (!grid) return;
   grid.innerHTML = "";
-  if (panel) {
-    panel.innerHTML = "";
-    panel.style.display = "none";
-  }
 
   const items =
     collaborators && collaborators.length ? collaborators : defaultContent.collaborators;
@@ -631,10 +585,10 @@ function renderCollaborators(collaborators = []) {
 
   members.forEach((member) => {
     const card = document.createElement("article");
-    card.className = "card team-person-card collaborator-card";
+    card.className = "card team-person-card collaborator-card collaborator-card--full";
 
-    const inner = document.createElement("div");
-    inner.className = "team-person-inner";
+    const header = document.createElement("div");
+    header.className = "team-card-header";
 
     const photoBox = document.createElement("div");
     photoBox.className = "team-person-photo-box";
@@ -656,18 +610,26 @@ function renderCollaborators(collaborators = []) {
     const name = document.createElement("h3");
     name.textContent = member.name || "";
 
-    const role = document.createElement("p");
-    role.className = "role";
-    role.textContent = member.role || "";
-
     text.appendChild(name);
-    text.appendChild(role);
-    inner.appendChild(photoBox);
-    inner.appendChild(text);
-    card.appendChild(inner);
+    header.appendChild(photoBox);
+    header.appendChild(text);
+    card.appendChild(header);
+
+    const detail = document.createElement("div");
+    detail.className = "team-card-detail";
+
+    const bioText =
+      (member.bio && !isPlaceholder(member.bio) && member.bio) ||
+      (member.role && !isPlaceholder(member.role) && member.role) ||
+      "";
+    if (bioText) {
+      const bio = document.createElement("p");
+      bio.textContent = bioText;
+      detail.appendChild(bio);
+    }
 
     const actions = document.createElement("div");
-    actions.className = "team-detail-actions collaborator-actions";
+    actions.className = "team-card-actions collaborator-actions";
 
     if (member.website) {
       if (isPlaceholder(member.website)) {
@@ -733,29 +695,11 @@ function renderCollaborators(collaborators = []) {
       actions.appendChild(badge);
     }
 
-    card.appendChild(actions);
+    if (actions.children.length) {
+      detail.appendChild(actions);
+    }
+    card.appendChild(detail);
     grid.appendChild(card);
-  });
-}
-
-function setupTeamInteractions() {
-  const personCards = document.querySelectorAll(".team-person-card");
-  const detailBlocks = document.querySelectorAll(".team-detail");
-
-  if (!personCards.length || !detailBlocks.length) return;
-
-  personCards.forEach((card) => {
-    card.addEventListener("click", () => {
-      const id = card.getAttribute("data-person");
-      if (!id) return;
-
-      personCards.forEach((item) => item.classList.remove("active"));
-      card.classList.add("active");
-
-      detailBlocks.forEach((block) => {
-        block.hidden = block.getAttribute("data-person") !== id;
-      });
-    });
   });
 }
 
