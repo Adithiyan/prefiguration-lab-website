@@ -43,6 +43,8 @@ body {
 .section-heading h2 {
   font-size: 2rem;
   margin-bottom: 0.75rem;
+  color: #90191d;
+  font-weight: 700;
 }
 
 /* Header & nav */
@@ -175,39 +177,47 @@ body {
 }
 
 .theme-icon {
-  width: 30px;
-  height: 30px;
+  width: 38px;
+  height: 38px;
   border-radius: 999px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.15);
-  color: #ffffff;
+  background: #f3f5f9;
+  color: #1f2937;
+  border: none;
 }
 
 .theme-icon svg {
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  stroke-width: 2.8;
 }
 
 .theme-icon--health {
-  background-color: #e6f4ea;
-  color: #1b5e20;
+  color: #c467a8;
+  background-color: #fbeff6;
+}
+
+.theme-icon--health svg,
+.project-category-icon--health svg {
+  transform: translateX(-1px);
 }
 
 .theme-icon--education {
-  background-color: #fff4db;
-  color: #8a5a00;
+  color: #e9b843;
+  background-color: #fdf6e6;
 }
 
 .theme-icon--transportation {
-  background-color: #e0f2f1;
-  color: #0f766e;
+  color: #c8d958;
+  background-color: #f8fbef;
 }
 
 .theme-icon--technology {
-  background-color: #e7f0ff;
-  color: #0747a6;
+  color: #3a75c4;
+  background-color: #edf3fb;
 }
 
 /* Buttons & links */
@@ -252,7 +262,7 @@ body {
 }
 
 .projects-grid {
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   gap: 1rem;
 }
 
@@ -303,6 +313,7 @@ body {
   font-size: 1.02rem;
   line-height: 1.14;
   letter-spacing: -0.01em;
+  font-weight: 700;
 }
 
 .project-card > p {
@@ -336,47 +347,56 @@ body {
 .project-category-pill {
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
-  padding: 0.4rem 0.7rem;
-  border-radius: 999px;
-  background-color: #eef2f7;
-  border: 1px solid #e5e7eb;
-  font-weight: 700;
-  color: #1f2937;
-  font-size: 0.85rem;
+  justify-content: center;
+  gap: 0;
+  padding: 0;
+  border-radius: 50%;
+  background-color: transparent;
+  border: none;
 }
 
 .project-category-icon {
-  width: 12px;
-  height: 12px;
+  width: 25px;
+  height: 25px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   border-radius: 999px;
-  background-color: rgba(255, 255, 255, 0.85);
-  border: 1px solid currentColor;
+  background-color: transparent;
+  border: none;
+  color: #1a1a1a;
 }
 
 .project-category-icon svg {
-  width: 8px;
-  height: 8px;
+  width: 17px;
+  height: 17px;
   display: block;
+  stroke: currentColor;
+  stroke-width: 2.4;
 }
 
 .project-category-icon--health {
-  color: #1b5e20;
+  color: #c467a8;
+  background-color: #fbeff6;
+  border: none;
 }
 
 .project-category-icon--education {
-  color: #8a5a00;
+  color: #e9b843;
+  background-color: #fdf6e6;
+  border: none;
 }
 
 .project-category-icon--transportation {
-  color: #0f766e;
+  color: #c8d958;
+  background-color: #f8fbef;
+  border: none;
 }
 
 .project-category-icon--technology {
-  color: #1b3f8a;
+  color: #3a75c4;
+  background-color: #edf3fb;
+  border: none;
 }
 
 .project-category-pill svg {
@@ -397,14 +417,14 @@ body {
 
 .project-category-pill--footer {
   margin-left: auto;
-  padding: 0.2rem 0.36rem;
-  gap: 0.2rem;
-  background-color: rgba(83, 187, 188, 0.12);
-  border-color: #53bbbc;
-  color: #0f5253;
+  padding: 0;
+  gap: 0;
+  background-color: transparent;
+  border: none;
+  color: inherit;
   display: inline-flex;
   align-items: center;
-  box-shadow: 0 6px 14px rgba(83, 187, 188, 0.14);
+  box-shadow: none;
   font-size: 0.78rem;
 }
 
@@ -414,12 +434,12 @@ body {
   gap: 0.2rem;
   padding: 0.32rem 0.55rem;
   border-radius: 999px;
-  background-color: #c467a8;
+  background-color: #53bbbc;
   color: #ffffff;
   font-weight: 700;
   font-size: 0.8rem;
   text-decoration: none;
-  border: 1px solid #c467a8;
+  border: 1px solid #53bbbc;
 }
 
 .project-card:hover .project-action {
@@ -427,43 +447,35 @@ body {
 }
 
 .project-card--health {
-  border-color: #c8e6d0;
+  border-color: #ead3e2;
 }
 
 .project-card--education {
-  border-color: #f1d9a4;
+  border-color: #f3e1ac;
 }
 
 .project-card--transportation {
-  border-color: #b7e1dc;
+  border-color: #e4efb2;
 }
 
 .project-card--technology {
-  border-color: #c7d6ff;
+  border-color: #c7d7f3;
 }
 
 .project-card--health .project-category-pill {
-  background-color: #e6f4ea;
-  color: #1b5e20;
-  border-color: #c8e6d0;
+  color: #c467a8;
 }
 
 .project-card--education .project-category-pill {
-  background-color: #fff4db;
-  color: #8a5a00;
-  border-color: #f1d9a4;
+  color: #e9b843;
 }
 
 .project-card--transportation .project-category-pill {
-  background-color: #e0f2f1;
-  color: #0f766e;
-  border-color: #b7e1dc;
+  color: #c8d958;
 }
 
 .project-card--technology .project-category-pill {
-  background-color: #e5edff;
-  color: #1b3f8a;
-  border-color: #c7d6ff;
+  color: #3a75c4;
 }
 
 .project-card {
@@ -502,60 +514,66 @@ body {
 }
 
 .project-category-icon {
-  width: 22px;
-  height: 22px;
+  width: 30px;
+  height: 30px;
   aspect-ratio: 1 / 1;
-  flex: 0 0 22px;
-  border-radius: 8px;
+  flex: 0 0 26px;
+  border-radius: 50%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 3px;
-  background-color: #f3f5f9;
-  border: 1px solid #e5e7eb;
+  padding: 0;
+  background-color: transparent;
+  border: none;
   color: #1a1a1a;
 }
 
 .project-category-icon svg {
-  width: 12px;
-  height: 12px;
+  width: 20px;
+  height: 20px;
   display: block;
+  stroke: currentColor;
+  stroke-width: 2.4;
 }
 
 .project-category-icon--health {
-  background-color: #e6f4ea;
-  color: #1b5e20;
+  background-color: #fbeff6;
+  color: #c467a8;
+  border: none;
 }
 
 .project-category-icon--education {
-  background-color: #fff4db;
-  color: #8a5a00;
+  background-color: #fdf6e6;
+  color: #e9b843;
+  border: none;
 }
 
 .project-category-icon--transportation {
-  background-color: #e0f2f1;
-  color: #0f766e;
+  background-color: #f8fbef;
+  color: #c8d958;
+  border: none;
 }
 
 .project-category-icon--technology {
-  background-color: #e0f2ff;
-  color: #075985;
+  background-color: #edf3fb;
+  color: #3a75c4;
+  border: none;
 }
 
 .project-card--health {
-  border-left: 5px solid #1b5e20;
+  border-left: 5px solid #c467a8;
 }
 
 .project-card--education {
-  border-left: 5px solid #8a5a00;
+  border-left: 5px solid #e9b843;
 }
 
 .project-card--transportation {
-  border-left: 5px solid #0f766e;
+  border-left: 5px solid #c8d958;
 }
 
 .project-card--technology {
-  border-left: 5px solid #075985;
+  border-left: 5px solid #3a75c4;
 }
 
 .project-card p.meta,
@@ -702,7 +720,7 @@ body {
 
 @media (min-width: 1080px) {
   .projects-grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
@@ -818,6 +836,7 @@ body {
 
 .team-person-text h3 {
   margin-bottom: 0.15rem;
+  font-weight: 700;
 }
 
 .team-person-text .role {
@@ -889,6 +908,7 @@ body {
 
 .team-detail-text h3 {
   margin-bottom: 0.2rem;
+  font-weight: 700;
 }
 
 .team-detail-text p {
