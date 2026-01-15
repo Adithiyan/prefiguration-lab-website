@@ -24,7 +24,7 @@ body {
   width: 100%;
   max-width: 1360px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 3rem;
 }
 
 .section {
@@ -60,7 +60,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.75rem 0;
+  padding: 1.6rem 0;
+}
+
+.site-header .container {
+  padding: 0 3rem;
+}
+
+.site-header {
+  padding: 0.3rem 0;
 }
 
 .logo {
@@ -752,6 +760,14 @@ body {
 
   .projects-grid {
     grid-template-columns: 1fr;
+  }
+
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .site-header .container {
+    padding: 0 1.5rem;
   }
 }
 /* === Our Team – vertical Telfer-outlined cards === */
