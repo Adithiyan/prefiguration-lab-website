@@ -2,6 +2,9 @@ const fs = require("fs");
 const path = require("path");
 
 const placeholder = (href) => !href || href === "#" || href.toLowerCase() === "coming-soon";
+const skipLinks = new Set([
+  "https://www.talkingaboutorganizations.com/",
+]);
 const contentPath = path.join(process.cwd(), "content.json");
 
 function loadContent() {
@@ -65,6 +68,9 @@ async function main() {
   for (const link of links) {
     const { section, label, href } = link;
     if (placeholder(href)) {
+      continue;
+    }
+    if (skipLinks.has(href)) {
       continue;
     }
 

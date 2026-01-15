@@ -780,7 +780,41 @@ function setPodcast(podcast) {
   const iframe = document.getElementById("podcast-embed");
   if (iframe) {
     const embed = podcast && podcast.embed ? podcast.embed : defaultContent.podcast.embed;
-    iframe.src = embed;
+    const embedValue = String(embed || "").trim();
+    const isPlaceholderEmbed = !embedValue || embedValue.includes("PLACEHOLDER");
+    if (isPlaceholderEmbed) {
+      iframe.removeAttribute("src");
+      iframe.srcdoc = `<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      html, body {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        font-family: "Work Sans", system-ui, -apple-system, sans-serif;
+        background: #f8fafc;
+        color: #334155;
+        display: grid;
+        place-items: center;
+      }
+      .placeholder {
+        text-align: center;
+        font-size: 0.9rem;
+        padding: 0 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="placeholder">Podcast coming soon.</div>
+  </body>
+</html>`;
+    } else {
+      iframe.srcdoc = "";
+      iframe.src = embedValue;
+    }
   }
   const list = document.getElementById("podcast-links");
   if (!list) return;
