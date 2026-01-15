@@ -310,8 +310,7 @@ function renderProjects(projects = []) {
     const hasPdf = project.pdf && !isPlaceholder(project.pdf);
     const cardTag = hasPdf ? "a" : "article";
     const card = document.createElement(cardTag);
-    card.className =
-      "card project-card shadow-sm border border-slate-200 rounded-xl bg-white hover:shadow-lg transition hover:-translate-y-0.5";
+    card.className = "card project-card";
     if (project.category) {
       card.classList.add(`project-card--${project.category}`);
     }
@@ -486,6 +485,10 @@ function renderTeam(team = []) {
       const img = document.createElement("img");
       img.src = member.photo;
       img.alt = `Portrait of ${member.name || "team member"}`;
+      img.width = 78;
+      img.height = 78;
+      img.loading = "lazy";
+      img.decoding = "async";
       photoBox.appendChild(img);
     } else {
       photoBox.classList.add("team-person-photo-placeholder");
@@ -596,6 +599,10 @@ function renderCollaborators(collaborators = []) {
       const img = document.createElement("img");
       img.src = member.photo;
       img.alt = `Portrait of ${member.name || "collaborator"}`;
+      img.width = 78;
+      img.height = 78;
+      img.loading = "lazy";
+      img.decoding = "async";
       photoBox.appendChild(img);
     } else {
       photoBox.classList.add("team-person-photo-placeholder");
@@ -738,6 +745,10 @@ function renderSupporters(supporters = []) {
       const img = document.createElement("img");
       img.src = supporter.logo;
       img.alt = supporter.name || "Supporter logo";
+      img.width = 150;
+      img.height = 64;
+      img.loading = "lazy";
+      img.decoding = "async";
       img.addEventListener("error", () => {
         img.remove();
         ensureInitial();

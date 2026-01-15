@@ -749,6 +749,10 @@ body {
   .main-nav.open {
     display: flex;
   }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
 }
 /* === Our Team – vertical Telfer-outlined cards === */
 
@@ -808,15 +812,7 @@ body {
   overflow: hidden;
 }
 
-.team-detail-photo {
-  width: 64px;
-  height: 64px;
-  border-radius: 0.75rem;
-  overflow: hidden;
-}
-
-.team-person-photo-box img,
-.team-detail-photo img {
+.team-person-photo-box img {
   width: 100%;
   height: 100%;
   border-radius: 0.9rem;
@@ -1023,13 +1019,3 @@ body {
 }
 
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .team-detail-main {
-    align-items: flex-start;
-  }
-
-  .team-detail-panel {
-    margin-top: 1.4rem;
-  }
-}
