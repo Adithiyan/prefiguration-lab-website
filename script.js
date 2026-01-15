@@ -477,7 +477,7 @@ function renderTeam(team = []) {
     card.setAttribute("data-person", member.id);
 
     const header = document.createElement("div");
-    header.className = "team-card-header";
+    header.className = "team-card-header team-card-header--team";
 
     const photoBox = document.createElement("div");
     photoBox.className = "team-person-photo-box";
@@ -485,8 +485,8 @@ function renderTeam(team = []) {
       const img = document.createElement("img");
       img.src = member.photo;
       img.alt = `Portrait of ${member.name || "team member"}`;
-      img.width = 78;
-      img.height = 78;
+      img.width = 86;
+      img.height = 86;
       img.loading = "lazy";
       img.decoding = "async";
       photoBox.appendChild(img);
@@ -503,7 +503,12 @@ function renderTeam(team = []) {
     const name = document.createElement("h3");
     name.textContent = member.name || "";
 
+    const role = document.createElement("p");
+    role.className = "role role-inline";
+    role.textContent = member.role || "";
+
     text.appendChild(name);
+    text.appendChild(role);
     header.appendChild(photoBox);
     header.appendChild(text);
     card.appendChild(header);
