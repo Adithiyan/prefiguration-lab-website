@@ -87,6 +87,15 @@ h3,
   padding: 0.3rem 0;
 }
 
+.color-stripe {
+  width: 100%;
+  height: 10px;
+  background-image: url("images/ColouredLine.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .logo {
   display: flex;
   align-items: center;
@@ -141,7 +150,7 @@ h3,
 
 /* Hero */
 .hero {
-  background: #f7f7f7;
+  background: #efefef;
   color: #1a1a1a;
   padding: 5rem 0 4rem;
 }
@@ -164,6 +173,7 @@ h3,
   margin-bottom: 1rem;
   max-width: 36rem;
   color: #1a1a1a;
+  font-weight: 700;
 }
 
 .hero-text p {
