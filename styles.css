@@ -35,6 +35,18 @@ h3,
   letter-spacing: 0.02em;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* Layout helpers */
 .container {
   width: 100%;
@@ -157,7 +169,7 @@ h3,
 .hero {
   background: #ffffff;
   color: #1a1a1a;
-  padding: 5rem 0 4rem;
+  padding: 4rem 0 3rem;
 }
 
 .hero-inner {
@@ -171,6 +183,16 @@ h3,
   margin-bottom: 1rem;
   color: #90191d;
   font-weight: 700;
+}
+
+.hero-logo {
+  margin-bottom: 10rem;
+}
+
+.hero-logo img {
+  max-width: min(400px, 55%);
+  height: auto;
+  display: block;
 }
 
 .hero-text .tagline {
