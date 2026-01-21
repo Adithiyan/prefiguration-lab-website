@@ -75,7 +75,8 @@ h3,
 .header-inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  position: relative;
   padding: 1.6rem 0;
 }
 
@@ -146,11 +147,15 @@ h3,
   background: none;
   font-size: 1.5rem;
   cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 /* Hero */
 .hero {
-  background: #efefef;
+  background: #ffffff;
   color: #1a1a1a;
   padding: 5rem 0 4rem;
 }
