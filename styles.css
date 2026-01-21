@@ -169,7 +169,7 @@ h3,
 .hero {
   background: #ffffff;
   color: #1a1a1a;
-  padding: 4rem 0 3rem;
+  padding: 2rem 0 1rem;
 }
 
 .hero-inner {
@@ -186,7 +186,7 @@ h3,
 }
 
 .hero-logo {
-  margin-bottom: 10rem;
+  margin: 0 0 1rem;
 }
 
 .hero-logo img {
