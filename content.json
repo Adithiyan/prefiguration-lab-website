@@ -257,7 +257,7 @@
       "role": "Assistant professor in human resources and management at the DeGroote School of Business, McMaster University",
       "id": "collab-5",
       "photo": "images/Yao_Yao.jpg",
-      "website": "https://dtiuottawa.ca/faculties/yao-yao/",
+      "website": "https://degroote.mcmaster.ca/profiles/yao33/",
       "linkedin": "https://ca.linkedin.com/in/yao-yao-04a08335",
       "scholar": "https://scholar.google.com/citations?user=UudkYf8AAAAJ&hl=en"
     },
@@ -280,9 +280,18 @@
       "scholar": "http://scholar.google.ca/citations?user=Q2yaqb4AAAAJ&hl=en"
     },
     {
+      "name": "Madeline Toubiana",
+      "role": "Professor of Strategy and Organization and the Desmarais Chair in Entrepreneurship at Telfer School of Management, University of Ottawa",
+      "id": "collab-8",
+      "photo": "images/Madeline_Toubiana.png",
+      "website": "https://telfer.uottawa.ca/en/directory/madeline-toubiana/",
+      "linkedin": "https://www.linkedin.com/in/madeline-toubiana",
+      "scholar": "https://scholar.google.com/citations?user=hkKa8JcAAAAJ&hl=en"
+    },
+    {
       "name": "Qingyi Zhu",
       "role": "PhD student in Strategy and Organization at Telfer School of Management, University of Ottawa",
-      "id": "collab-8",
+      "id": "collab-9",
       "photo": "images/Qingyi_Zhu.jpg",
       "website": "",
       "linkedin": "https://www.linkedin.com/in/qingyi-zhu-a46064334/",
@@ -291,7 +300,7 @@
     {
       "name": "Ayman Ajaj",
       "role": "PhD student in Digital Transformation and Innovation at University of Ottawa",
-      "id": "collab-9",
+      "id": "collab-10",
       "photo": "images/Ayman_Ajaj.jpg",
       "website": "",
       "linkedin": "https://www.linkedin.com/in/aymanajaj/",
@@ -300,7 +309,7 @@
     {
       "name": "Emily Da Silva",
       "role": "Head of research support at the University of Ottawa Management Library",
-      "id": "collab-10",
+      "id": "collab-11",
       "photo": "images/Emily_Da_Silva.jpg",
       "website": "https://telfer.uottawa.ca/en/directory/emily-da-silva/",
       "linkedin": "https://www.linkedin.com/in/emilydasilva/",
