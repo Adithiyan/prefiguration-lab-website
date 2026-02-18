@@ -289,9 +289,18 @@
       "scholar": "https://scholar.google.com/citations?user=hkKa8JcAAAAJ&hl=en"
     },
     {
+      "name": "Timothy Hannigan",
+      "role": "Associate Professor of Strategy and Organization and the Father Edgar Thivierge Chair in Canadian Business at the Telfer School of Management, University of Ottawa",
+      "id": "collab-9",
+      "photo": "images/Tim_Hannigan.png",
+      "website": "https://telfer.uottawa.ca/en/directory/tim-hannigan/",
+      "linkedin": "https://www.linkedin.com/in/timhannigan/",
+      "scholar": "https://scholar.google.com/citations?user=0-tyIUkAAAAJ&hl=en"
+    },
+    {
       "name": "Qingyi Zhu",
       "role": "PhD student in Strategy and Organization at thw Telfer School of Management, University of Ottawa",
-      "id": "collab-9",
+      "id": "collab-10",
       "photo": "images/Qingyi_Zhu.jpg",
       "website": "",
       "linkedin": "https://www.linkedin.com/in/qingyi-zhu-a46064334/",
@@ -300,7 +309,7 @@
     {
       "name": "Ayman Ajaj",
       "role": "PhD student in Digital Transformation and Innovation at the University of Ottawa",
-      "id": "collab-10",
+      "id": "collab-11",
       "photo": "images/Ayman_Ajaj.jpg",
       "website": "",
       "linkedin": "https://www.linkedin.com/in/aymanajaj/",
@@ -309,7 +318,7 @@
     {
       "name": "Emily Da Silva",
       "role": "Head of research support at the University of Ottawa Management Library",
-      "id": "collab-11",
+      "id": "collab-12",
       "photo": "images/Emily_Da_Silva.jpg",
       "website": "https://telfer.uottawa.ca/en/directory/emily-da-silva/",
       "linkedin": "https://www.linkedin.com/in/emilydasilva/",
