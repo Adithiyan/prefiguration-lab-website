@@ -134,7 +134,7 @@
       "id": "adi",
       "name": "Adithiyan Rajan",
       "role": "Student Researcher",
-      "bio": "Adithiyan Rajan is a Computer Science graduate student who specializes in transforming cutting-edge AI and Machine Learning research into practical, high-impact solutions that address complex, multidisciplinary challenges.",
+      "bio": "Adithiyan Rajan is a Computer Science graduate student who builds AI systems where real-world impact and technical rigor meet, with a focus on solving complex multidisciplinary problems that matter.",
       "photo": "images/Adi_Rajan.jpeg",
       "linkedin": "https://www.linkedin.com/in/adithiyanrajan/",
       "email": "aindi023@uottawa.ca"
@@ -351,6 +351,11 @@
       "name": "Green Academy",
       "url": "https://telfer.uottawa.ca/en/the-green-academy-at-telfer/",
       "logo": "https://telfer.uottawa.ca/assets/cache/webp/6d/e8/6de809b66b1d2ed43a4d7662a8aa9bed.webp"
+    },
+    {
+      "name": "CSIID",
+      "url": "https://csiid.org/",
+      "logo": "images/CSIID_logo.png"
     }
   ]
 }

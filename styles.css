@@ -1061,7 +1061,7 @@ h3,
 
 .supporters-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
 
@@ -1137,6 +1137,18 @@ h3,
 .supporter-card:hover {
   border-color: #c9d3e5;
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
+}
+
+@media (max-width: 900px) {
+  .supporters-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .supporters-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 

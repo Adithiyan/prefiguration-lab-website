@@ -131,6 +131,7 @@ const defaultContent = {
     { name: "Telfer", url: "#" },
     { name: "uOttawa", url: "#" },
     { name: "Green Academy", url: "#" },
+    { name: "CSIID", url: "https://csiid.org/", logo: "images/CSIID_logo.png" },
   ],
   podcastMeta:
     "If your podcast is hosted elsewhere, you can replace this embed code or link to the external site.",
