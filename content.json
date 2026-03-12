@@ -193,6 +193,16 @@
   "resourcesCopy": "Reports, working papers, syllabi, and other materials from the Prefiguration Lab.",
   "resources": [
     {
+      "title": "Pedagogy Prefiguration Workshop Report",
+      "pdf": "data-files/2026-03-10%20BCom%20prefig%20report%20-%20for%20Telfer%20UPC%201.pdf",
+      "label": "Open PDF"
+    },
+    {
+      "title": "Pedagogy Prefiguration Workshop Infographic",
+      "pdf": "data-files/2026-03-10%20BCom%20prefig%20infographic%20-%20for%20Telfer%20UPC%201.pdf",
+      "label": "Open PDF"
+    },
+    {
       "title": "Lab Overview",
       "pdf": "#",
       "label": "PDF (coming soon)"
