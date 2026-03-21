@@ -41,7 +41,7 @@
       ]
     },
     {
-      "title": "Prefigurative pedagogy in the business school: a temporal perspective",
+      "title": "Prefigurative pedagogy in business schools: a temporal emotional perspective",
       "blurb": "We experiment with new ways of learning together that harness utopian imagination to guide action in the present toward desirable futures.",
       "pdf": "https://telfer.uottawa.ca/en/telfer-knowledge-hub/greener/prefiguring-pedagogies-when-imagination-becomes-a-collective-practice/",
       "pdfLabel": "Project overview",
@@ -51,7 +51,8 @@
         "Green Academy"
       ],
       "authors": [
-        "Mathieu Bouchard"
+        "Mathieu Bouchard",
+        "Anaïs del Bono"
       ],
       "studentResearchers": [
         "Hamza Tawdi",
@@ -338,6 +339,15 @@
       "photo": "images/Emily_Da_Silva.jpg",
       "website": "https://telfer.uottawa.ca/en/directory/emily-da-silva/",
       "linkedin": "https://www.linkedin.com/in/emilydasilva/",
+      "scholar": ""
+    }
+        {
+      "name": "Anaîs del Bono",
+      "role": "PhD candidate in Management and Strategy at HEC Montréal",
+      "id": "collab-14",
+      "photo": "images/Anais_del_Bono.jpg",
+      "website": "https://theconversation.com/profiles/ana-s-del-bono-1482447",
+      "linkedin": "https://www.linkedin.com/in/anaisdelbono/",
       "scholar": ""
     }
   ],
