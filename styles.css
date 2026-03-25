@@ -1253,18 +1253,6 @@ h3,
   }
 }
 
-/* =====================================================
-   HERO — dot grid background (Magic UI "Dot Pattern")
-   ===================================================== */
-.hero {
-  background-image:
-    radial-gradient(circle, #d1d5db 1px, transparent 1px);
-  background-size: 24px 24px;
-  background-color: #ffffff;
-}
-
-100%     { background-position: 200% 0; }
-}
 
 /* =====================================================
    NAV — active link on scroll
