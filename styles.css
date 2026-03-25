@@ -18,12 +18,12 @@ html {
     BlinkMacSystemFont, "Segoe UI", sans-serif;
 
   /* Brand palette */
-  --teal:        var(--teal);
-  --teal-light:  var(--teal-light);
-  --color-red:   var(--color-red);
-  --color-pink:  var(--color-pink);
-  --color-yellow:var(--color-yellow);
-  --color-lime:  var(--color-lime);
+  --teal:        #53bbbc;
+  --teal-light:  #6cced0;
+  --color-red:   #90191d;
+  --color-pink:  #c467a8;
+  --color-yellow:#e9b843;
+  --color-lime:  #c8d958;
   --color-dark:  #1a1a1a;
   --color-bg:    #f7f7f7;
   --color-border:#e6e6e6;
