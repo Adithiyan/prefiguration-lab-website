@@ -257,6 +257,9 @@ function renderContent(content) {
 
   setText("contact-copy", content.contactCopy);
   setContact(content.contact);
+
+  // Kick off animations after all DOM is populated
+  requestAnimationFrame(initAnimations);
 }
 
 function setText(id, value) {
@@ -329,6 +332,21 @@ function renderProjects(projects = []) {
       card.href = project.pdf;
       card.target = "_blank";
       card.rel = "noopener noreferrer";
+    }
+
+    if (project.image) {
+      const imgWrap = document.createElement("div");
+      imgWrap.className = "project-card-image";
+      const img = document.createElement("img");
+      img.src = project.image;
+      img.alt = project.title || "";
+      img.loading = "lazy";
+      img.decoding = "async";
+      imgWrap.appendChild(img);
+      const shimmer = document.createElement("div");
+      shimmer.className = "project-card-shimmer";
+      imgWrap.appendChild(shimmer);
+      card.appendChild(imgWrap);
     }
 
     const head = document.createElement("div");
@@ -962,6 +980,72 @@ function slugify(value) {
     .trim()
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "");
+}
+
+function initAnimations() {
+  // --- Nav active link tracking ---
+  const sections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll(".main-nav a");
+
+  const navObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          navLinks.forEach((link) => {
+            link.classList.toggle(
+              "nav-active",
+              link.getAttribute("href") === `#${id}`
+            );
+          });
+        }
+      });
+    },
+    { threshold: 0.25, rootMargin: "-72px 0px -55% 0px" }
+  );
+
+  sections.forEach((s) => navObserver.observe(s));
+
+  // --- Scroll entrance animations ---
+  const animTargets = document.querySelectorAll(
+    "#projects .section-heading, #projects .project-card, " +
+    "#team .section-heading, #team .team-person-card, " +
+    "#collaborators .section-heading, #collaborators .team-person-card, " +
+    "#supporters .section-heading, #supporters .supporter-card, " +
+    "#podcast .section-heading, " +
+    "#resources .section-heading, .resource-list li, " +
+    "#contact .section-heading, .contact-card"
+  );
+
+  animTargets.forEach((el) => {
+    el.classList.add("will-animate");
+
+    // Stagger siblings inside grid/list containers
+    const parent = el.parentElement;
+    if (parent) {
+      const siblings = Array.from(parent.children).filter((c) =>
+        c.classList.contains("will-animate")
+      );
+      const idx = siblings.indexOf(el);
+      if (idx > 0) {
+        el.style.transitionDelay = `${Math.min(idx * 65, 300)}ms`;
+      }
+    }
+  });
+
+  const scrollObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
+          scrollObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.07, rootMargin: "0px 0px -32px 0px" }
+  );
+
+  animTargets.forEach((el) => scrollObserver.observe(el));
 }
 
 function initPage() {

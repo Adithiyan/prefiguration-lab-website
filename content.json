@@ -11,6 +11,7 @@
     {
       "title": "Liminal becomings: the professionalization project of peer support workers",
       "blurb": "We examine how peer support workers have sought over the last two decades to carve out a space for their practice within the professional sector of mental health care.",
+      "image": "images/Peer_support.jpg",
       "pdf": "docs/peer-support-project.pdf",
       "pdfLabel": "Project overview",
       "category": "health",
@@ -29,6 +30,7 @@
     {
       "title": "Ritualizing the workplace",
       "blurb": "We reveal the ritualized process of creating supportive spaces that strengthen trust and foster collective learning in the workplace.",
+      "image": "images/Ritual.jpg",
       "pdf": "#",
       "pdfLabel": "Coming soon",
       "category": "health",
@@ -43,6 +45,7 @@
     {
       "title": "Prefigurative pedagogy in business schools: a time and emotion perspective",
       "blurb": "We experiment with new ways of learning together that harness utopian imagination to guide action in the present toward desirable futures.",
+      "image": "images/Prefigurative pedagogy.jpg",
       "pdf": "https://telfer.uottawa.ca/en/telfer-knowledge-hub/greener/prefiguring-pedagogies-when-imagination-becomes-a-collective-practice/",
       "pdfLabel": "Project overview",
       "category": "education",
@@ -63,6 +66,7 @@
     {
       "title": "The shack: negotiating (dis)order in a center for homeschoolers",
       "blurb": "We explore how board administrators, parents, and staff educators influence an alternative pedagogal space operating outside of the formal school system.",
+      "image": "images/Homeschooling.jpg",
       "pdf": "#",
       "pdfLabel": "Coming soon",
       "category": "education",
@@ -80,6 +84,7 @@
     {
       "title": "Cycling activism: direct action for sustainable mobility systems",
       "blurb": "We investigate the formation of entrepreneurial ecosystems for social change to create urban communities where active transportation is the norm and car is the exception.",
+      "image": "images/Cycling_activism.JPG",
       "pdf": "https://telfer.uottawa.ca/en/telfer-knowledge-hub/research-news/alternative-entrepreneurial-ecosystems-the-case-of-cycling-activism-in-ottawa/",
       "pdfLabel": "Project overview",
       "category": "transportation",
@@ -98,6 +103,7 @@
     {
       "title": "How digital rights activists rein in regulatory entrepreneurs: the case of Clearview AI",
       "blurb": "We explain how activists mobilize regulatory frameworks and public opinion to defend against the incursions of technology companies into citizens' digital rights.",
+      "image": "images/Digital_rights.jpg",
       "pdf": "docs/clearview-ai-project.pdf",
       "pdfLabel": "Project overview",
       "category": "technology",
