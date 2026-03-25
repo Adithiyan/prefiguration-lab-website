@@ -428,7 +428,25 @@ function renderProjects(projects = []) {
 
       footer.appendChild(pill);
     }
-card.appendChild(footer);
+    card.appendChild(footer);
+
+    if (Array.isArray(project.resources) && project.resources.length) {
+      const resSection = document.createElement("div");
+      resSection.className = "project-resources";
+      project.resources.forEach((res) => {
+        if (res.pdf && !isPlaceholder(res.pdf)) {
+          const link = document.createElement("a");
+          link.className = "project-resource-link";
+          link.href = res.pdf;
+          link.target = "_blank";
+          link.rel = "noopener noreferrer";
+          link.textContent = res.label || res.title || "Open";
+          resSection.appendChild(link);
+        }
+      });
+      if (resSection.children.length) card.appendChild(resSection);
+    }
+
     grid.appendChild(card);
   });
 }

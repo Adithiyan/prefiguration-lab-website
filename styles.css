@@ -592,6 +592,25 @@ h3,
   filter: brightness(1.05);
 }
 
+.project-resources {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.6rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid #f0f0f0;
+}
+
+.project-resource-link {
+  font-size: 0.78rem;
+  color: #2a4c6f;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.project-resource-link:hover {
+  text-decoration: underline;
+}
+
 .project-card--health {
   border-color: #ead3e2;
 }

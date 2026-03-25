@@ -48,6 +48,18 @@
       "image": "images/Prefigurative pedagogy.jpg",
       "pdf": "https://telfer.uottawa.ca/en/telfer-knowledge-hub/greener/prefiguring-pedagogies-when-imagination-becomes-a-collective-practice/",
       "pdfLabel": "Project overview",
+      "resources": [
+        {
+          "title": "Pedagogy Prefiguration Workshop Report",
+          "pdf": "data-files/2026-03-10%20BCom%20prefig%20report%20-%20for%20Telfer%20UPC%201.pdf",
+          "label": "Workshop report"
+        },
+        {
+          "title": "Pedagogy Prefiguration Workshop Infographic",
+          "pdf": "data-files/2026-03-10%20BCom%20prefig%20infographic%20-%20for%20Telfer%20UPC%201.pdf",
+          "label": "Workshop infographic"
+        }
+      ],
       "category": "education",
       "organizations": [
         "Telfer",
@@ -197,22 +209,32 @@
   "resourcesCopy": "Reports, working papers, syllabi, and other materials from the Prefiguration Lab.",
   "resources": [
     {
-      "title": "Pedagogy Prefiguration Workshop Report",
-      "pdf": "data-files/2026-03-10%20BCom%20prefig%20report%20-%20for%20Telfer%20UPC%201.pdf",
-      "label": "Open PDF"
+      "title": "Vulnerability Practices among Professionals in Multidisciplinary Settings",
+      "pdf": "docs/Bouchard et al. - AMJ 2025 accepted.pdf",
+      "label": "Accepted manuscript (AMJ 2025)"
     },
     {
-      "title": "Pedagogy Prefiguration Workshop Infographic",
-      "pdf": "data-files/2026-03-10%20BCom%20prefig%20infographic%20-%20for%20Telfer%20UPC%201.pdf",
-      "label": "Open PDF"
+      "title": "Liminal Becomings: The Professionalization Project of Peer Support Workers",
+      "pdf": "data-files/Proof - AoM2025 peer support - 16561.pdf",
+      "label": "Conference paper (AoM 2025)"
+    },
+    {
+      "title": "Activism for Responsible Technology Policymaking: The Case of Homo Digitalis and Clearview AI",
+      "pdf": "data-files/2025-03-06 Digital rights activism project.pdf",
+      "label": "Working paper (2025)"
+    },
+    {
+      "title": "Emotions and Client Participation in Jurisdictional Contestation",
+      "pdf": "docs/AMR-2020-0511-Original.R4_Proof.pdf",
+      "label": "Manuscript proof (AMR)"
+    },
+    {
+      "title": "Domesticating the Beast: A Resource Profile Framework of Power Relations in Nonprofit–Business Collaboration",
+      "pdf": "docs/bouchard-raufflet-2019-domesticating-the-beast-a-resource-profile-framework-of-power-relations-in-nonprofit-business.pdf",
+      "label": "Published article (NVSQ 2019)"
     },
     {
       "title": "Lab Overview",
-      "pdf": "#",
-      "label": "PDF (coming soon)"
-    },
-    {
-      "title": "Clearview AI project brief",
       "pdf": "#",
       "label": "PDF (coming soon)"
     },
