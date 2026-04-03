@@ -99,6 +99,13 @@
       "image": "images/Cycling_activism.JPG",
       "pdf": "https://telfer.uottawa.ca/en/telfer-knowledge-hub/research-news/alternative-entrepreneurial-ecosystems-the-case-of-cycling-activism-in-ottawa/",
       "pdfLabel": "Project overview",
+      "resources": [
+       {
+          "title": "SDG Month 2026 Prefiguration Workshop",
+          "pdf": "data-files/Bouchard - SDG Month 2026 - cycling activism.pdf",
+          "label": "SDG Month 2026 Workshop"
+        }
+      ],
       "category": "transportation",
       "organizations": [
         "uOttawa",
@@ -108,8 +115,7 @@
         "Mathieu Bouchard"
       ],
       "studentResearchers": [
-        "Camila Estrada",
-        "Adithiyan Rajan"
+        "Camila Estrada"
       ]
     },
     {
