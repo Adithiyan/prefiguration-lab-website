@@ -189,29 +189,6 @@
       "email": "htawd008@uottawa.ca"
     }
   ],
-  "podcastCopy": "The vivre sans voiture / living without a car podcast hosts conversations about activism for healthy and sustainable urban transportation.",
-  "podcastMeta": "We will add a link to the podcast once it is available.",
-  "podcast": {
-    "embed": "",
-    "links": [
-      {
-        "label": "Example: Talking About Organizations",
-        "href": "https://www.talkingaboutorganizations.com/"
-      },
-      {
-        "label": "Prefiguration Lab on Spotify (coming soon)",
-        "href": "#"
-      },
-      {
-        "label": "Prefiguration Lab on Apple Podcasts (coming soon)",
-        "href": "#"
-      },
-      {
-        "label": "RSS feed (coming soon)",
-        "href": "#"
-      }
-    ]
-  },
   "resourcesCopy": "Peer-reviewed articles, working papers, and other materials from the Prefiguration Lab.",
   "resources": [
     {
@@ -240,6 +217,29 @@
       "label": "Nonprofit and Voluntary Sector Quarterly, 2019"
     }
   ],
+  "podcastCopy": "The vivre sans voiture / living without a car podcast hosts conversations about activism for healthy and sustainable urban transportation.",
+  "podcastMeta": "We will add a link to the podcast once it is available.",
+  "podcast": {
+    "embed": "",
+    "links": [
+      {
+        "label": "Example: Talking About Organizations",
+        "href": "https://www.talkingaboutorganizations.com/"
+      },
+      {
+        "label": "Prefiguration Lab on Spotify (coming soon)",
+        "href": "#"
+      },
+      {
+        "label": "Prefiguration Lab on Apple Podcasts (coming soon)",
+        "href": "#"
+      },
+      {
+        "label": "RSS feed (coming soon)",
+        "href": "#"
+      }
+    ]
+  },
   "contactCopy": "To learn more about Prefiguration Lab or explore collaboration opportunities, please get in touch.",
   "contact": {
     "email": "mbourcha@uottawa.ca",
