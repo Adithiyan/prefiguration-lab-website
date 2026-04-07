@@ -187,6 +187,15 @@
       "photo": "images/Hamza_Tawdi.JPG",
       "linkedin": "https://www.linkedin.com/in/hamza-tawdi-a6aa5925b/",
       "email": "htawd008@uottawa.ca"
+    },
+    {
+      "id": "herve",
+      "name": "Jacques Herve Nguetsop",
+      "role": "Student Researcher",
+      "bio": "Jacques Herve Nguetsop is a master’s student in Project Management at UQO. He studies how to manage complex projects, with a current focus on cycling activism to promote sustainable and equitable mobility.",
+      "photo": "images/Jacques_Herve_Nguetsop.jpg",
+      "linkedin": "",
+      "email": "nguetsopherve@gmail.com"
     }
   ],
   "resourcesCopy": "Peer-reviewed articles, working papers, and other materials from the Prefiguration Lab.",
