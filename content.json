@@ -28,7 +28,7 @@
       ]
     },
     {
-      "title": "Ritualizing the workplace",
+      "title": "How to create vulnerability rituals in the workplace",
       "blurb": "We reveal the ritualized process of creating supportive spaces that strengthen trust and foster collective learning in the workplace.",
       "image": "images/Ritual.jpg",
       "pdf": "#",
@@ -125,6 +125,13 @@
       "image": "images/Digital_rights.jpg",
       "pdf": "docs/clearview-ai-project.pdf",
       "pdfLabel": "Project overview",
+      "resources": [
+       {
+          "title": "IDeaS 2026 Slides",
+          "pdf": "data-files/2026-04-21 IDeaS - Digital rights activism.pdf",
+          "label": "IDeaS 2026 Slides"
+        }
+      ],
       "category": "technology",
       "organizations": [
         "SSHRC"
