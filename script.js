@@ -452,50 +452,57 @@ function renderProjects(projects = []) {
       body.appendChild(el);
     }
 
-    const footer = document.createElement("div");
-    footer.className = "mt-auto pt-3 border-t border-gray-100 flex items-center justify-between gap-2 flex-wrap";
-
     const orgNames = Array.isArray(project.organizations)
       ? project.organizations.map(o => typeof o === "string" ? o : o?.name || "").filter(Boolean)
       : [];
     if (orgNames.length) {
       const orgLine = document.createElement("p");
       orgLine.className = "text-[10px] text-gray-500";
-      orgLine.innerHTML = `<span class="font-semibold">Funded by:</span> ${orgNames.join(", ")}`;
-      footer.appendChild(orgLine);
+      orgLine.innerHTML = `<span class="font-semibold text-gray-600">Supporters:</span> ${orgNames.join(", ")}`;
+      body.appendChild(orgLine);
     }
 
+    // Footer: resource links left, project overview right
+    const footer = document.createElement("div");
+    footer.className = "mt-auto pt-3 border-t border-gray-100 flex items-center justify-between gap-2 flex-wrap";
+
+    const validRes = Array.isArray(project.resources)
+      ? project.resources.filter(r => r.pdf && !isPlaceholder(r.pdf))
+      : [];
+
+    const leftSide = document.createElement("div");
+    leftSide.className = "flex flex-wrap gap-x-3 gap-y-1";
+    validRes.forEach(res => {
+      const link = document.createElement("a");
+      link.href = res.pdf;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.className = "inline-flex items-center gap-1 text-[10px] font-semibold text-[#3a8a8b] hover:underline";
+      link.innerHTML = `<svg class="w-2.5 h-2.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>${res.label || res.title || "Open"}`;
+      leftSide.appendChild(link);
+    });
+    footer.appendChild(leftSide);
+
+    const rightSide = document.createElement("div");
+    rightSide.className = "ml-auto shrink-0";
     if (hasPdf) {
-      const action = document.createElement("span");
-      action.className = "inline-flex items-center gap-1 text-xs font-semibold text-[#90191d] shrink-0";
-      action.innerHTML = `${project.pdfLabel || "Open"} <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>`;
-      footer.appendChild(action);
-    } else {
-      const badge = document.createElement("span");
-      badge.className = "text-[10px] text-gray-400 italic";
-      badge.textContent = project.pdfLabel || "More details coming soon";
-      footer.appendChild(badge);
-    }
-    body.appendChild(footer);
-
-    if (Array.isArray(project.resources) && project.resources.length) {
-      const validRes = project.resources.filter(r => r.pdf && !isPlaceholder(r.pdf));
-      if (validRes.length) {
-        const resSection = document.createElement("div");
-        resSection.className = "flex flex-wrap gap-1.5 pt-3 border-t border-gray-100 mt-1";
-        validRes.forEach(res => {
-          const link = document.createElement("a");
-          link.href = res.pdf;
-          link.target = "_blank";
-          link.rel = "noopener noreferrer";
-          link.className = "inline-flex items-center text-[10px] font-semibold text-gray-600 bg-gray-100 hover:bg-gray-200 rounded-full px-2.5 py-1 transition-colors";
-          link.style.textDecoration = "none";
-          link.textContent = res.label || res.title || "Open";
-          resSection.appendChild(link);
-        });
-        body.appendChild(resSection);
+      const action = document.createElement(card.tagName === "A" ? "span" : "a");
+      if (action.tagName === "A") {
+        action.href = project.pdf;
+        action.target = "_blank";
+        action.rel = "noopener noreferrer";
       }
+      action.className = "inline-flex items-center gap-1 text-xs font-semibold text-[#90191d] hover:opacity-70 transition-opacity";
+      action.innerHTML = `${project.pdfLabel || "Project overview"} <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>`;
+      rightSide.appendChild(action);
+    } else {
+      const note = document.createElement("span");
+      note.className = "text-[10px] text-gray-400 italic";
+      note.textContent = project.pdfLabel || "More details coming soon";
+      rightSide.appendChild(note);
     }
+    footer.appendChild(rightSide);
+    body.appendChild(footer);
 
     card.appendChild(body);
     grid.appendChild(card);
