@@ -459,15 +459,10 @@ function renderProjects(projects = []) {
       ? project.organizations.map(o => typeof o === "string" ? o : o?.name || "").filter(Boolean)
       : [];
     if (orgNames.length) {
-      const tagsWrap = document.createElement("div");
-      tagsWrap.className = "flex flex-wrap gap-1";
-      orgNames.slice(0, 3).forEach(org => {
-        const tag = document.createElement("span");
-        tag.className = "text-[10px] font-semibold text-gray-500 bg-gray-100 rounded-full px-2 py-0.5";
-        tag.textContent = org;
-        tagsWrap.appendChild(tag);
-      });
-      footer.appendChild(tagsWrap);
+      const orgLine = document.createElement("p");
+      orgLine.className = "text-[10px] text-gray-500";
+      orgLine.innerHTML = `<span class="font-semibold">Funded by:</span> ${orgNames.join(", ")}`;
+      footer.appendChild(orgLine);
     }
 
     if (hasPdf) {
@@ -759,14 +754,34 @@ function renderSupporters(supporters = []) {
     };
 
     if (supporter.logo) {
-      const img = document.createElement("img");
-      img.src = supporter.logo;
-      img.alt = supporter.name || "Supporter logo";
-      img.className = "max-h-12 max-w-[110px] w-auto object-contain";
-      img.loading = "lazy";
-      img.decoding = "async";
-      img.addEventListener("error", () => { img.remove(); ensureInitial(); });
-      logoArea.appendChild(img);
+      if (supporter.logo.toLowerCase().endsWith(".svg")) {
+        fetch(supporter.logo)
+          .then((r) => r.ok ? r.text() : Promise.reject())
+          .then((svgText) => {
+            const wrap = document.createElement("div");
+            wrap.className = "max-h-10 max-w-[110px] flex items-center justify-center";
+            wrap.innerHTML = svgText;
+            const svg = wrap.querySelector("svg");
+            if (svg) {
+              svg.removeAttribute("width");
+              svg.removeAttribute("height");
+              svg.style.cssText = "max-height:40px;max-width:110px;width:auto;height:auto;";
+            }
+            logoArea.innerHTML = "";
+            logoArea.appendChild(wrap);
+          })
+          .catch(ensureInitial);
+        ensureInitial();
+      } else {
+        const img = document.createElement("img");
+        img.src = supporter.logo;
+        img.alt = supporter.name || "Supporter logo";
+        img.className = "max-h-12 max-w-[110px] w-auto object-contain";
+        img.loading = "lazy";
+        img.decoding = "async";
+        img.addEventListener("error", () => { img.remove(); ensureInitial(); });
+        logoArea.appendChild(img);
+      }
     } else {
       ensureInitial();
     }
