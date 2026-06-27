@@ -153,7 +153,7 @@
       "name": "Prof. Mathieu Bouchard",
       "role": "Principal Investigator",
       "bio": "Mathieu Bouchard is an assistant professor of strategy and organization at the University of Ottawa's Telfer School of Management. He studies activism for desirable futures to create a better world in the present.",
-      "photo": "images/1725373874280.jpeg",
+      "photo": "images/Mat.jpeg",
       "linkedin": "https://www.linkedin.com/in/mathieubcd/",
       "scholar": "https://scholar.google.com/citations?user=5KMSWeIAAAAJ&hl=en",
       "website": "https://telfer.uottawa.ca/en/directory/mathieu-bouchard/",
@@ -173,7 +173,7 @@
       "name": "Adithiyan Rajan",
       "role": "Research Contributor",
       "bio": "Adithiyan Rajan is a Computer Science graduate student who builds AI systems where real-world impact and technical rigor meet, with a focus on solving complex multidisciplinary problems that matter.",
-      "photo": "images/Adi_Rajan.jpeg",
+      "photo": "images/Adi_Rajan.jpg",
       "linkedin": "https://www.linkedin.com/in/adithiyanrajan/",
       "email": "aindi023@uottawa.ca"
     },
@@ -262,6 +262,84 @@
       {
         "label": "RSS feed (coming soon)",
         "href": "#"
+      }
+    ]
+  },
+  "trainingCopy": {
+    "en": "Six-module training series on launching a Community of Practice — co-produced by the Prefiguration Lab and Telfer School of Management, University of Ottawa.",
+    "fr": "Série de formation en six modules sur le démarrage d'une communauté de pratique — coproduite par le Laboratoire sur la Préfiguration et l'École de management Telfer, Université d'Ottawa."
+  },
+  "training": {
+    "brand": {
+      "plab": "images/PLab logo - transparent.png",
+      "telfer": "https://telfer.uottawa.ca/assets/images/brand/Tertiary_Black3.png"
+    },
+    "modules": [
+      {
+        "number": 1,
+        "title": { "en": "Identity", "fr": "Identité" },
+        "description": {
+          "en": "Developing a shared understanding of what your community of practice represents — its practice, members, and boundaries.",
+          "fr": "Développer une compréhension commune de ce que représente votre communauté de pratique — sa pratique, ses membres et ses frontières."
+        },
+        "videoEn": "",
+        "videoFr": "",
+        "pdf": ""
+      },
+      {
+        "number": 2,
+        "title": { "en": "Project", "fr": "Projet" },
+        "description": {
+          "en": "Defining shared goals and collective action plans that give the community direction and purpose.",
+          "fr": "Définir des objectifs communs et des plans d'action collectifs qui donnent une direction et un sens à la communauté."
+        },
+        "videoEn": "",
+        "videoFr": "",
+        "pdf": ""
+      },
+      {
+        "number": 3,
+        "title": { "en": "Ritual", "fr": "Rituel" },
+        "description": {
+          "en": "Establishing meeting rhythms, session formats, and activity sequences that sustain participation over time.",
+          "fr": "Établir des rythmes de rencontre, des formats de séance et des séquences d'activités qui soutiennent la participation dans le temps."
+        },
+        "videoEn": "",
+        "videoFr": "",
+        "pdf": ""
+      },
+      {
+        "number": 4,
+        "title": { "en": "Governance", "fr": "Gouvernance" },
+        "description": {
+          "en": "Structuring decision-making and leadership so the community can self-organize while remaining coordinated.",
+          "fr": "Structurer la prise de décision et le leadership pour que la communauté puisse s'autoorganiser tout en restant coordonnée."
+        },
+        "videoEn": "",
+        "videoFr": "",
+        "pdf": ""
+      },
+      {
+        "number": 5,
+        "title": { "en": "Ecosystem", "fr": "Écosystème" },
+        "description": {
+          "en": "Mapping the organizational landscape — affiliations, resources, and partnerships the community can draw on.",
+          "fr": "Cartographier le paysage organisationnel — affiliations, ressources et partenariats sur lesquels la communauté peut s'appuyer."
+        },
+        "videoEn": "",
+        "videoFr": "",
+        "pdf": ""
+      },
+      {
+        "number": 6,
+        "title": { "en": "Impact", "fr": "Impact" },
+        "description": {
+          "en": "Measuring and evaluating outcomes for members and their organizations — setting metrics and timelines for assessment.",
+          "fr": "Mesurer et évaluer les retombées pour les membres et leurs organisations — fixer des indicateurs et des échéanciers d'évaluation."
+        },
+        "videoEn": "",
+        "videoFr": "",
+        "pdf": ""
       }
     ]
   },

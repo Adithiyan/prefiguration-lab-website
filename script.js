@@ -13,6 +13,47 @@ const CATEGORY_LABELS = {
   technology: "Technology",
 };
 
+const CATEGORY_BADGE = {
+  health:         "bg-pink-50 text-pink-700 border border-pink-200",
+  education:      "bg-amber-50 text-amber-700 border border-amber-200",
+  transportation: "bg-lime-50 text-lime-800 border border-lime-200",
+  technology:     "bg-cyan-50 text-cyan-700 border border-cyan-100",
+};
+
+const CATEGORY_ACCENT = {
+  health:         "bg-pink-400",
+  education:      "bg-amber-400",
+  transportation: "bg-lime-500",
+  technology:     "bg-cyan-400",
+};
+
+// Compact inline SVGs (w-3.5 h-3.5) for use inside badges
+const CATEGORY_ICON_SM = {
+  health: `<svg class="w-3.5 h-3.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8.5c0-2-1.5-4-4-4-1.6 0-2.8.7-3.5 1.5-.7-.8-1.9-1.5-3.5-1.5-2.5 0-4 2-4 4 0 4 7.5 9 7.5 9S21 12.5 21 8.5Z"/><path d="M8 10h2l1-2 2 4 1-2h2"/></svg>`,
+  education: `<svg class="w-3.5 h-3.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>`,
+  transportation: `<svg class="w-3.5 h-3.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5.5" cy="17.5" r="3"/><circle cx="18.5" cy="17.5" r="3"/><path d="M5.5 14.5h6l-2-4H8"/><path d="m18.5 14.5-3-6h-3"/><path d="M12.5 10.5 14 14.5"/></svg>`,
+  technology: `<svg class="w-3.5 h-3.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M9 1v2M15 1v2M9 21v2M15 21v2M1 9h2M1 15h2M21 9h2M21 15h2"/></svg>`,
+};
+
+const SOCIAL_BUTTON_CONFIG = {
+  linkedin: {
+    icon: `<svg class="w-3.5 h-3.5 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>`,
+    classes: "bg-blue-50 text-blue-700 border border-blue-200 hover:bg-blue-100",
+  },
+  scholar: {
+    icon: `<svg class="w-3.5 h-3.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>`,
+    classes: "bg-purple-50 text-purple-700 border border-purple-200 hover:bg-purple-100",
+  },
+  website: {
+    icon: `<svg class="w-3.5 h-3.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><path d="M2 12h20"/></svg>`,
+    classes: "bg-[#53bbbc]/10 text-[#3a8a8b] border border-[#53bbbc]/30 hover:bg-[#53bbbc]/20",
+  },
+  email: {
+    icon: `<svg class="w-3.5 h-3.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>`,
+    classes: "bg-red-50 text-[#90191d] border border-red-200 hover:bg-red-100",
+  },
+};
+
 const defaultContent = {
   hero: {
     title: "Prefiguration Lab",
@@ -69,7 +110,7 @@ const defaultContent = {
       role: "Principal Investigator",
       bio:
         "Mathieu Bouchard is an assistant professor of strategy and organization at the University of Ottawa's Telfer School of Management. He studies activism for sustainable policymaking out of a belief that if we want to create a better future, we need to act in the present.",
-      photo: "images/1725373874280.jpeg",
+      photo: "images/Mat.jpeg",
       linkedin: "https://www.linkedin.com/in/mathieubcd/",
       email: "professor@example.com",
     },
@@ -79,7 +120,7 @@ const defaultContent = {
       role: "Graduate Student",
       bio:
         "Adithiyan Rajan is a Computer Science graduate student who specializes in transforming cutting-edge AI and Machine Learning research into practical, high-impact solutions for areas such as cybersecurity and real-time detection.",
-      photo: "images/1736718621383.jpeg",
+      photo: "images/Adi_Rajan.jpg",
       linkedin: "https://www.linkedin.com/in/adithiyanrajan/",
       email: "student@example.com",
     },
@@ -99,7 +140,7 @@ const defaultContent = {
       role: "Student Researcher",
       bio:
         "Camila Estrada is an accounting student at the University of Ottawa involved in research on cycling activism, with an interest in how people are motivated to create change in their communities.",
-      photo: "images/1758660234229.png",
+      photo: "images/Camila_Estrada.png",
       linkedin: "https://www.linkedin.com/in/camila-estrada-523s/",
       email: "student@example.com",
     },
@@ -185,6 +226,24 @@ const defaultContent = {
       label: "PDF (coming soon)",
     },
   ],
+  trainingCopy: {
+    en: "Six-module training series on launching a Community of Practice — co-produced by the Prefiguration Lab and Telfer School of Management, University of Ottawa.",
+    fr: "Série de formation en six modules sur le démarrage d'une communauté de pratique — coproduite par le Laboratoire sur la Préfiguration et l'École de management Telfer, Université d'Ottawa.",
+  },
+  training: {
+    brand: {
+      plab: "images/PLab logo - transparent.png",
+      telfer: "https://telfer.uottawa.ca/assets/images/brand/Tertiary_Black3.png",
+    },
+    modules: [
+      { number: 1, title: { en: "Identity", fr: "Identité" }, description: { en: "Developing a shared understanding of what your community of practice represents — its practice, members, and boundaries.", fr: "Développer une compréhension commune de ce que représente votre communauté de pratique — sa pratique, ses membres et ses frontières." }, videoEn: "", videoFr: "", pdf: "" },
+      { number: 2, title: { en: "Project", fr: "Projet" }, description: { en: "Defining shared goals and collective action plans that give the community direction and purpose.", fr: "Définir des objectifs communs et des plans d'action collectifs qui donnent une direction et un sens à la communauté." }, videoEn: "", videoFr: "", pdf: "" },
+      { number: 3, title: { en: "Ritual", fr: "Rituel" }, description: { en: "Establishing meeting rhythms, session formats, and activity sequences that sustain participation over time.", fr: "Établir des rythmes de rencontre, des formats de séance et des séquences d'activités qui soutiennent la participation dans le temps." }, videoEn: "", videoFr: "", pdf: "" },
+      { number: 4, title: { en: "Governance", fr: "Gouvernance" }, description: { en: "Structuring decision-making and leadership so the community can self-organize while remaining coordinated.", fr: "Structurer la prise de décision et le leadership pour que la communauté puisse s'autoorganiser tout en restant coordonnée." }, videoEn: "", videoFr: "", pdf: "" },
+      { number: 5, title: { en: "Ecosystem", fr: "Écosystème" }, description: { en: "Mapping the organizational landscape — affiliations, resources, and partnerships the community can draw on.", fr: "Cartographier le paysage organisationnel — affiliations, ressources et partenariats sur lesquels la communauté peut s'appuyer." }, videoEn: "", videoFr: "", pdf: "" },
+      { number: 6, title: { en: "Impact", fr: "Impact" }, description: { en: "Measuring and evaluating outcomes for members and their organizations — setting metrics and timelines for assessment.", fr: "Mesurer et évaluer les retombées pour les membres et leurs organisations — fixer des indicateurs et des échéanciers d'évaluation." }, videoEn: "", videoFr: "", pdf: "" },
+    ],
+  },
   contactCopy:
     "To learn more about Prefiguration Lab or explore collaboration opportunities, please get in touch.",
   contact: {
@@ -252,6 +311,8 @@ function renderContent(content) {
   setText("podcast-meta", content.podcastMeta);
   setPodcast(content.podcast);
 
+  renderTraining(content.training, content.trainingCopy);
+
   setText("resources-copy", content.resourcesCopy);
   renderResources(content.resources);
 
@@ -312,141 +373,136 @@ function renderThemes(themes = []) {
 function renderProjects(projects = []) {
   const grid = document.getElementById("projects-grid");
   if (!grid) return;
+  grid.className = "projects-grid grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5";
   grid.innerHTML = "";
+
   if (!Array.isArray(projects) || projects.length === 0) {
-    const empty = document.createElement("p");
-    empty.className = "projects-empty";
-    empty.textContent = "Projects coming soon.";
-    grid.appendChild(empty);
+    grid.innerHTML = `<p class="text-gray-500 col-span-3 text-center py-8">Projects coming soon.</p>`;
     return;
   }
+
   projects.forEach((project) => {
     const hasPdf = project.pdf && !isPlaceholder(project.pdf);
-    const cardTag = hasPdf ? "a" : "article";
-    const card = document.createElement(cardTag);
-    card.className = "card project-card";
-    if (project.category) {
-      card.classList.add(`project-card--${project.category}`);
-    }
+    const card = document.createElement(hasPdf ? "a" : "article");
+    card.className = "project-card group flex flex-col bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 overflow-hidden";
     if (hasPdf) {
       card.href = project.pdf;
       card.target = "_blank";
       card.rel = "noopener noreferrer";
+      card.style.cssText = "text-decoration:none;color:inherit;";
+    }
+
+    // Coloured accent bar at top
+    if (project.category) {
+      const accent = document.createElement("div");
+      accent.className = `h-1 w-full flex-shrink-0 ${CATEGORY_ACCENT[project.category] || "bg-gray-200"}`;
+      card.appendChild(accent);
     }
 
     if (project.image) {
       const imgWrap = document.createElement("div");
-      imgWrap.className = "project-card-image";
+      imgWrap.className = "h-44 overflow-hidden bg-gray-100 flex-shrink-0";
       const img = document.createElement("img");
       img.src = project.image;
       img.alt = project.title || "";
       img.loading = "lazy";
       img.decoding = "async";
+      img.className = "w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500";
       imgWrap.appendChild(img);
-      const shimmer = document.createElement("div");
-      shimmer.className = "project-card-shimmer";
-      imgWrap.appendChild(shimmer);
       card.appendChild(imgWrap);
     }
 
-    const head = document.createElement("div");
-    head.className = "project-head";
+    const body = document.createElement("div");
+    body.className = "flex flex-col gap-2.5 p-5 flex-1";
+
+    if (project.category) {
+      const badgeCls = CATEGORY_BADGE[project.category] || "bg-gray-50 text-gray-600 border border-gray-200";
+      const badge = document.createElement("span");
+      badge.className = `w-fit inline-flex items-center gap-1.5 text-[10px] font-bold tracking-widest uppercase px-2.5 py-1 rounded-full ${badgeCls}`;
+      badge.innerHTML = (CATEGORY_ICON_SM[project.category] || "") + (CATEGORY_LABELS[project.category] || project.category);
+      body.appendChild(badge);
+    }
+
     const title = document.createElement("h3");
+    title.className = "font-bold text-gray-900 leading-snug text-[0.9rem]";
     title.textContent = project.title || "";
-    head.appendChild(title);
+    body.appendChild(title);
 
-    const blurb = document.createElement("p");
-    blurb.textContent = project.blurb || "";
+    if (project.blurb) {
+      const blurb = document.createElement("p");
+      blurb.className = "text-sm text-gray-600 leading-relaxed";
+      blurb.style.cssText = "display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;";
+      blurb.textContent = project.blurb;
+      body.appendChild(blurb);
+    }
 
-      card.appendChild(head);
-      if (project.blurb) {
-        card.appendChild(blurb);
-      }
+    const authorsText = formatList(project.authors);
+    if (authorsText && authorsText !== "Coming soon") {
+      const el = document.createElement("p");
+      el.className = "text-xs text-gray-500";
+      el.innerHTML = `<span class="font-semibold text-gray-700">Authors:</span> ${authorsText}`;
+      body.appendChild(el);
+    }
 
-      const authorsRow = createTextLine("Authors", formatList(project.authors));
-      if (authorsRow) card.appendChild(authorsRow);
-
-      const studentsRow = createTextLine(
-        "Student researchers",
-        formatList(project.studentResearchers)
-      );
-      if (studentsRow) card.appendChild(studentsRow);
-
-    const orgRow = createOrgRow(project.organizations);
-    if (orgRow) card.appendChild(orgRow);
+    const studentsText = formatList(project.studentResearchers);
+    if (studentsText && studentsText !== "Coming soon") {
+      const el = document.createElement("p");
+      el.className = "text-xs text-gray-500";
+      el.innerHTML = `<span class="font-semibold text-gray-700">Student researchers:</span> ${studentsText}`;
+      body.appendChild(el);
+    }
 
     const footer = document.createElement("div");
-    footer.className = "project-footer";
+    footer.className = "mt-auto pt-3 border-t border-gray-100 flex items-center justify-between gap-2 flex-wrap";
+
+    const orgNames = Array.isArray(project.organizations)
+      ? project.organizations.map(o => typeof o === "string" ? o : o?.name || "").filter(Boolean)
+      : [];
+    if (orgNames.length) {
+      const tagsWrap = document.createElement("div");
+      tagsWrap.className = "flex flex-wrap gap-1";
+      orgNames.slice(0, 3).forEach(org => {
+        const tag = document.createElement("span");
+        tag.className = "text-[10px] font-semibold text-gray-500 bg-gray-100 rounded-full px-2 py-0.5";
+        tag.textContent = org;
+        tagsWrap.appendChild(tag);
+      });
+      footer.appendChild(tagsWrap);
+    }
 
     if (hasPdf) {
-      const action =
-        cardTag === "a" ? document.createElement("span") : document.createElement("a");
-      action.className = "project-action";
-      action.textContent = project.pdfLabel || "Open PDF";
-      if (cardTag !== "a") {
-        action.href = project.pdf;
-        action.target = "_blank";
-        action.rel = "noopener noreferrer";
-      }
+      const action = document.createElement("span");
+      action.className = "inline-flex items-center gap-1 text-xs font-semibold text-[#90191d] shrink-0";
+      action.innerHTML = `${project.pdfLabel || "Open"} <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>`;
       footer.appendChild(action);
     } else {
       const badge = document.createElement("span");
-      badge.className = "badge badge-muted";
+      badge.className = "text-[10px] text-gray-400 italic";
       badge.textContent = project.pdfLabel || "More details coming soon";
       footer.appendChild(badge);
     }
-
-    if (project.supporters && project.supporters.length) {
-      const supporters = document.createElement("div");
-      supporters.className = "project-supporters";
-      const supporterList = project.supporters || [];
-      const topSupporters = supporterList.slice(0, 3);
-      topSupporters.forEach((supporter) => {
-        const tag = document.createElement("span");
-        tag.className = "supporter-badge";
-        tag.textContent = supporter;
-        supporters.appendChild(tag);
-      });
-      if (supporterList.length > topSupporters.length) {
-        const remaining = supporterList.length - topSupporters.length;
-        const more = document.createElement("span");
-        more.className = "supporter-badge";
-        more.textContent = `+${remaining} more`;
-        supporters.appendChild(more);
-      }
-      footer.appendChild(supporters);
-    }
-
-    if (project.category) {
-      const pill = document.createElement("span");
-      pill.className = "project-category-pill project-category-pill--footer";
-
-      const iconWrap = document.createElement("span");
-      iconWrap.className = `project-category-icon project-category-icon--${project.category}`;
-      iconWrap.innerHTML = CATEGORY_ICONS[project.category] || "";
-      pill.appendChild(iconWrap);
-
-      footer.appendChild(pill);
-    }
-    card.appendChild(footer);
+    body.appendChild(footer);
 
     if (Array.isArray(project.resources) && project.resources.length) {
-      const resSection = document.createElement("div");
-      resSection.className = "project-resources";
-      project.resources.forEach((res) => {
-        if (res.pdf && !isPlaceholder(res.pdf)) {
+      const validRes = project.resources.filter(r => r.pdf && !isPlaceholder(r.pdf));
+      if (validRes.length) {
+        const resSection = document.createElement("div");
+        resSection.className = "flex flex-wrap gap-1.5 pt-3 border-t border-gray-100 mt-1";
+        validRes.forEach(res => {
           const link = document.createElement("a");
-          link.className = "project-resource-link";
           link.href = res.pdf;
           link.target = "_blank";
           link.rel = "noopener noreferrer";
+          link.className = "inline-flex items-center text-[10px] font-semibold text-gray-600 bg-gray-100 hover:bg-gray-200 rounded-full px-2.5 py-1 transition-colors";
+          link.style.textDecoration = "none";
           link.textContent = res.label || res.title || "Open";
           resSection.appendChild(link);
-        }
-      });
-      if (resSection.children.length) card.appendChild(resSection);
+        });
+        body.appendChild(resSection);
+      }
     }
 
+    card.appendChild(body);
     grid.appendChild(card);
   });
 }
@@ -511,6 +567,7 @@ function formatList(value) {
 function renderTeam(team = []) {
   const grid = document.getElementById("team-grid");
   if (!grid) return;
+  grid.className = "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4";
   grid.innerHTML = "";
 
   const members = team.map((member, index) => ({
@@ -518,109 +575,64 @@ function renderTeam(team = []) {
     id: member.id || slugify(member.name || `member-${index + 1}`),
   }));
 
-  members.forEach((member, index) => {
+  members.forEach((member) => {
     const card = document.createElement("article");
-    card.className = "card team-person-card team-person-card--full";
+    card.className = "team-card flex flex-col gap-4 p-5 bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200";
     card.setAttribute("data-person", member.id);
 
     const header = document.createElement("div");
-    header.className = "team-card-header team-card-header--team";
+    header.className = "flex items-center gap-3";
 
     const photoBox = document.createElement("div");
-    photoBox.className = "team-person-photo-box";
+    photoBox.className = "w-16 h-16 rounded-xl overflow-hidden bg-gray-100 flex-shrink-0 flex items-center justify-center";
     if (member.photo) {
       const img = document.createElement("img");
       img.src = member.photo;
       img.alt = `Portrait of ${member.name || "team member"}`;
-      img.width = 86;
-      img.height = 86;
+      img.width = 64;
+      img.height = 64;
       img.loading = "lazy";
       img.decoding = "async";
+      img.className = "w-full h-full object-cover";
       photoBox.appendChild(img);
     } else {
-      photoBox.classList.add("team-person-photo-placeholder");
+      photoBox.classList.add("bg-pink-50");
       const span = document.createElement("span");
+      span.className = "text-xl font-bold text-[#90191d]";
       span.textContent = (member.name || "T").trim().charAt(0).toUpperCase();
       photoBox.appendChild(span);
     }
 
-    const text = document.createElement("div");
-    text.className = "team-person-text";
-
+    const nameBlock = document.createElement("div");
     const name = document.createElement("h3");
+    name.className = "font-bold text-gray-900 text-sm leading-tight";
     name.textContent = member.name || "";
-
     const role = document.createElement("p");
-    role.className = "role role-inline";
+    role.className = "text-xs text-[#90191d] font-medium mt-0.5";
     role.textContent = member.role || "";
+    nameBlock.appendChild(name);
+    nameBlock.appendChild(role);
 
-    text.appendChild(name);
-    text.appendChild(role);
     header.appendChild(photoBox);
-    header.appendChild(text);
+    header.appendChild(nameBlock);
     card.appendChild(header);
 
-    const detailMain = document.createElement("div");
-    detailMain.className = "team-card-detail";
-
     if (member.bio) {
-      const detailBio = document.createElement("p");
-      detailBio.textContent = member.bio;
-      detailMain.appendChild(detailBio);
+      const bio = document.createElement("p");
+      bio.className = "text-sm text-gray-600 leading-relaxed flex-1";
+      bio.textContent = member.bio;
+      card.appendChild(bio);
     }
 
     const actions = document.createElement("div");
-    actions.className = "team-card-actions";
+    actions.className = "flex flex-wrap gap-2 pt-3 border-t border-gray-100";
 
-    if (member.linkedin) {
-      actions.appendChild(
-        createIconButton(
-          member.linkedin,
-          "linkedin",
-          `Connect with ${member.name} on LinkedIn`,
-          "LinkedIn"
-        )
-      );
-    }
+    if (member.linkedin) actions.appendChild(createIconButton(member.linkedin, "linkedin", `Connect with ${member.name} on LinkedIn`, "LinkedIn"));
+    if (member.scholar) actions.appendChild(createIconButton(member.scholar, "scholar", `View ${member.name}'s Google Scholar profile`, "Scholar"));
+    if (member.website) actions.appendChild(createIconButton(member.website, "website", `Visit ${member.name}'s profile page`, "Profile"));
+    if (member.email) actions.appendChild(createIconButton(`mailto:${member.email}`, "email", `Email ${member.name}`, "Email", { newTab: false }));
 
-      if (member.scholar) {
-        actions.appendChild(
-          createIconButton(
-            member.scholar,
-            "scholar",
-            `View ${member.name}'s Google Scholar profile`,
-            "Google Scholar"
-          )
-        );
-      }
-
-    if (member.website) {
-      actions.appendChild(
-        createIconButton(
-          member.website,
-          "website",
-          `Visit ${member.name}'s profile page`,
-          "uOttawa profile"
-        )
-      );
-    }
-
-    if (member.email) {
-      actions.appendChild(
-        createIconButton(
-          `mailto:${member.email}`,
-          "email",
-          `Email ${member.name}`,
-          "Email",
-          { newTab: false }
-        )
-      );
-    }
-
-    if (actions.children.length) {
-      detailMain.appendChild(actions);
-    }
-    card.appendChild(detailMain);
+    if (actions.children.length) card.appendChild(actions);
     grid.appendChild(card);
   });
 }
@@ -628,6 +640,7 @@ function renderTeam(team = []) {
 function renderCollaborators(collaborators = []) {
   const grid = document.getElementById("collaborators-grid");
   if (!grid) return;
+  grid.className = "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4";
   grid.innerHTML = "";
 
   const items =
@@ -640,124 +653,78 @@ function renderCollaborators(collaborators = []) {
 
   members.forEach((member) => {
     const card = document.createElement("article");
-    card.className = "card team-person-card collaborator-card collaborator-card--full";
+    card.className = "collaborator-card flex flex-col gap-3 p-4 bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200";
 
     const header = document.createElement("div");
-    header.className = "team-card-header";
+    header.className = "flex items-center gap-2.5";
 
     const photoBox = document.createElement("div");
-    photoBox.className = "team-person-photo-box";
+    photoBox.className = "w-12 h-12 rounded-lg overflow-hidden bg-gray-100 flex-shrink-0 flex items-center justify-center";
     if (member.photo) {
       const img = document.createElement("img");
       img.src = member.photo;
       img.alt = `Portrait of ${member.name || "collaborator"}`;
-      img.width = 78;
-      img.height = 78;
+      img.width = 48;
+      img.height = 48;
       img.loading = "lazy";
       img.decoding = "async";
+      img.className = "w-full h-full object-cover";
       photoBox.appendChild(img);
     } else {
-      photoBox.classList.add("team-person-photo-placeholder");
       const span = document.createElement("span");
+      span.className = "text-sm font-bold text-gray-400";
       span.textContent = (member.name || "C").trim().charAt(0).toUpperCase();
       photoBox.appendChild(span);
     }
 
-    const text = document.createElement("div");
-    text.className = "team-person-text";
-
     const name = document.createElement("h3");
+    name.className = "font-bold text-gray-900 text-sm leading-tight";
     name.textContent = member.name || "";
 
-    text.appendChild(name);
     header.appendChild(photoBox);
-    header.appendChild(text);
+    header.appendChild(name);
     card.appendChild(header);
-
-    const detail = document.createElement("div");
-    detail.className = "team-card-detail";
 
     const bioText =
       (member.bio && !isPlaceholder(member.bio) && member.bio) ||
-      (member.role && !isPlaceholder(member.role) && member.role) ||
-      "";
+      (member.role && !isPlaceholder(member.role) && member.role) || "";
     if (bioText) {
       const bio = document.createElement("p");
+      bio.className = "text-xs text-gray-600 leading-relaxed flex-1";
       bio.textContent = bioText;
-      detail.appendChild(bio);
+      card.appendChild(bio);
     }
 
     const actions = document.createElement("div");
-    actions.className = "team-card-actions collaborator-actions";
+    actions.className = "flex flex-wrap gap-1.5 pt-2 border-t border-gray-100 mt-auto";
 
     if (member.website) {
-      if (isPlaceholder(member.website)) {
-        actions.appendChild(createPlaceholderButton("Profile"));
-      } else {
-        actions.appendChild(
-          createIconButton(
-            member.website,
-            "website",
-            `Visit ${member.name}'s profile page`,
-            "Profile"
-          )
-        );
-      }
+      actions.appendChild(isPlaceholder(member.website)
+        ? createPlaceholderButton("Profile")
+        : createIconButton(member.website, "website", `Visit ${member.name}'s profile page`, "Profile"));
     }
-
     if (member.scholar) {
-      if (isPlaceholder(member.scholar)) {
-        actions.appendChild(createPlaceholderButton("Google Scholar"));
-      } else {
-        actions.appendChild(
-          createIconButton(
-            member.scholar,
-            "scholar",
-            `View ${member.name}'s Google Scholar profile`,
-            "Google Scholar"
-          )
-        );
-      }
+      actions.appendChild(isPlaceholder(member.scholar)
+        ? createPlaceholderButton("Scholar")
+        : createIconButton(member.scholar, "scholar", `View ${member.name}'s Google Scholar profile`, "Scholar"));
     }
-
     if (member.linkedin) {
-      if (isPlaceholder(member.linkedin)) {
-        actions.appendChild(createPlaceholderButton("LinkedIn"));
-      } else {
-        actions.appendChild(
-          createIconButton(
-            member.linkedin,
-            "linkedin",
-            `Connect with ${member.name} on LinkedIn`,
-            "LinkedIn"
-          )
-        );
-      }
+      actions.appendChild(isPlaceholder(member.linkedin)
+        ? createPlaceholderButton("LinkedIn")
+        : createIconButton(member.linkedin, "linkedin", `Connect with ${member.name} on LinkedIn`, "LinkedIn"));
     }
-
     if (member.email) {
-      actions.appendChild(
-        createIconButton(
-          `mailto:${member.email}`,
-          "email",
-          `Email ${member.name}`,
-          "Email",
-          { newTab: false }
-        )
-      );
+      actions.appendChild(createIconButton(`mailto:${member.email}`, "email", `Email ${member.name}`, "Email", { newTab: false }));
     }
 
     if (!actions.children.length) {
-      const badge = document.createElement("span");
-      badge.className = "badge badge-muted";
-      badge.textContent = "Links coming soon";
-      actions.appendChild(badge);
+      const note = document.createElement("span");
+      note.className = "text-xs text-gray-400 italic";
+      note.textContent = "Links coming soon";
+      actions.appendChild(note);
     }
 
-    if (actions.children.length) {
-      detail.appendChild(actions);
-    }
-    card.appendChild(detail);
+    card.appendChild(actions);
     grid.appendChild(card);
   });
 }
@@ -765,10 +732,10 @@ function renderCollaborators(collaborators = []) {
 function renderSupporters(supporters = []) {
   const grid = document.getElementById("supporters-grid");
   if (!grid) return;
+  grid.className = "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4";
   grid.innerHTML = "";
 
-  const items =
-    supporters && supporters.length ? supporters : defaultContent.supporters;
+  const items = supporters && supporters.length ? supporters : defaultContent.supporters;
 
   const section = document.getElementById("supporters");
   if (!items || items.length === 0) {
@@ -779,49 +746,41 @@ function renderSupporters(supporters = []) {
 
   items.forEach((supporter) => {
     const card = document.createElement("div");
-    card.className = "supporter-card";
+    card.className = "supporter-card flex flex-col items-center justify-center gap-2 p-4 bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition-all duration-200 text-center min-h-[100px]";
 
-    const logoBox = document.createElement("div");
-    logoBox.className = "supporter-logo-box";
+    const logoArea = document.createElement("div");
+    logoArea.className = "flex items-center justify-center flex-1";
 
     const ensureInitial = () => {
       const initial = document.createElement("div");
-      initial.className = "supporter-initial";
+      initial.className = "w-12 h-12 rounded-xl bg-gray-100 flex items-center justify-center text-xl font-bold text-gray-400";
       initial.textContent = supporter.name ? supporter.name.trim().charAt(0).toUpperCase() : "?";
-      logoBox.classList.add("supporter-logo-box--text");
-      card.classList.add("supporter-card--initial");
-      logoBox.appendChild(initial);
+      logoArea.appendChild(initial);
     };
 
     if (supporter.logo) {
       const img = document.createElement("img");
       img.src = supporter.logo;
       img.alt = supporter.name || "Supporter logo";
-      img.width = 150;
-      img.height = 64;
+      img.className = "max-h-12 max-w-[110px] w-auto object-contain";
       img.loading = "lazy";
       img.decoding = "async";
-      img.addEventListener("error", () => {
-        img.remove();
-        ensureInitial();
-      });
-      logoBox.appendChild(img);
+      img.addEventListener("error", () => { img.remove(); ensureInitial(); });
+      logoArea.appendChild(img);
     } else {
       ensureInitial();
     }
 
     const nameLabel = document.createElement("span");
-    nameLabel.className = "supporter-name";
+    nameLabel.className = "text-xs font-semibold text-gray-500";
     nameLabel.textContent = supporter.name || "Supporter";
 
-    logoBox.appendChild(nameLabel);
-    card.appendChild(logoBox);
+    card.appendChild(logoArea);
+    card.appendChild(nameLabel);
 
     if (supporter.url && !isPlaceholder(supporter.url)) {
-      card.addEventListener("click", () => {
-        window.open(supporter.url, "_blank", "noopener");
-      });
-      card.classList.add("supporter-card--clickable");
+      card.style.cursor = "pointer";
+      card.addEventListener("click", () => window.open(supporter.url, "_blank", "noopener"));
     }
 
     grid.appendChild(card);
@@ -879,44 +838,209 @@ function setPodcast(podcast) {
       link.href = linkItem.href;
       link.target = "_blank";
       link.rel = "noopener noreferrer";
-      link.textContent = linkItem.label;
+      link.className = "flex items-center gap-2 text-sm text-gray-700 hover:text-[#90191d] transition-colors no-underline";
+      link.innerHTML = `<svg class="w-3.5 h-3.5 text-[#53bbbc] flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>${linkItem.label}`;
       li.appendChild(link);
     } else {
       const badge = document.createElement("span");
-      badge.className = "badge badge-muted";
-      badge.textContent = linkItem.label || "Link coming soon";
+      badge.className = "flex items-center gap-2 text-sm text-gray-400 italic";
+      badge.innerHTML = `<svg class="w-3.5 h-3.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>${linkItem.label || "Link coming soon"}`;
       li.appendChild(badge);
     }
     list.appendChild(li);
   });
 }
 
+let trainingLang = "en";
+
+function renderTraining(training, copy) {
+  const titleEl = document.getElementById("training-title");
+  const titles = { en: "Community of Practice Training", fr: "Formation en communauté de pratique" };
+
+  function applyLang(lang) {
+    trainingLang = lang;
+    if (titleEl) titleEl.textContent = titles[lang] || titles.en;
+    const copyText = copy && copy[lang] ? copy[lang] : (typeof copy === "string" ? copy : "");
+    setText("training-copy", copyText);
+    renderTrainingModules(training && training.modules, true);
+    document.querySelectorAll(".lang-btn").forEach((b) =>
+      b.classList.toggle("lang-btn--active", b.dataset.lang === lang)
+    );
+  }
+
+  // Initial render (EN default, cards not yet visible so let initAnimations handle them)
+  if (titleEl) titleEl.textContent = titles[trainingLang];
+  const initCopy = copy && copy[trainingLang] ? copy[trainingLang] : (typeof copy === "string" ? copy : "");
+  setText("training-copy", initCopy);
+  renderTrainingBrand(training && training.brand);
+  renderTrainingModules(training && training.modules, false);
+
+  document.querySelectorAll(".lang-btn").forEach((btn) => {
+    btn.addEventListener("click", () => applyLang(btn.dataset.lang));
+  });
+}
+
+function renderTrainingBrand(brand) {
+  const el = document.getElementById("training-brand");
+  if (!el || !brand) return;
+  el.innerHTML = "";
+  ["plab", "telfer"].forEach((key) => {
+    if (!brand[key]) return;
+    const img = document.createElement("img");
+    img.src = brand[key];
+    img.alt = key === "plab" ? "Prefiguration Lab" : "Telfer School of Management";
+    img.className = "training-brand-logo";
+    img.loading = "lazy";
+    img.decoding = "async";
+    el.appendChild(img);
+  });
+}
+
+function renderTrainingModules(modules, alreadyVisible) {
+  const grid = document.getElementById("training-grid");
+  if (!grid) return;
+  grid.className = "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4";
+  grid.innerHTML = "";
+
+  if (!Array.isArray(modules) || !modules.length) {
+    const p = document.createElement("p");
+    p.className = "text-gray-500 col-span-3 text-center py-8";
+    p.textContent = trainingLang === "fr" ? "Modules à venir." : "Modules coming soon.";
+    grid.appendChild(p);
+    return;
+  }
+
+  modules.forEach((mod) => {
+    const card = document.createElement("article");
+    card.className = "training-module-card flex flex-col gap-3 p-5 bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200";
+    if (alreadyVisible) card.classList.add("will-animate", "in-view");
+
+    const header = document.createElement("div");
+    header.className = "flex items-center gap-3";
+
+    const num = document.createElement("span");
+    num.className = "flex items-center justify-center w-8 h-8 rounded-full bg-[#90191d] text-white font-bold text-sm flex-shrink-0";
+    num.textContent = mod.number || "";
+
+    const title = document.createElement("h3");
+    title.className = "font-bold text-gray-900 text-sm leading-tight";
+    title.textContent = (mod.title && mod.title[trainingLang]) || "";
+
+    header.appendChild(num);
+    header.appendChild(title);
+    card.appendChild(header);
+
+    if (mod.description) {
+      const desc = document.createElement("p");
+      desc.className = "text-sm text-gray-600 leading-relaxed flex-1";
+      desc.textContent = (mod.description && mod.description[trainingLang]) || "";
+      card.appendChild(desc);
+    }
+
+    const videoUrl = trainingLang === "fr" ? mod.videoFr : mod.videoEn;
+    const embedWrap = document.createElement("div");
+    embedWrap.className = "embed-wrapper training-embed";
+
+    if (videoUrl && !isPlaceholder(videoUrl)) {
+      const iframe = document.createElement("iframe");
+      iframe.src = videoUrl;
+      iframe.width = "100%";
+      iframe.height = "220";
+      iframe.frameBorder = "0";
+      iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+      iframe.allowFullscreen = true;
+      iframe.loading = "lazy";
+      iframe.title = (mod.title && mod.title[trainingLang]) || "";
+      embedWrap.appendChild(iframe);
+    } else {
+      const placeholder = document.createElement("div");
+      placeholder.className = "flex flex-col items-center justify-center gap-2 h-36 rounded-xl border-2 border-dashed border-gray-200 text-gray-400";
+      placeholder.innerHTML = `<svg class="w-8 h-8 opacity-40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"/></svg><span class="text-xs font-medium">${trainingLang === "fr" ? "Vidéo à venir" : "Video coming soon"}</span>`;
+      embedWrap.appendChild(placeholder);
+    }
+    card.appendChild(embedWrap);
+
+    if (mod.pdf && !isPlaceholder(mod.pdf)) {
+      const link = document.createElement("a");
+      link.href = mod.pdf;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.className = "inline-flex items-center gap-1.5 text-xs font-semibold text-[#90191d] hover:opacity-60 transition-opacity";
+      link.textContent = trainingLang === "fr" ? "Télécharger le guide (PDF)" : "Download guide (PDF)";
+      card.appendChild(link);
+    }
+
+    grid.appendChild(card);
+  });
+}
+
+function parseResourceLabel(label) {
+  if (!label) return { venue: "", year: "" };
+  const match = label.match(/,\s*(\d{4})\s*$/);
+  if (match) {
+    return { venue: label.slice(0, match.index).trim(), year: match[1] };
+  }
+  return { venue: label, year: "" };
+}
+
 function renderResources(resources = []) {
   const list = document.getElementById("resource-list");
   if (!list) return;
+  list.className = "resource-list grid grid-cols-1 lg:grid-cols-2 gap-4 max-w-5xl mx-auto";
   list.innerHTML = "";
-  resources.forEach((resource) => {
-    const li = document.createElement("li");
-    const title = document.createElement("strong");
-    title.textContent = resource.title || "";
 
+  resources.forEach((resource) => {
+    const { venue, year } = parseResourceLabel(resource.label);
+    const hasPdf = resource.pdf && !isPlaceholder(resource.pdf);
+
+    const li = document.createElement("li");
+    li.className = "flex flex-col gap-3 p-6 bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200";
+
+    // Venue + year row
+    if (venue || year) {
+      const meta = document.createElement("div");
+      meta.className = "flex items-center gap-2 flex-wrap";
+      if (venue) {
+        const venueEl = document.createElement("span");
+        venueEl.className = "text-[10px] font-bold tracking-widest uppercase text-[#90191d] opacity-80";
+        venueEl.textContent = venue;
+        meta.appendChild(venueEl);
+      }
+      if (year) {
+        const yearBadge = document.createElement("span");
+        yearBadge.className = "text-[10px] font-semibold text-gray-400 bg-gray-100 rounded-full px-2 py-0.5 shrink-0";
+        yearBadge.textContent = year;
+        meta.appendChild(yearBadge);
+      }
+      li.appendChild(meta);
+    }
+
+    // Title
+    const title = document.createElement("p");
+    title.className = "text-sm font-semibold text-gray-900 leading-snug flex-1";
+    title.textContent = resource.title || "";
     li.appendChild(title);
 
-    if (resource.pdf && !isPlaceholder(resource.pdf)) {
+    // Footer: divider + action
+    const footer = document.createElement("div");
+    footer.className = "pt-3 border-t border-gray-100";
+
+    if (hasPdf) {
       const link = document.createElement("a");
       link.href = resource.pdf;
       link.target = "_blank";
       link.rel = "noopener noreferrer";
-      link.className = "link";
-      link.textContent = resource.label || "PDF";
-      li.appendChild(link);
+      link.className = "inline-flex items-center gap-1.5 text-xs font-semibold text-[#90191d] hover:opacity-60 transition-opacity";
+      link.innerHTML = `Open paper <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>`;
+      footer.appendChild(link);
     } else {
       const badge = document.createElement("span");
-      badge.className = "badge badge-muted";
-      badge.textContent = resource.label || "Coming soon";
-      li.appendChild(badge);
+      badge.className = "text-xs text-gray-400 italic";
+      badge.textContent = venue ? "Coming soon" : (resource.label || "Coming soon");
+      footer.appendChild(badge);
     }
 
+    li.appendChild(footer);
     list.appendChild(li);
   });
 }
@@ -967,13 +1091,13 @@ function setCurrentYear() {
   }
 }
 
-function createIconButton(href, className, ariaLabel, label, options = {}) {
+function createIconButton(href, type, ariaLabel, label, options = {}) {
+  const config = SOCIAL_BUTTON_CONFIG[type] || SOCIAL_BUTTON_CONFIG.website;
   const button = document.createElement("a");
-  button.className = `team-icon-btn ${className}`;
+  button.className = `inline-flex items-center gap-1.5 text-xs font-medium rounded-lg px-2.5 py-1 transition-colors no-underline ${config.classes}`;
   button.href = href;
   button.setAttribute("aria-label", ariaLabel);
-  button.textContent = label;
-
+  button.innerHTML = config.icon + label;
   if (options.newTab !== false) {
     button.target = "_blank";
     button.rel = "noopener noreferrer";
@@ -983,7 +1107,7 @@ function createIconButton(href, className, ariaLabel, label, options = {}) {
 
 function createPlaceholderButton(label) {
   const button = document.createElement("span");
-  button.className = "team-icon-btn team-icon-btn--disabled";
+  button.className = "inline-flex items-center gap-1.5 text-xs font-medium text-gray-300 border border-gray-100 rounded-lg px-2.5 py-1 cursor-not-allowed";
   button.textContent = label;
   return button;
 }
@@ -1027,10 +1151,11 @@ function initAnimations() {
   // --- Scroll entrance animations ---
   const animTargets = document.querySelectorAll(
     "#projects .section-heading, #projects .project-card, " +
-    "#team .section-heading, #team .team-person-card, " +
-    "#collaborators .section-heading, #collaborators .team-person-card, " +
+    "#team .section-heading, #team .team-card, " +
+    "#collaborators .section-heading, #collaborators .collaborator-card, " +
     "#supporters .section-heading, #supporters .supporter-card, " +
     "#podcast .section-heading, " +
+    "#training .section-heading, #training .training-module-card, " +
     "#resources .section-heading, .resource-list li, " +
     "#contact .section-heading, .contact-card"
   );

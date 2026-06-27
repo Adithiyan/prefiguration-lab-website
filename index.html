@@ -52,8 +52,98 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <style>
+      #pg-overlay {
+        position: fixed; inset: 0; z-index: 9999;
+        background: #111827;
+        display: flex; align-items: center; justify-content: center;
+        padding: 1.5rem;
+      }
+      #pg-overlay.pg-hidden { display: none; }
+      .pg-card {
+        background: #fff; border-radius: 1.25rem;
+        padding: 2.5rem 2rem; width: 100%; max-width: 360px;
+        box-shadow: 0 25px 50px rgba(0,0,0,0.4);
+        display: flex; flex-direction: column; gap: 1.25rem;
+        text-align: center;
+      }
+      .pg-logo { height: 52px; width: auto; margin: 0 auto; }
+      .pg-label { font-size: 0.8rem; color: #6b7280; margin-bottom: -0.5rem; }
+      .pg-input {
+        width: 100%; padding: 0.65rem 1rem; border: 1.5px solid #e5e7eb;
+        border-radius: 0.75rem; font-size: 0.95rem; outline: none;
+        font-family: inherit; transition: border-color 0.15s;
+      }
+      .pg-input:focus { border-color: #53bbbc; }
+      .pg-input.pg-error { border-color: #90191d; animation: pg-shake 0.35s ease; }
+      .pg-btn {
+        width: 100%; padding: 0.7rem; border: none; border-radius: 0.75rem;
+        background: #53bbbc; color: #fff; font-size: 0.95rem; font-weight: 700;
+        cursor: pointer; font-family: inherit; transition: background 0.15s;
+      }
+      .pg-btn:hover { background: #6cced0; }
+      .pg-err-msg { font-size: 0.8rem; color: #90191d; min-height: 1rem; }
+      @keyframes pg-shake {
+        0%,100% { transform: translateX(0); }
+        20%,60% { transform: translateX(-6px); }
+        40%,80% { transform: translateX(6px); }
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        corePlugins: { preflight: false },
+        theme: {
+          extend: {
+            colors: {
+              'brand-red': '#90191d',
+              'brand-teal': '#53bbbc',
+            },
+          },
+        },
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
+    <!-- Password gate -->
+    <div id="pg-overlay">
+      <div class="pg-card">
+        <img src="images/PLab logo - transparent.png" alt="Prefiguration Lab" class="pg-logo" />
+        <p class="pg-label">This is a private preview. Enter the password to continue.</p>
+        <input id="pg-input" class="pg-input" type="password" placeholder="Password" autocomplete="current-password" />
+        <button class="pg-btn" id="pg-btn">Enter</button>
+        <p class="pg-err-msg" id="pg-err" aria-live="polite"></p>
+      </div>
+    </div>
+    <script>
+      (function () {
+        var PW = "prefigurationlab-UO-26";
+        var KEY = "pg_auth";
+        var overlay = document.getElementById("pg-overlay");
+        if (sessionStorage.getItem(KEY) === "1") {
+          overlay.classList.add("pg-hidden");
+          return;
+        }
+        function attempt() {
+          var input = document.getElementById("pg-input");
+          var err = document.getElementById("pg-err");
+          if (input.value === PW) {
+            sessionStorage.setItem(KEY, "1");
+            overlay.classList.add("pg-hidden");
+          } else {
+            err.textContent = "Incorrect password. Try again.";
+            input.classList.add("pg-error");
+            input.value = "";
+            setTimeout(function () { input.classList.remove("pg-error"); }, 400);
+          }
+        }
+        document.getElementById("pg-btn").addEventListener("click", attempt);
+        document.getElementById("pg-input").addEventListener("keydown", function (e) {
+          if (e.key === "Enter") attempt();
+        });
+      })();
+    </script>
+
     <!-- Header & Navigation -->
     <header class="site-header">
       <div class="container header-inner">
@@ -62,6 +152,7 @@
           <a href="#projects">Projects</a>
           <a href="#team">Our Team</a>
           <a href="#podcast">Podcast</a>
+          <a href="#training">Training</a>
           <a href="#resources">Resources</a>
           <a href="#contact">Contact</a>
         </nav>
@@ -161,10 +252,9 @@
             <p id="podcast-copy"></p>
           </div>
 
-          <div class="podcast-layout">
-            <div class="podcast-player card">
-              <h3>Latest Episode</h3>
-              <!-- Replace the iframe src with your actual podcast embed (Spotify, Apple, etc.) -->
+          <div class="flex flex-col md:flex-row gap-5 max-w-4xl mx-auto">
+            <div class="flex-[2] flex flex-col gap-3 p-5 bg-white rounded-2xl border border-gray-200 shadow-sm">
+              <h3 class="font-bold text-gray-900 text-sm">Latest Episode</h3>
               <div class="embed-wrapper">
                 <iframe
                   id="podcast-embed"
@@ -177,19 +267,35 @@
                   loading="lazy"
                 ></iframe>
               </div>
-              <p class="meta" id="podcast-meta"></p>
+              <p class="text-xs text-gray-500 italic" id="podcast-meta"></p>
             </div>
 
-            <aside class="card podcast-links">
-              <h3>Listen & Subscribe</h3>
-              <ul id="podcast-links"></ul>
+            <aside class="flex-[1] flex flex-col gap-3 p-5 bg-white rounded-2xl border border-gray-200 shadow-sm">
+              <h3 class="font-bold text-gray-900 text-sm">Listen &amp; Subscribe</h3>
+              <ul id="podcast-links" class="flex flex-col gap-2 list-none"></ul>
             </aside>
           </div>
         </div>
       </section>
 
+      <!-- TRAINING / CoP -->
+      <section id="training" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <h2 id="training-title">Community of Practice Training</h2>
+            <p id="training-copy"></p>
+            <div class="lang-toggle" id="lang-toggle" aria-label="Language / Langue">
+              <button class="lang-btn lang-btn--active" data-lang="en">EN</button>
+              <button class="lang-btn" data-lang="fr">FR</button>
+            </div>
+            <div class="training-brand" id="training-brand"></div>
+          </div>
+          <div class="training-grid" id="training-grid"></div>
+        </div>
+      </section>
+
       <!-- RESOURCES / PDF LINKS -->
-      <section id="resources" class="section section-alt">
+      <section id="resources" class="section">
         <div class="container">
           <div class="section-heading">
             <h2>Resources</h2>
@@ -208,16 +314,12 @@
             <p id="contact-copy"></p>
           </div>
 
-          <div class="card contact-card contact-card--stack">
-            <p id="contact-institution">
-              <strong>Institution:</strong><br />
-              Department Name<br />
-              University of Ottawa, Ottawa, ON, Canada
-            </p>
-            <p class="contact-card__helper">
+          <div class="contact-card max-w-lg mx-auto flex flex-col gap-4 p-6 bg-white rounded-2xl border border-gray-200 shadow-sm">
+            <p id="contact-institution" class="text-sm text-gray-700 leading-relaxed"></p>
+            <p class="text-sm text-gray-500">
               Have a question about the lab, want to collaborate, or provide feedback?
             </p>
-            <a class="button contact-button" id="contact-button">Email the lab</a>
+            <a class="button" id="contact-button" style="align-self:flex-start">Email the lab</a>
           </div>
         </div>
       </section>
