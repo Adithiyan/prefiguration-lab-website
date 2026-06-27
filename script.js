@@ -994,7 +994,7 @@ function renderResources(resources = []) {
     const hasPdf = resource.pdf && !isPlaceholder(resource.pdf);
 
     const li = document.createElement("li");
-    li.className = "flex flex-col gap-3 p-6 bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200";
+    li.className = "flex flex-col gap-2 p-4 bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200";
 
     // Venue + year row
     if (venue || year) {
@@ -1017,13 +1017,13 @@ function renderResources(resources = []) {
 
     // Title
     const title = document.createElement("p");
-    title.className = "text-sm font-semibold text-gray-900 leading-snug flex-1";
+    title.className = "text-xs font-semibold text-gray-900 leading-snug flex-1";
     title.textContent = resource.title || "";
     li.appendChild(title);
 
     // Footer: divider + action
     const footer = document.createElement("div");
-    footer.className = "pt-3 border-t border-gray-100";
+    footer.className = "pt-2 border-t border-gray-100";
 
     if (hasPdf) {
       const link = document.createElement("a");
