@@ -593,7 +593,7 @@ function renderTeam(team = []) {
       img.height = 64;
       img.loading = "lazy";
       img.decoding = "async";
-      img.className = "w-full h-full object-cover";
+      img.className = "w-full h-full object-cover object-top";
       photoBox.appendChild(img);
     } else {
       photoBox.classList.add("bg-pink-50");
