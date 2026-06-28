@@ -934,7 +934,7 @@ function renderTrainingModules(modules, alreadyVisible) {
 
   modules.forEach((mod) => {
     const card = document.createElement("article");
-    card.className = "training-module-card flex flex-col gap-3 p-5 bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200";
+    card.className = "training-module-card flex flex-col gap-2 p-4 bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200";
     if (alreadyVisible) card.classList.add("will-animate", "in-view");
 
     const header = document.createElement("div");
@@ -954,7 +954,7 @@ function renderTrainingModules(modules, alreadyVisible) {
 
     if (mod.description) {
       const desc = document.createElement("p");
-      desc.className = "text-sm text-gray-600 leading-relaxed flex-1";
+      desc.className = "text-xs text-gray-600 leading-relaxed flex-1";
       desc.textContent = (mod.description && mod.description[trainingLang]) || "";
       card.appendChild(desc);
     }
@@ -976,7 +976,7 @@ function renderTrainingModules(modules, alreadyVisible) {
       embedWrap.appendChild(iframe);
     } else {
       const placeholder = document.createElement("div");
-      placeholder.className = "flex flex-col items-center justify-center gap-2 h-36 rounded-xl border-2 border-dashed border-gray-200 text-gray-400";
+      placeholder.className = "flex flex-col items-center justify-center gap-1.5 h-24 rounded-xl border-2 border-dashed border-gray-200 text-gray-400";
       placeholder.innerHTML = `<svg class="w-8 h-8 opacity-40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"/></svg><span class="text-xs font-medium">${trainingLang === "fr" ? "Vidéo à venir" : "Video coming soon"}</span>`;
       embedWrap.appendChild(placeholder);
     }
