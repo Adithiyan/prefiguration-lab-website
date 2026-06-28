@@ -30,7 +30,7 @@ h1, h2, h3, .logo-text, .logo-mark {
 }
 
 /* Layout */
-.container { width: 100%; max-width: 1360px; margin: 0 auto; padding: 0 3rem; }
+.container { width: 100%; max-width: 1440px; margin: 0 auto; padding: 0 1.5rem; }
 .section { padding: 4rem 0; }
 .section-alt { background-color: #ffffff; }
 

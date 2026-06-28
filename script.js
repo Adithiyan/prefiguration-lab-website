@@ -1116,7 +1116,7 @@ function setCurrentYear() {
 function createIconButton(href, type, ariaLabel, label, options = {}) {
   const config = SOCIAL_BUTTON_CONFIG[type] || SOCIAL_BUTTON_CONFIG.website;
   const button = document.createElement("a");
-  button.className = `inline-flex items-center gap-1 text-[10px] font-medium rounded-md px-1.5 py-0.5 transition-colors no-underline ${config.classes}`;
+  button.className = `inline-flex items-center gap-0.5 text-[9px] font-medium rounded px-1 py-px transition-colors no-underline ${config.classes}`;
   button.href = href;
   button.setAttribute("aria-label", ariaLabel);
   button.innerHTML = config.icon + label;
