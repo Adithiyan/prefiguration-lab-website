@@ -373,7 +373,7 @@ function renderThemes(themes = []) {
 function renderProjects(projects = []) {
   const grid = document.getElementById("projects-grid");
   if (!grid) return;
-  grid.className = "projects-grid grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5";
+  grid.className = "projects-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5";
   grid.innerHTML = "";
 
   if (!Array.isArray(projects) || projects.length === 0) {
@@ -569,7 +569,7 @@ function formatList(value) {
 function renderTeam(team = []) {
   const grid = document.getElementById("team-grid");
   if (!grid) return;
-  grid.className = "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4";
+  grid.className = "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4";
   grid.innerHTML = "";
 
   const members = team.map((member, index) => ({
@@ -642,7 +642,7 @@ function renderTeam(team = []) {
 function renderCollaborators(collaborators = []) {
   const grid = document.getElementById("collaborators-grid");
   if (!grid) return;
-  grid.className = "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4";
+  grid.className = "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4";
   grid.innerHTML = "";
 
   const items =
@@ -783,7 +783,7 @@ function renderSupporters(supporters = []) {
         const img = document.createElement("img");
         img.src = supporter.logo;
         img.alt = supporter.name || "Supporter logo";
-        img.className = "max-h-12 max-w-[110px] w-auto object-contain";
+        img.className = "max-h-16 max-w-[110px] w-auto object-contain";
         img.loading = "lazy";
         img.decoding = "async";
         img.addEventListener("error", () => { img.remove(); ensureInitial(); });
