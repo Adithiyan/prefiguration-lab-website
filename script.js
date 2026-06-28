@@ -579,20 +579,20 @@ function renderTeam(team = []) {
 
   members.forEach((member) => {
     const card = document.createElement("article");
-    card.className = "team-card flex flex-col gap-4 p-5 bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200";
+    card.className = "team-card flex flex-col gap-3 p-4 bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200";
     card.setAttribute("data-person", member.id);
 
     const header = document.createElement("div");
-    header.className = "flex items-center gap-3";
+    header.className = "flex items-center gap-2.5";
 
     const photoBox = document.createElement("div");
-    photoBox.className = "w-16 h-16 rounded-xl overflow-hidden bg-gray-100 flex-shrink-0 flex items-center justify-center";
+    photoBox.className = "w-12 h-12 rounded-xl overflow-hidden bg-gray-100 flex-shrink-0 flex items-center justify-center";
     if (member.photo) {
       const img = document.createElement("img");
       img.src = member.photo;
       img.alt = `Portrait of ${member.name || "team member"}`;
-      img.width = 64;
-      img.height = 64;
+      img.width = 48;
+      img.height = 48;
       img.loading = "lazy";
       img.decoding = "async";
       img.className = "w-full h-full object-cover object-top";
@@ -600,7 +600,7 @@ function renderTeam(team = []) {
     } else {
       photoBox.classList.add("bg-pink-50");
       const span = document.createElement("span");
-      span.className = "text-xl font-bold text-[#90191d]";
+      span.className = "text-base font-bold text-[#90191d]";
       span.textContent = (member.name || "T").trim().charAt(0).toUpperCase();
       photoBox.appendChild(span);
     }
@@ -610,7 +610,7 @@ function renderTeam(team = []) {
     name.className = "font-bold text-gray-900 text-sm leading-tight";
     name.textContent = member.name || "";
     const role = document.createElement("p");
-    role.className = "text-xs text-[#90191d] font-medium mt-0.5";
+    role.className = "text-[10px] text-[#90191d] font-medium mt-0.5";
     role.textContent = member.role || "";
     nameBlock.appendChild(name);
     nameBlock.appendChild(role);
@@ -621,13 +621,13 @@ function renderTeam(team = []) {
 
     if (member.bio) {
       const bio = document.createElement("p");
-      bio.className = "text-sm text-gray-600 leading-relaxed flex-1";
+      bio.className = "text-xs text-gray-600 leading-relaxed flex-1";
       bio.textContent = member.bio;
       card.appendChild(bio);
     }
 
     const actions = document.createElement("div");
-    actions.className = "flex flex-wrap gap-1.5 pt-3 border-t border-gray-100";
+    actions.className = "flex flex-wrap gap-1 pt-2 border-t border-gray-100";
 
     if (member.linkedin) actions.appendChild(createIconButton(member.linkedin, "linkedin", `Connect with ${member.name} on LinkedIn`, "LinkedIn"));
     if (member.scholar) actions.appendChild(createIconButton(member.scholar, "scholar", `View ${member.name}'s Google Scholar profile`, "Scholar"));
