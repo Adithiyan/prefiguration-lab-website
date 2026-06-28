@@ -4,7 +4,13 @@
     "tagline": "We study activism for sustainable policymaking.",
     "body": "Prefiguration is about enacting here and now visions of a desirable future. Inspired by this idea, we study and promote actions that start small to make a big difference.",
     "ctaLabel": "View our projects",
-    "ctaHref": "#projects"
+    "ctaHref": "#projects",
+    "themes": [
+      { "label": "Health", "category": "health" },
+      { "label": "Education", "category": "education" },
+      { "label": "Transportation", "category": "transportation" },
+      { "label": "Technology", "category": "technology" }
+    ]
   },
   "projectsCopy": "Take a look at what keeps us busy right now.",
   "projects": [
@@ -175,6 +181,7 @@
       "bio": "Adithiyan Rajan is a Computer Science graduate student who builds AI systems where real-world impact and technical rigor meet, with a focus on solving complex multidisciplinary problems that matter.",
       "photo": "images/Adi_Rajan.jpg",
       "linkedin": "https://www.linkedin.com/in/adithiyanrajan/",
+      "website": "https://www.adithiyanr.com/",
       "email": "aindi023@uottawa.ca"
     },
     {
