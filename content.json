@@ -20,6 +20,13 @@
       "image": "images/Peer_support.jpg",
       "pdf": "docs/peer-support-project.pdf",
       "pdfLabel": "Project overview",
+      "resources": [
+        {
+          "title": "AOM 2025 slides",
+          "pdf": "data-files/2026-03-10%20BCom%20prefig%20report%20-%20for%20Telfer%20UPC%201.pdf",
+          "label": "UPC workshop report"
+        }
+      ],
       "category": "health",
       "organizations": [
         "FRQSC"
