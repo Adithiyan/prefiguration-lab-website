@@ -1,7 +1,7 @@
 ﻿{
   "hero": {
     "title": "Prefiguration Lab",
-    "tagline": "We study activism for sustainable policymaking.",
+    "tagline": "Research for desirable futures.",
     "body": "Prefiguration is about enacting here and now visions of a desirable future. Inspired by this idea, we study and promote actions that start small to make a big difference.",
     "ctaLabel": "View our projects",
     "ctaHref": "#projects",
@@ -18,8 +18,15 @@
       "title": "Liminal becomings: the professionalization project of peer support workers",
       "blurb": "We examine how peer support workers have sought over the last two decades to carve out a space for their practice within the professional sector of mental health care.",
       "image": "images/Peer_support.jpg",
-      "pdf": "docs/peer-support-project.pdf",
-      "pdfLabel": "Project overview",
+      "pdf": "#",
+      "pdfLabel": "Coming soon",
+      "resources": [
+        {
+          "title": "Liminal becomings - AOM 2025 slides",
+          "pdf": "data-files/Bouchard et al. - Liminal becomings - AOM 2025.pdf",
+          "label": "AOM 2025 slides"
+        }
+      ],
       "category": "health",
       "organizations": [
         "FRQSC"
@@ -28,13 +35,10 @@
         "Mathieu Bouchard",
         "Steve Maguire",
         "Ann Langley",
-        "Luciano Barin Cruz"],
-      "studentResearchers": [
-        "Hamza Tawdi"
-      ]
+        "Luciano Barin Cruz"]
     },
     {
-      "title": "Vulnerability rituals in the workplace",
+      "title": "Vulnerability in the workplace",
       "blurb": "We reveal the ritualized process of creating supportive spaces that strengthen trust and foster collective learning in the workplace.",
       "image": "images/Ritual.jpg",
       "pdf": "https://www.workties.org/post/vulnerability-in-the-workplace",
@@ -45,6 +49,7 @@
       ],
       "authors": [
         "Mathieu Bouchard",
+        "Samia Chreim",
         "Qingyi Zhu"
       ]
     },
@@ -82,7 +87,7 @@
       ]
     },
     {
-      "title": "The shack: negotiating (dis)order in a center for homeschoolers",
+      "title": "Negotiating (dis)order in a center for homeschoolers",
       "blurb": "We explore how board administrators, parents, and staff educators influence an alternative pedagogal space operating outside of the formal school system.",
       "image": "images/Homeschooling.jpg",
       "pdf": "#",
@@ -221,30 +226,35 @@
       "email": "htawd008@uottawa.ca"
     }
   ],
-  "resourcesCopy": "Peer-reviewed articles, working papers, and other materials from the Prefiguration Lab.",
+  "resourcesCopy": "Peer-reviewed articles, working papers, and other materials from the Prefiguration Lab team and research collaborators.",
   "resources": [
     {
-      "title": "Vulnerability Practices among Professionals in Multidisciplinary Settings",
-      "pdf": "docs/Bouchard et al. - AMJ 2025 accepted.pdf",
+      "title": "Vulnerability practices among professionals in multidisciplinary settings",
+      "authors": "Bouchard, M., Chreim, S., Langley, A. & Boivin, A.",
+      "pdf": "docs/Bouchard et al. 2026 AMJ.pdf",
       "label": "Academy of Management Journal, 2026"
     },
     {
-      "title": "Liminal Becomings: The Professionalization Project of Peer Support Workers",
-      "pdf": "data-files/Proof - AoM2025 peer support - 16561.pdf",
-      "label": "Academy of Management, OMT best paper, 2025"
+      "title": "Scaling a tech-mediated community: prefigurative enrolling atop evolving institutional logics",
+      "authors": "Pak. Y., Hannigan, T. R., P. Jennings, P. D., Lounsbury, M.",
+      "pdf": "docs/Pak et al. 2026 - Prefigurative enrolling.pdf",
+      "label": "Information and Organization, 2026"
     },
     {
-      "title": "Activism for Responsible Technology Policymaking: The Case of Homo Digitalis and Clearview AI",
-      "pdf": "data-files/2025-03-06 Digital rights activism project.pdf",
-      "label": "IDeaS Workshop, working paper, 2025"
+      "title": "Liminal becomings: the professionalization project of peer support workers",
+      "authors": "Bouchard, M., Langley, A., Maguire, S. & Barin Cruz, L.",
+      "pdf": "docs/Bouchard et al. 2025 AOM Proceedings - Liminal becomings.pdf",
+      "label": "Academy of Management Proceedings (OMT Best Paper), 2025"
     },
     {
-      "title": "Emotions and Client Participation in Jurisdictional Contestation",
-      "pdf": "docs/AMR-2020-0511-Original.R4_Proof.pdf",
+      "title": "Emotions and client participation in jurisdictional contestation",
+      "authors": "Bouchard, M., Barin Cruz, L. & Maguire, S.",
+      "pdf": "docs/Bouchard, Barin Cruz & Maguire 2024 AMR.pdf",
       "label": "Academy of Management Review, 2024"
     },
     {
-      "title": "Domesticating the Beast: A Resource Profile Framework of Power Relations in Nonprofit–Business Collaboration",
+      "title": "Domesticating the beast: a resource profile framework of power relations in nonprofit–business collaboration",
+      "authors": "Bouchard, M., & Raufflet, E.",
       "pdf": "docs/bouchard-raufflet-2019-domesticating-the-beast-a-resource-profile-framework-of-power-relations-in-nonprofit-business.pdf",
       "label": "Nonprofit and Voluntary Sector Quarterly, 2019"
     }

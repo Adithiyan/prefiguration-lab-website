@@ -431,7 +431,6 @@ function renderProjects(projects = []) {
     if (project.blurb) {
       const blurb = document.createElement("p");
       blurb.className = "text-sm text-gray-600 leading-relaxed";
-      blurb.style.cssText = "display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;";
       blurb.textContent = project.blurb;
       body.appendChild(blurb);
     }
@@ -1042,6 +1041,14 @@ function renderResources(resources = []) {
     title.className = "text-xs font-semibold text-gray-900 leading-snug flex-1";
     title.textContent = resource.title || "";
     li.appendChild(title);
+
+    // Authors
+    if (resource.authors) {
+      const authors = document.createElement("p");
+      authors.className = "text-[10px] text-gray-500 italic leading-snug";
+      authors.textContent = resource.authors;
+      li.appendChild(authors);
+    }
 
     // Footer: divider + action
     const footer = document.createElement("div");
