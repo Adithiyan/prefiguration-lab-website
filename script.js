@@ -876,7 +876,7 @@ let trainingLang = "en";
 
 function renderTraining(training, copy) {
   const titleEl = document.getElementById("training-title");
-  const titles = { en: "Community of Practice Training", fr: "Formation en communauté de pratique" };
+  const titles = { en: "Community of practice training", fr: "Formation sur les communautés de pratique" };
 
   function applyLang(lang) {
     trainingLang = lang;
