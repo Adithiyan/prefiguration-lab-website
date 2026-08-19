@@ -227,7 +227,7 @@ const defaultContent = {
     },
   ],
   trainingCopy: {
-    en: "Six-module training series on launching a Community of Practice — co-produced by the Prefiguration Lab and Telfer School of Management, University of Ottawa.",
+    en: "Six-module training series on launching a successful community of practice — co-produced by the Prefiguration Lab and Telfer School of Management, University of Ottawa.",
     fr: "Série de formation en six modules sur le démarrage d'une communauté de pratique — coproduite par le Laboratoire sur la Préfiguration et l'École de management Telfer, Université d'Ottawa.",
   },
   training: {
