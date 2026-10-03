@@ -264,15 +264,11 @@
       "label": "Nonprofit and Voluntary Sector Quarterly, 2019"
     }
   ],
-  "podcastCopy": "The vivre sans voiture / living without a car podcast hosts conversations about activism for healthy and sustainable urban transportation.",
+  "podcastCopy": "The Cycling the City Podcast hosts conversations about cycling advocacy for sustainable cities.",
   "podcastMeta": "We will add a link to the podcast once it is available.",
   "podcast": {
     "embed": "",
     "links": [
-      {
-        "label": "Example: Talking About Organizations",
-        "href": "https://www.talkingaboutorganizations.com/"
-      },
       {
         "label": "Prefiguration Lab on Spotify (coming soon)",
         "href": "#"
@@ -367,7 +363,7 @@
   },
   "contactCopy": "To learn more about Prefiguration Lab or explore collaboration opportunities, please get in touch.",
   "contact": {
-    "email": "mbourcha@uottawa.ca",
+    "email": "bouchard@telfer.uottawa.ca",
     "buttonLabel": "Email us",
     "institution": "Telfer School of Management\nUniversity of Ottawa, Ottawa, ON, Canada"
   },
