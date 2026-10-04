@@ -1,4 +1,4 @@
-﻿# Internal instructions
+# Internal instructions
 
 This guide explains how to edit the website content via `content.json`, either on GitHub or locally. The site is content-driven: changes in `content.json` populate the page without editing HTML.
 
@@ -73,22 +73,84 @@ Notes:
 - Use .jpg/.jpeg/.png formats.
 
 ## Working locally (optional)
-### Prerequisites
-- A text editor (VS Code recommended).
-- Git installed (`git --version` should return a version).
-- Python for a quick local server (optional).
+Working locally lets you preview your changes in the browser **before** they go live.
 
-### Steps
-1. Clone: `git clone https://github.com/Adithiyan/prefiguration-lab-website.git`
-2. Enter the folder: `cd prefiguration-lab-website`
-3. Create a branch: `git checkout -b update-content`
-4. Edit `content.json`.
-5. Preview locally: `python -m http.server 8000` and open http://localhost:8000
-6. Stage: `git add content.json`
-7. Commit: `git commit -m "Update content"`
-8. Pull latest: `git pull origin master` (replace `master` with `main` if needed)
-9. Push: `git push origin HEAD`
-10. Open a Pull Request and merge.
+### One-time setup (Windows)
+Run these in PowerShell. Close and reopen PowerShell (or restart VS Code) after installing, so the new commands are recognized.
+
+1. Install the tools:
+   ```powershell
+   winget install -e --id Microsoft.VisualStudioCode
+   winget install -e --id Git.Git
+   winget install -e --id OpenJS.NodeJS.LTS
+   ```
+2. Tell Git who you are:
+   ```powershell
+   git config --global user.name "Your Name"
+   git config --global user.email "you@example.com"
+   ```
+3. Allow PowerShell to run tools such as `npx` (only needed once):
+   ```powershell
+   Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
+   ```
+   If this is blocked on your computer, use `npx.cmd` instead of `npx` in the steps below.
+4. Download the site to your computer and open it in VS Code:
+   ```powershell
+   cd ~\Documents
+   git clone https://github.com/Adithiyan/prefiguration-lab-website.git
+   cd prefiguration-lab-website
+   code .
+   ```
+
+### Every time you edit
+Open the project in VS Code, then open a terminal with **Terminal → New Terminal**. It starts in the project folder.
+
+1. **Get the latest version** (in case someone else changed the site):
+   ```powershell
+   git pull
+   ```
+2. **Start the local server:**
+   ```powershell
+   npx serve
+   ```
+   Open the address it prints (usually http://localhost:3000) in your browser.
+   - Why a server? The page loads its text from `content.json`, and browsers block that when you just double-click `index.html`. The page then shows built-in default text instead of your edits.
+   - The server keeps running in that terminal. Open a second terminal (**+** icon in the terminal panel) for the Git commands below.
+   - Alternative: install the VS Code extension **Live Server** and press `Alt+L` then `Alt+O`. It refreshes the browser automatically every time you save.
+3. **Edit and check:** edit `content.json`, save (`Ctrl+S`), then refresh the browser.
+   If the page looks empty or shows default text, the JSON has an error. See *Troubleshooting* below.
+4. **Stop the server** when finished: click in its terminal and press `Ctrl+C`.
+
+### Save your changes to GitHub
+Run these three commands in the terminal, in this order:
+
+1. **`git add`**: choose which changed files to include.
+   ```powershell
+   git add content.json
+   ```
+   Use `git add .` to include every changed file (for example, new photos in `images/`).
+   Run `git status` at any time to see what has changed and what is included.
+2. **`git commit -m "..."`**: save a snapshot with a short message describing the change.
+   ```powershell
+   git commit -m "Update team bios"
+   ```
+   Write the message between the quotes. Keep it short and specific.
+3. **`git push`**: send your commits to GitHub.
+   ```powershell
+   git push
+   ```
+   The first time, a window asks you to sign in to GitHub. Choose **Sign in with your browser**.
+
+GitHub Pages republishes the live site 1–2 minutes after the push.
+
+You can do the same three steps without commands from VS Code's **Source Control** panel (left bar): click **+** next to a file (add), type a message and click **Commit**, then click **Sync Changes** (push).
+
+### Undo the last commit (if something breaks)
+```powershell
+git revert --no-edit HEAD
+git push
+```
+This adds a new commit that cancels the previous one. Nothing is deleted from history.
 
 ## Troubleshooting JSON errors
 - Missing comma between fields.
