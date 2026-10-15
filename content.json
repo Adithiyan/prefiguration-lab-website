@@ -138,8 +138,8 @@
       "title": "Activist strategies of firm deterrence in the age of artificial intelligence",
       "blurb": "We explain how activists mobilize regulatory frameworks and public opinion to defend against the incursions of technology companies into citizens' digital rights.",
       "image": "images/Digital_rights.jpg",
-      "pdf": "docs/clearview-ai-project.pdf",
-      "pdfLabel": "Project overview",
+      "pdf": "#",
+      "pdfLabel": "Coming soon",
       "resources": [
        {
           "title": "IDeaS 2026 Slides",
@@ -262,6 +262,12 @@
       "authors": "Bouchard, M., & Raufflet, E.",
       "pdf": "docs/bouchard-raufflet-2019-domesticating-the-beast-a-resource-profile-framework-of-power-relations-in-nonprofit-business.pdf",
       "label": "Nonprofit and Voluntary Sector Quarterly, 2019"
+    },
+    {
+      "title": "Damned if you do(n't): how epistemic technology spoils expertise",
+      "authors": "Ajaj, A., Joshi, M., Bouchard, M.",
+      "pdf": "docs/SMASH_2026_Spolied_Expertise_CameraReady.pdf",
+      "label": "SMASH Conference, Montreal, 2026"
     }
   ],
   "podcastCopy": "The Cycling the City Podcast hosts conversations about cycling advocacy for sustainable cities.",
