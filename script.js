@@ -494,6 +494,16 @@ function renderProjects(projects = []) {
       action.className = "inline-flex items-center gap-1 text-xs font-semibold text-[#90191d] hover:opacity-70 transition-opacity";
       action.innerHTML = `${project.pdfLabel || "Project overview"} <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>`;
       rightSide.appendChild(action);
+      if (project.pdf2) {
+        const action2 = document.createElement("a");
+        action2.href = project.pdf2;
+        action2.target = "_blank";
+        action2.rel = "noopener noreferrer";
+        action2.className = "inline-flex items-center gap-1 text-xs font-semibold text-[#90191d] hover:opacity-70 transition-opacity ml-3";
+        action2.innerHTML = project.pdfLabel2 || "More";
+        action2.addEventListener("click", e => e.stopPropagation());
+        rightSide.appendChild(action2);
+      }
     } else {
       const note = document.createElement("span");
       note.className = "text-[10px] text-gray-400 italic";
