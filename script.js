@@ -974,8 +974,8 @@ function renderTrainingModules(modules, alreadyVisible) {
 
     if (videoUrl && !isPlaceholder(videoUrl)) {
       const iframe = document.createElement("iframe");
-      iframe.src = videoUrl;
-      iframe.width = "100%";
+      const sep = videoUrl.includes("?") ? "&" : "?";
+      iframe.src = `${videoUrl}${sep}cc_load_policy=0&hl=${trainingLang}`;      iframe.width = "100%";
       iframe.height = "220";
       iframe.frameBorder = "0";
       iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
