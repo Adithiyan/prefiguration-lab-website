@@ -178,14 +178,13 @@
       "email": "mbourcha@uottawa.ca"
     },
     {
-      "id": "adi",
-      "name": "Adithiyan Rajan",
-      "role": "Research Contributor",
-      "bio": "Adithiyan Rajan is a Computer Science graduate student who builds AI systems where real-world impact and technical rigor meet, with a focus on solving complex multidisciplinary problems that matter.",
-      "photo": "images/Adi_Rajan.jpg",
-      "linkedin": "https://www.linkedin.com/in/adithiyanrajan/",
-      "website": "https://www.adithiyanr.com/",
-      "email": "aindi023@uottawa.ca"
+      "id": "karina",
+      "name": "Karina Viktor",
+      "role": "Student Researcher",
+      "bio": "Karina Viktor is a student in the Bachelor of Commerce and Juris Doctor Program at the Telfer School of Management, combining both strong analytical and presentation skills to deliver exceptional digital tools.",
+      "photo": "images/Karina_Viktor.jpg",
+      "linkedin": "https://www.linkedin.com/in/karina-viktor/",
+      "email": "kvikt069@uottawa.ca"
     },
     {
       "id": "herve",
@@ -197,15 +196,6 @@
       "email": "nguetsopherve@gmail.com"
     },
     {
-      "id": "karina",
-      "name": "Karina Viktor",
-      "role": "Student Researcher",
-      "bio": "Karina Viktor is a student in the Bachelor of Commerce and Juris Doctor Program at the Telfer School of Management, combining both strong analytical and presentation skills to deliver exceptional digital tools.",
-      "photo": "images/Karina_Viktor.jpg",
-      "linkedin": "https://www.linkedin.com/in/karina-viktor/",
-      "email": "kvikt069@uottawa.ca"
-    },
-    {
       "id": "anthony",
       "name": "Anthony Alary",
       "role": "Student Researcher",
@@ -213,6 +203,16 @@
       "photo": "images/Anthony_Alary.jpg",
       "linkedin": "https://www.linkedin.com/in/anthony-alary-founder/",
       "email": "aalar007@uottawa.ca"
+    },
+    {
+      "id": "adi",
+      "name": "Adithiyan Rajan",
+      "role": "Research Contributor",
+      "bio": "Adithiyan Rajan is a Computer Science graduate student who builds AI systems where real-world impact and technical rigor meet, with a focus on solving complex multidisciplinary problems that matter.",
+      "photo": "images/Adi_Rajan.jpg",
+      "linkedin": "https://www.linkedin.com/in/adithiyanrajan/",
+      "website": "https://www.adithiyanr.com/",
+      "email": "aindi023@uottawa.ca"
     },
     {
       "id": "phuong",
