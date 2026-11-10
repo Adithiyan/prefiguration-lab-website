@@ -83,9 +83,9 @@
         "Anaïs Del Bono"
       ],
       "studentResearchers": [
+        "Anthony Alary",
         "Hamza Tawdi",
-        "Phuong Tran",
-        "Camila Estrada"
+        "Phuong Tran"
       ]
     },
     {
@@ -171,7 +171,7 @@
       "name": "Prof. Mathieu Bouchard",
       "role": "Principal Investigator",
       "bio": "Mathieu Bouchard is an assistant professor of strategy and organization at the University of Ottawa's Telfer School of Management. He studies activism for desirable futures to create a better world in the present.",
-      "photo": "images/Mat.jpeg",
+      "photo": "images/Mat.png",
       "linkedin": "https://www.linkedin.com/in/mathieubcd/",
       "scholar": "https://scholar.google.com/citations?user=5KMSWeIAAAAJ&hl=en",
       "website": "https://telfer.uottawa.ca/en/directory/mathieu-bouchard/",
@@ -203,6 +203,15 @@
       "photo": "images/Anthony_Alary.jpg",
       "linkedin": "https://www.linkedin.com/in/anthony-alary-founder/",
       "email": "aalar007@uottawa.ca"
+    },
+    {
+      "id": "Ayman",
+      "name": "Ayman Ajaj",
+      "role": "Research Contributor",
+      "bio": "Ayman Ajaj is a Doctoral Candidate in Digital Transformation and Innovation at uOttawa, focusing on the social implications of epistemic tecnology adoption.",
+      "photo": "images/Ayman_Ajaj.jpg",
+      "linkedin": "https://www.linkedin.com/in/aymanajaj/",
+      "email": "aajaj024@uottawa.ca"
     },
     {
       "id": "adi",
@@ -483,15 +492,6 @@
       "photo": "images/Qingyi_Zhu.jpg",
       "website": "",
       "linkedin": "https://www.linkedin.com/in/qingyi-zhu-a46064334/",
-      "scholar": ""
-    },
-    {
-      "name": "Ayman Ajaj",
-      "role": "PhD student in Digital Transformation and Innovation at the University of Ottawa",
-      "id": "collab-12",
-      "photo": "images/Ayman_Ajaj.jpg",
-      "website": "",
-      "linkedin": "https://www.linkedin.com/in/aymanajaj/",
       "scholar": ""
     },
     {
