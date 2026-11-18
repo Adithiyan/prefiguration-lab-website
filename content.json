@@ -83,9 +83,7 @@
         "Anaïs Del Bono"
       ],
       "studentResearchers": [
-        "Anthony Alary",
-        "Hamza Tawdi",
-        "Phuong Tran"
+        "Anthony Alary"
       ]
     },
     {
@@ -103,7 +101,6 @@
         "Samia Chreim"
       ],
       "studentResearchers": [
-        "Hamza Tawdi"
       ]
     },
     {
@@ -156,8 +153,7 @@
       "authors": [
         "Mathieu Bouchard",
         "Siddhant Ritwick",
-        "Mayur Joshi",
-        "Adithiyan Rajan"
+        "Mayur Joshi"
       ],
       "studentResearchers": [
         "Phuong Tran"
@@ -205,18 +201,9 @@
       "email": "aalar007@uottawa.ca"
     },
     {
-      "id": "Ayman",
-      "name": "Ayman Ajaj",
-      "role": "Research Contributor",
-      "bio": "Ayman Ajaj is a Doctoral Candidate in Digital Transformation and Innovation at uOttawa, focusing on the social implications of epistemic tecnology adoption.",
-      "photo": "images/Ayman_Ajaj.jpg",
-      "linkedin": "https://www.linkedin.com/in/aymanajaj/",
-      "email": "aajaj024@uottawa.ca"
-    },
-    {
       "id": "adi",
       "name": "Adithiyan Rajan",
-      "role": "Research Contributor",
+      "role": "Research Contributor (2025-2026)",
       "bio": "Adithiyan Rajan is a Computer Science graduate student who builds AI systems where real-world impact and technical rigor meet, with a focus on solving complex multidisciplinary problems that matter.",
       "photo": "images/Adi_Rajan.jpg",
       "linkedin": "https://www.linkedin.com/in/adithiyanrajan/",
@@ -240,15 +227,6 @@
       "photo": "images/Camila_Estrada.png",
       "linkedin": "https://www.linkedin.com/in/camila-estrada-523s/",
       "email": "cestr073@uottawa.ca"
-    },
-    {
-      "id": "hamza",
-      "name": "Hamza Tawdi",
-      "role": "Student Researcher (2025-2026)",
-      "bio": "Hamza Tawdi is a graduate of the Telfer School of Management with a Bachelor of Commerce degree. His work focuses on analysis, synthesis, and writing, with an emphasis on making information accessible.",
-      "photo": "images/Hamza_Tawdi.JPG",
-      "linkedin": "https://www.linkedin.com/in/hamza-tawdi-a6aa5925b/",
-      "email": "htawd008@uottawa.ca"
     }
   ],
   "resourcesCopy": "Peer-reviewed articles, working papers, and other materials from the Prefiguration Lab team and research collaborators.",
@@ -485,10 +463,18 @@
       "linkedin": "https://www.linkedin.com/in/timhannigan/",
       "scholar": "https://scholar.google.com/citations?user=0-tyIUkAAAAJ&hl=en"
     },
+        {
+      "name": "Ayman Ajaj",
+      "role": "PhD candidate in Digital Transformation and Innovation at uOttawa, focusing on the social implications of epistemic tecnology adoption.",
+      "id": "collab-11",
+      "photo": "images/Ayman_Ajaj.jpg",
+      "linkedin": "https://www.linkedin.com/in/aymanajaj/",
+      "scholar": ""
+    },
     {
       "name": "Qingyi Zhu",
       "role": "PhD student in Strategy and Organization at the Telfer School of Management, University of Ottawa",
-      "id": "collab-11",
+      "id": "collab-12",
       "photo": "images/Qingyi_Zhu.jpg",
       "website": "",
       "linkedin": "https://www.linkedin.com/in/qingyi-zhu-a46064334/",
@@ -497,7 +483,7 @@
     {
       "name": "Anaîs Del Bono",
       "role": "PhD candidate in Management and Strategy at HEC Montréal",
-      "id": "collab-14",
+      "id": "collab-13",
       "photo": "images/Anais_del_Bono.jpg",
       "website": "https://theconversation.com/profiles/ana-s-del-bono-1482447",
       "linkedin": "https://www.linkedin.com/in/anaisdelbono/",
