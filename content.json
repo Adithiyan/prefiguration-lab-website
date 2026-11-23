@@ -193,6 +193,15 @@
       "email": "nguetsopherve@gmail.com"
     },
     {
+      "id": "qingyi",
+      "name": "Qingyi Zhu",
+      "role": "Research Contributor",
+      "bio": "Qingyi Zhu is a PhD student in Strategy and Organization at the Telfer School of Management who studies the role of marginalized actors in institutional settings",
+      "photo": "images/Qingyi_Zhu.jpg",
+      "linkedin": "https://www.linkedin.com/in/qingyi-zhu-a46064334/",
+      "email": "qzhu035@uottawa.ca"
+    },
+    {
       "id": "anthony",
       "name": "Anthony Alary",
       "role": "Student Researcher",
@@ -470,15 +479,6 @@
       "id": "collab-11",
       "photo": "images/Ayman_Ajaj.jpg",
       "linkedin": "https://www.linkedin.com/in/aymanajaj/",
-      "scholar": ""
-    },
-    {
-      "name": "Qingyi Zhu",
-      "role": "PhD student in Strategy and Organization at the Telfer School of Management, University of Ottawa",
-      "id": "collab-12",
-      "photo": "images/Qingyi_Zhu.jpg",
-      "website": "",
-      "linkedin": "https://www.linkedin.com/in/qingyi-zhu-a46064334/",
       "scholar": ""
     },
     {
